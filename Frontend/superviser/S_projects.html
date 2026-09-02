@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projects - Graduation Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/style_menu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --header-height: 72px;
+            --sidebar-width: 280px;
+            --deep-blue: #06324a;
+            --mid-blue: #0f4b6b;
+            --light-blue: #1e5a8e;
+            --accent: #ffd34a;
+            --border-color: #e5e7eb;
+            --text-gray: #6b7280;
+        }
+
+        .main-header {
+            background: linear-gradient(180deg, var(--mid-blue) 0%, var(--deep-blue) 100%);
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .main-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .main-header p {
+            font-size: 14px;
+            color: #dbeafe;
+            margin: 1px;
+        }
+
+        .main-header .header-icon {
+            font-size: 36px;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+        .projects-filters-card {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .filters-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .search-box {
+            margin-bottom: 14px;
+        }
+
+        .search-box label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .filters-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 14px;
+        }
+
+        .filter-item label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .filter-item select {
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            font-size: 14px;
+        }
+
+        .clear-btn {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            font-size: 14px;
+            direction: rtl;
+        }
+
+        .search-input::placeholder {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        input,
+        select,
+        button {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 18px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .review {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .active {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .completed {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .project-info {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 14px;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .progress {
+            margin-top: 12px;
+        }
+
+        .bar {
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            background: #0b3a6a;
+        }
+
+        .actions {
+            margin-top: 14px;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <div class="header-right">
+            <div class="logo-circle">🎓</div>
+            <div>
+                <div class="university-name">جامعة الرموك</div>
+                <div class="university-subtitle">منصة مشاريع التخرج</div>
+                <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+            </div>
+        </div>
+
+        <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        function handleLogout() {
+            try { localStorage.removeItem("token"); } catch { }
+            window.location.href = '/superviser/S_login.html';
+        }
+    </script>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar"></div>
+                <div class="user-info">
+                    <span class="user-name" id="menuUserName"></span>
+                    <div class="user-role">supervisor</div>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <a href="/superviser/S_Dashboard.html" class="menu-item ">
+                    <i class="fas fa-th-large menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">لوحة التحكم</span>
+                        <span class="menu-item-en">Dashboard</span>
+                    </div>
+                </a>
+
+                <a href="/superviser/S_team_management.html" class="menu-item">
+                    <i class="fas fa-lightbulb menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">إدارة الفرق</span>
+                        <span class="menu-item-en">Team Management</span>
+                    </div>
+                </a>
+
+                <a href="/superviser/S_projects.html" class="menu-item active">
+                    <i class="fas fa-calendar-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">المشاريع</span>
+                        <span class="menu-item-en">Projects</span>
+                    </div>
+                </a>
+
+                <a href="/superviser/S_PhasesManager.html" class="menu-item">
+                    <i class="fas fa-user-circle menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar"> إدارة المراحل</span>
+                        <span class="menu-item-en">Stage management</span>
+                    </div>
+                </a>
+
+                <a href="/superviser/S_messages.html" class="menu-item">
+                    <i class="fas fa-comment-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">المحادثات</span>
+                        <span class="menu-item-en">Messages</span>
+                    </div>
+                </a>
+
+                <a href="/superviser/S_notifications.html" class="menu-item">
+                    <i class="fas fa-bell menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الإشعارات</span>
+                        <span class="menu-item-en">Notifications</span>
+                    </div>
+                </a>
+
+                <a href="/superviser/S_profile.html" class="menu-item">
+                    <i class="fas fa-user-circle menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الملف الشخصي</span>
+                        <span class="menu-item-en">Profile</span>
+                    </div>
+                </a>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <div class="main-header">
+                <div class="header-icon">
+                    <i class="bi bi-folder-fill"></i>
+                </div>
+                <div class="header-text">
+                    <h1>المشاريع</h1>
+                    <p>عرض وإدارة جميع مشاريع الطلاب</p>
+                </div>
+            </div>
+
+            <div class="projects-filters-card">
+                <div class="filters-title">
+                    <i class="bi bi-search"></i>
+                    <span>البحث والفلاتر</span>
+                </div>
+
+                <div class="search-box">
+                    <label>بحث</label>
+                    <input id="searchInput" type="text" class="search-input"
+                        placeholder="البحث برقم المشروع، اسم الطالب، الرقم الجامعي، أو عنوان المشروع..." />
+                </div>
+
+                <div class="filters-row">
+                    <div class="filter-item">
+                        <label>الحالة</label>
+                        <select id="statusFilter">
+                            <option value="">جميع الحالات</option>
+                            <option value="review">قيد المراجعة</option>
+                            <option value="active">نشط</option>
+                            <option value="completed">مكتمل</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item clear">
+                        <button class="clear-btn" onclick="resetFilters()">
+                            <i class="bi bi-x-circle"></i>
+                            مسح الفلاتر
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="projectsCount"></h3>
+            <div id="projectsContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        // ======================
+        // API binding (REAL)
+        // ======================
+        const API_BASE = "https://nonverbalized-gushier-alessandra.ngrok-free.dev";
+        const token = (() => { try { return localStorage.getItem("token"); } catch { return null; } })();
+
+        const container = document.getElementById("projectsContainer");
+        const count = document.getElementById("projectsCount");
+
+        function mapStatusForApi(uiStatus) {
+            if (uiStatus === "review") return "Pending";
+            if (uiStatus === "active") return "Active";
+            if (uiStatus === "completed") return "Completed";
+            return "";
+        }
+
+        function normalizeStatusFromApi(apiStatus) {
+            if (!apiStatus) return "review";
+            const s = String(apiStatus).toLowerCase();
+            if (s === "active") return "active";
+            if (s === "completed") return "completed";
+            return "review";
+        }
+
+        function statusLabel(s) {
+            if (s === "review") return "قيد المراجعة";
+            if (s === "active") return "نشط";
+            return "مكتمل";
+        }
+
+        function openDetails(id, statusUi) {
+            const mode = statusUi === "active" ? "active" : "view";
+            window.location.href = `/superviser/S_project_details_button.html?id=${id}&mode=${mode}`;
+        }
+
+        function formatDate(d) {
+            if (!d) return "-";
+            const dt = new Date(d);
+            if (isNaN(dt.getTime())) return "-";
+            return dt.toISOString().slice(0, 10);
+        }
+
+        function render(list) {
+            container.innerHTML = "";
+            count.textContent = `قائمة المشاريع (${list.length})`;
+
+            list.forEach(p => {
+                container.innerHTML += `
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>${p.title ?? ""}</h4>
+                            <span class="status ${p.statusUi}">
+                                ${statusLabel(p.statusUi)}
+                            </span>
+                        </div>
+
+                        <div class="project-info">
+                            <div>👤 ${p.ownerName ?? "-"}</div>
+                            <div>✉️ ${p.ownerEmail ?? "-"}</div>
+                            <div>👥 ${p.teamCount ?? 1} طلاب</div>
+                            <div>📅 ${formatDate(p.deadline)}</div>
+                        </div>
+
+                        <div class="progress">
+                            <small>${p.progress ?? 0}%</small>
+                            <div class="bar">
+                                <div class="fill" style="width:${p.progress ?? 0}%"></div>
+                            </div>
+                        </div>
+
+                        <div class="actions">
+                            <button onclick="openDetails(${p.projectId}, '${p.statusUi}')">👁 عرض التفاصيل</button>
+                            <button disabled title="لسا ما ربطنا المحادثات">مراسلة الطالب</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        async function fetchProjects() {
+            if (!token) {
+                window.location.href = "/superviser/S_login.html";
+                return;
+            }
+
+            const q = document.getElementById("searchInput").value.trim();
+            const statusUi = document.getElementById("statusFilter").value;
+            const statusApi = mapStatusForApi(statusUi);
+
+            // ✅ لازم URL object مش string
+            const url = new URL(`${API_BASE}/api/supervisor/projects`);
+            if (q) url.searchParams.set("q", q);
+            if (statusApi) url.searchParams.set("status", statusApi);
+
+            const res = await fetch(url.toString(), {
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "ngrok-skip-browser-warning": "true",
+                    "Accept": "application/json"
+                },
+                cache: "no-store"
+            });
+
+            // لو توكن غلط / انتهت الجلسة
+            if (res.status === 401 || res.status === 403) {
+                try { localStorage.removeItem("token"); } catch { }
+                alert("الجلسة انتهت أو غير مصرح. رح يحولك للّوجين.");
+                window.location.href = "/superviser/S_login.html";
+                return;
+            }
+
+            const text = await res.text();
+
+            if (!res.ok) {
+                alert("فشل تحميل المشاريع: " + text);
+                return;
+            }
+
+            // لو رجع HTML بالغلط (ngrok warning أو error page)
+            if (text.trim().startsWith("<")) {
+                console.error("رجع HTML بدل JSON:", text.slice(0, 200));
+                alert("السيرفر رجع HTML بدل JSON (غالباً صفحة تحذير ngrok).");
+                return;
+            }
+
+            const data = JSON.parse(text);
+
+            const items = (data.items ?? []).map(x => ({
+                projectId: x.projectId,
+                title: x.title,
+                ownerName: x.ownerName,
+                ownerEmail: x.ownerEmail,
+                teamCount: x.teamCount,
+                deadline: x.deadline,
+                progress: x.progress,
+                statusUi: normalizeStatusFromApi(x.status)
+            }));
+
+            render(items);
+        }
+
+        function resetFilters() {
+            document.getElementById("searchInput").value = "";
+            document.getElementById("statusFilter").value = "";
+            fetchProjects();
+        }
+
+        document.getElementById("searchInput").addEventListener("input", fetchProjects);
+        document.getElementById("statusFilter").addEventListener("change", fetchProjects);
+
+        fetchProjects();
+    </script>
+</body>
+
+</html>

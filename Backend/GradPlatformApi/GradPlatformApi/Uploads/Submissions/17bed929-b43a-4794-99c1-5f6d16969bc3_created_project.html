@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نظرة عامة على التقدم - منصة مشاريع التخرج</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/style_menu.css">
+  <link rel="stylesheet" href="/style_crt_project_page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- إذا هذا الملف موجود عندك ومحتاجه، خليّه. إذا مش موجود احذفه -->
+  <link rel="stylesheet" href="style_created-project.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <!-- toggle button for mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <!-- university info -->
+    <div class="header-right">
+      <div class="logo-circle">🎓</div>
+      <div>
+        <div class="university-name">جامعة الرموك</div>
+        <div class="university-subtitle">منصة مشاريع التخرج</div>
+        <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+      </div>
+    </div>
+
+    <!-- logout button -->
+    <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+        stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="user-profile">
+        <div class="user-avatar">أ</div>
+        <div class="user-info">
+          <div class="user-name">أحمد</div>
+          <div class="user-role">طالب</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="create_project_page.html" class="menu-item active">
+          <i class="fas fa-th-large menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">لوحة التحكم</span>
+            <span class="menu-item-en">Dashboard</span>
+          </div>
+        </a>
+
+        <a href="IdeasGenerator.html" class="menu-item">
+          <i class="fas fa-lightbulb menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">أفكار ذكية</span>
+            <span class="menu-item-en">AI Ideas Generator</span>
+          </div>
+        </a>
+
+        <a href="progress&phases.html" class="menu-item">
+          <i class="fas fa-calendar-alt menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">التقدم والمراحل</span>
+            <span class="menu-item-en">Progress & Phases</span>
+          </div>
+        </a>
+
+        <a href="project_details.html" class="menu-item">
+          <i class="fas fa-folder menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">تفاصيل المشروع</span>
+            <span class="menu-item-en">Project Details</span>
+          </div>
+        </a>
+
+        <a href="messages.html" class="menu-item">
+          <i class="fas fa-comment-alt menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">المحادثات</span>
+            <span class="menu-item-en">Messages</span>
+          </div>
+        </a>
+
+        <a href="all_teams.html" class="menu-item">
+          <i class="fas fa-users menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">جميع الفرق</span>
+            <span class="menu-item-en">All Teams</span>
+          </div>
+        </a>
+
+        <a href="FindTeammates.html" class="menu-item">
+          <i class="fas fa-user-friends menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">البحث عن زملاء</span>
+            <span class="menu-item-en">Find Teammates</span>
+          </div>
+        </a>
+
+        <a href="notifications.html" class="menu-item">
+          <i class="fas fa-bell menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الإشعارات</span>
+            <span class="menu-item-en">Notifications</span>
+          </div>
+        </a>
+
+        <a href="profile.html" class="menu-item">
+          <i class="fas fa-user-circle menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الملف الشخصي</span>
+            <span class="menu-item-en">Profile</span>
+          </div>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+      <div class="greeting">
+        <div class="greeting-title">مرحباً! 👋</div>
+        <div class="greeting-subtitle">مرحباً بك في منصة إدارة مشاريع التخرج الذكية</div>
+      </div>
+
+      <!-- Progress Timeline Card -->
+      <div class="progress-timeline-card">
+        <h3 class="timeline-title">
+          نظرة عامة على التقدم
+          <span>Progress Overview</span>
+        </h3>
+        <hr>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline-step" data-phase="1">
+            <div class="circle"><i class="bi bi-lightbulb"></i></div>
+            <span>تسليم المقترح<br><small>Proposal</small></span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="timeline-step" data-phase="2">
+            <div class="circle"><i class="bi bi-file-earmark-text"></i></div>
+            <span>جمع المتطلبات<br><small>Requirements</small></span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="timeline-step" data-phase="3">
+            <div class="circle"><i class="bi bi-wrench"></i></div>
+            <span>التصميم<br><small>Design</small></span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="timeline-step" data-phase="4">
+            <div class="circle"><i class="bi bi-code-slash"></i></div>
+            <span>التنفيذ<br><small>Implementation</small></span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="timeline-step" data-phase="5">
+            <div class="circle"><i class="bi bi-bug"></i></div>
+            <span>الفحص<br><small>Testing</small></span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="timeline-step" data-phase="6">
+            <div class="circle"><i class="bi bi-easel"></i></div>
+            <span>العرض النهائي<br><small>Presentation</small></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- project summary -->
+      <aside class="project-summary">
+        <div class="project-summary-card">
+          <div class="card-top">
+            <div>
+              <div class="info-label">اسم المشروع</div>
+              <div class="info-value" id="projectName">—</div>
+            </div>
+            <button class="edit-btn" aria-label="تعديل" title="تعديل">
+              <i class="fa fa-pen"></i>
+            </button>
+          </div>
+
+          <div class="card-row">
+            <div class="info-label">الوصف</div>
+            <div class="info-value" id="projectDesc">—</div>
+            <div class="info-status" id="projectStatus">—</div>
+          </div>
+
+          <!-- ✅ تم إصلاح هذا الجزء -->
+          <div class="card-row">
+            <div class="info-label">أعضاء الفريق</div>
+            <div class="team-members-list" id="teamMembersList"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Weekly Reports -->
+      <div class="weekly-reports-card">
+        <div class="weekly-header">
+          <h3>
+            التقارير الأسبوعية
+            <span>Weekly Reports</span>
+          </h3>
+        </div>
+
+        <div class="weekly-empty">
+          <i class="bi bi-file-earmark-text"></i>
+          <p class="empty-title">لم يتم تقديم أي تقارير بعد</p>
+          <p class="empty-sub">قم بتقديم تقريرك الأسبوعي الأول</p>
+        </div>
+      </div>
+
+      <!-- Supervisor Comments -->
+      <div class="supervisor-comments-card">
+        <h3 class="section-title">
+          ملاحظات المشرف
+          <span>Supervisor Comments</span>
+        </h3>
+        <hr>
+        <div id="commentsContainer"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ✅ سكربت الربط مع API -->
+  <script src="/createdProjectApi.js" defer></script>
+</body>
+
+</html>

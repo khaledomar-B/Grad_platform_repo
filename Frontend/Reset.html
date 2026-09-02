@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>إعادة تعيين كلمة المرور</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #06324a;
+            --mid-blue: #0f4b6b;
+            --accent: #ffd34a;
+            --form-border: #e6eef6;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Tajawal", system-ui, Arial;
+            background: linear-gradient(180deg, #052d46 0%, #083b57 60%);
+            display: grid;
+            place-items: center;
+            padding: 32px;
+            color: #fff;
+            overflow-y: auto;
+            direction: rtl;
+        }
+
+        .wrap {
+            width: 420px;
+            position: relative;
+            text-align: center;
+        }
+
+        .card {
+            background: linear-gradient(180deg, var(--mid-blue), var(--deep-blue));
+            border-radius: 18px;
+            padding: 40px 28px 28px;
+            box-shadow: 0 10px 30px rgba(2, 18, 33, 0.45);
+            position: relative;
+        }
+
+        .logo {
+            width: 86px;
+            height: 86px;
+            border-radius: 50%;
+            background: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -43px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 72%;
+            height: auto;
+            display: block
+        }
+
+        .title {
+            margin-top: 18px;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+        }
+
+        .subtitle {
+            margin-top: 6px;
+            color: #ffd34a;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .description {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #e0e7ff;
+            line-height: 1.5;
+            padding: 0 8px;
+        }
+
+        .form-box {
+            margin-top: 20px;
+            background: #fff;
+            color: #1f2937;
+            border-radius: 12px;
+            padding: 22px;
+            direction: rtl;
+            text-align: right;
+            box-shadow: 0 6px 18px rgba(2, 18, 33, 0.12);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 18px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--form-border);
+            border-radius: 10px;
+            background: #fff;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group input::placeholder {
+            color: #9ca3af;
+        }
+
+        .form-group input:focus {
+            box-shadow: 0 0 0 4px rgba(11, 69, 94, 0.07);
+            border-color: #cfe8f5;
+        }
+
+        .btn-send {
+            width: 100%;
+            margin-top: 8px;
+            background: var(--deep-blue);
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(2, 18, 33, 0.25);
+            transition: background 0.3s ease;
+        }
+
+        .btn-send:hover {
+            background: #042a3a;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 12px;
+            color: #0f3b57;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--deep-blue);
+            text-decoration: underline;
+        }
+
+        @media (max-width:460px) {
+            .wrap {
+                width: 92%
+            }
+
+            .logo {
+                top: -36px;
+                width: 74px;
+                height: 74px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card" role="region" aria-label="reset password card">
+            <div class="logo">
+                <img src="data:image/png;base64,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"
+                    alt="logo">
+            </div>
+
+            <div class="title">إعادة تعيين كلمة المرور</div>
+            <div class="subtitle">Reset Your Password</div>
+
+            <div class="description">
+                أدخل الرمز الذي حصلت عليه من صفحة "نسيت كلمة السر" ثم اختر كلمة مرور جديدة.
+            </div>
+
+            <div class="form-box">
+                <div class="form-group">
+                    <input type="text" id="code" placeholder="رمز التحقق">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="newPassword" placeholder="كلمة المرور الجديدة">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" placeholder="تأكيد كلمة المرور">
+                </div>
+
+                <button class="btn-send" type="button" onclick="handleReset()">
+                    تأكيد
+                </button>
+
+                <a href="login.html" class="back-link">العودة إلى تسجيل الدخول</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // مؤقتًا: فقط نتحقق من الحقول ونرجع المستخدم لصفحة تسجيل الدخول
+        function handleReset() {
+            const code = document.getElementById('code').value.trim();
+            const pass = document.getElementById('newPassword').value.trim();
+            const confirm = document.getElementById('confirmPassword').value.trim();
+
+            if (!code || !pass || !confirm) {
+                alert('الرجاء تعبئة جميع الحقول.');
+                return;
+            }
+            if (pass !== confirm) {
+                alert('كلمتا المرور غير متطابقتين.');
+                return;
+            }
+
+            // هنا لاحقًا تضيف استدعاء الـ API الحقيقي
+            alert('تم تحديث كلمة المرور (ديمو للمناقشة). سيتم تحويلك لصفحة تسجيل الدخول.');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>

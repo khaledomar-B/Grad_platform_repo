@@ -1,0 +1,158 @@
+Project Category Classifier is an AI feature that automatically suggests the best category for a student’s graduation project idea based on the title + description + keywords.
+
+Categories: AI / Web / Mobile / IoT / Data Science
+
+Model: TF-IDF + Logistic Regression (supervised text classification)
+
+Output:
+
+label (predicted category)
+
+confidence_level (Low / Medium / High)
+
+Purpose: help students choose the correct category faster and reduce wrong selections.
+
+Important UX rule: it’s a suggestion. The student can still change it manually.
+
+ما هي هذه الميزة؟ (Arabic)
+
+مصنّف فئة المشروع (Project Category Classifier) هي ميزة ذكاء اصطناعي تقوم باقتراح الفئة الأنسب لفكرة مشروع التخرج اعتمادًا على العنوان + الوصف + الكلمات المفتاحية.
+
+الفئات: AI / Web / Mobile / IoT / Data Science
+
+النموذج: TF-IDF + Logistic Regression (تصنيف نصوص بطريقة Supervised)
+
+المخرجات:
+
+label الفئة المتوقعة
+
+confidence_level مستوى الثقة (Low / Medium / High)
+
+الهدف: تقليل الأخطاء في اختيار الفئة ومساعدة الطالب بسرعة.
+
+ملاحظة مهمة: النتيجة اقتراح ويمكن للطالب تعديلها يدويًا.
+
+Frontend (Raneem) — step by step
+UI placement
+
+On the student “Submit Idea” page (where Title/Description are entered):
+
+Add a button: “Suggest Category (AI)”
+
+Add a category dropdown (already exists usually). The AI button will fill it.
+
+Behavior (step-by-step)
+
+Validate input: if title/description are empty → disable button or show message.
+
+On click Suggest Category:
+
+Send POST request to the classifier service:
+
+Endpoint: POST /predict-category
+
+Body:
+
+{
+  "title": "...",
+  "description": "...",
+  "keywords": "..."
+}
+
+
+Receive response:
+
+{
+  "label": "Web",
+  "confidence_level": "Medium"
+}
+
+
+Update UI:
+
+Set category dropdown = "Web"
+
+Show a small note: Confidence: Medium
+
+Also show: “You can change the category manually”
+
+When student clicks Submit:
+
+Send the final selected category (AI suggested or manually chosen) to the main backend along with the idea fields.
+
+✅ Frontend does not need to store the model or do ML. It only calls the API and displays the result.
+
+Backend (Khaled) — step by step (main system backend)
+
+There are two valid integration options. Pick the easiest for your team.
+
+Option A (fastest): Frontend calls AI, backend only stores
+
+Frontend sends the final idea payload including:
+
+category
+
+confidence_level (optional)
+
+Backend saves into SQL Server.
+
+DB change (recommended)
+
+Add columns to the ideas/projects table:
+
+Category (NVARCHAR)
+
+CategoryConfidenceLevel (NVARCHAR) (optional)
+
+Example:
+
+ALTER TABLE Projects
+ADD Category NVARCHAR(50) NULL,
+    CategoryConfidenceLevel NVARCHAR(10) NULL;
+
+
+When backend receives the idea:
+
+Save Category = "Web"
+
+Save CategoryConfidenceLevel = "Medium" (optional)
+
+✅ This is simplest and works perfectly for demo.
+
+Option B (more “backend-driven”): Backend calls AI service
+
+Student submits idea without category OR with category as empty.
+
+Backend calls AI microservice:
+
+POST /predict-category
+
+Backend receives {label, confidence_level}
+
+Backend stores it in DB and returns it to frontend.
+
+✅ This is more controlled, but slightly more work.
+
+Our current AI microservice behavior (so everyone understands)
+
+Service runs locally at:
+
+http://127.0.0.1:8000
+
+Endpoint:
+
+POST /predict-category
+
+Input:
+
+title, description, keywords
+
+Output:
+
+label + confidence_level
+
+Model files:
+
+model/tfidf_vectorizer.pkl
+
+model/category_model.pkl

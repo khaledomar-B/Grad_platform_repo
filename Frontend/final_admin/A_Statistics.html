@@ -1,0 +1,189 @@
+<!--A_Statistics.html-->
+<!doctype html>
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>لوحة الأدمن - الإحصائيات</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- LOCAL CSS (same folder) -->
+  <link rel="stylesheet" href="/final_admin/style_menu.css">
+  <link rel="stylesheet" href="/final_admin/style_dashboard.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- LOCAL JS -->
+  <script defer src="/final_admin/A_Statistics.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <div class="header-right">
+      <div class="logo-circle">🎓</div>
+      <div>
+        <div class="university-name">جامعة اليرموك</div>
+        <div class="university-subtitle">منصة مشاريع التخرج</div>
+        <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+      </div>
+    </div>
+
+    <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+        stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="user-profile">
+        <div class="user-avatar">أ</div>
+        <div class="user-info">
+          <div class="user-name">Admin</div>
+          <div class="user-role">أدمن</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+       
+        <a href="A_Statistics.html" class="menu-item active">
+          <i class="fas fa-chart-pie menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الإحصائيات والتقارير</span>
+            <span class="menu-item-en">Statistics</span>
+          </div>
+        </a>
+
+        
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- ✅ PRINT-ONLY REPORT HEADER -->
+<div class="print-header">
+  <div class="print-brand">
+    <div class="print-logo">🎓</div>
+    <div class="print-brand-text">
+      <div class="print-uni">جامعة اليرموك</div>
+      <div class="print-sub">منصة مشاريع التخرج — تقرير الإحصائيات</div>
+    </div>
+  </div>
+
+  <div class="print-meta">
+    <div><strong>التاريخ:</strong> <span id="printDate">—</span></div>
+    <div><strong>آخر تحديث:</strong> <span id="printUpdated">—</span></div>
+  </div>
+</div>
+
+<hr class="print-sep" />
+
+<!-- ✅ PRINT-ONLY FOOTER -->
+<div class="print-footer">
+  <span>Yarmouk University – Graduation Projects Platform</span>
+  <span class="print-page"></span>
+</div>
+
+      <div class="greeting">
+        <div class="greeting-title">الإحصائيات والتقارير</div>
+        <div class="greeting-subtitle" id="lastUpdated">آخر تحديث: —</div>
+        <div style="margin-top:12px; display:flex; gap:10px; align-items:center;">
+  <button id="btnReport" class="report-btn" type="button">
+  <i class="fas fa-file-pdf"></i>
+  توليد تقرير
+</button>
+</div>
+      </div>
+
+      <!-- KPI -->
+      <section class="kpi-grid">
+        <div class="kpi-card kpi-yellow">
+          <div class="kpi-left">
+            <div class="kpi-icon">🎯</div>
+            <div class="kpi-text">
+              <div class="kpi-title">قيد المراجعة</div>
+              <div class="kpi-sub">تحتاج موافقة</div>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpiPending">—</div>
+        </div>
+
+        <div class="kpi-card kpi-green">
+          <div class="kpi-left">
+            <div class="kpi-icon">✅</div>
+            <div class="kpi-text">
+              <div class="kpi-title">مكتملة</div>
+              <div class="kpi-sub">مشاريع منتهية</div>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpiCompleted">—</div>
+        </div>
+
+        <div class="kpi-card kpi-purple">
+          <div class="kpi-left">
+            <div class="kpi-icon">⏱️</div>
+            <div class="kpi-text">
+              <div class="kpi-title">قيد التنفيذ</div>
+              <div class="kpi-sub">المشاريع النشطة</div>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpiInProgress">—</div>
+        </div>
+
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-left">
+            <div class="kpi-icon">📄</div>
+            <div class="kpi-text">
+              <div class="kpi-title">إجمالي المشاريع</div>
+              <div class="kpi-sub">جميع المشاريع المسجلة</div>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpiTotal">—</div>
+        </div>
+      </section>
+
+      <!-- Charts -->
+      <section class="charts-grid">
+        <div class="card-box">
+          <div class="card-title">المشاريع حسب التخصص</div>
+          <div class="chart-wrap"><canvas id="majorBarChart"></canvas></div>
+        </div>
+
+        <div class="card-box">
+          <div class="card-title">توزيع حالة المشاريع</div>
+          <div class="chart-wrap"><canvas id="statusPieChart"></canvas></div>
+        </div>
+      </section>
+
+      <div class="card-box" style="margin-top:14px;">
+           <div class="card-title">
+            تصنيف المشاريع حسب الفئة
+           <span style="font-size:13px;color:#6b7280;">
+            (AI / Web / Mobile / IoT / Data Science)
+            </span>
+          </div>
+        <div class="chart-wrap"><canvas id="categoryBarChart"></canvas></div>
+       </div>
+
+    </main>
+  </div>
+</body>
+</html>

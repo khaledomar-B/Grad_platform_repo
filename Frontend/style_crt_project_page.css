@@ -1,0 +1,422 @@
+:root {
+    --success-green: #10b981;
+    --light-gray: #e5e7eb;
+    --text-gray: #6b7280;
+}
+
+/* ============= GENERAL ============= */
+body {
+    font-family: 'Tajawal', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: #f6f7fb;
+    margin: 0;
+    color: #1f2937;
+}
+
+
+.progress-timeline-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    margin-bottom: 30px;
+}
+
+.timeline-title {
+    font-size: 16px;
+    margin-bottom:
+        25px;
+    color: #0b3a6a;
+}
+
+.timeline-title span {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+
+/* =====================
+   TIMELINE BASE
+===================== */
+.timeline {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    overflow-x: auto;
+    /* ⭐ سحب أفقي */
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.timeline-step .circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.timeline-step.active .circle {
+    background: #16a34a;
+    color: #fff;
+}
+
+.timeline-step span {
+    margin-top: 6px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.line {
+    flex: 1;
+    height: 3px;
+    background: #d1d5db;
+    border-radius: 2px;
+}
+
+
+@media (max-width: 575px) {
+    .timeline {
+        padding: 12px 8px;
+    }
+
+    .timeline-step {
+        min-width: 80px;
+    }
+
+    .timeline-step .circle {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .timeline-step span {
+        font-size: 9px;
+        line-height: 1.3;
+        white-space: normal;
+    }
+
+    .line {
+        flex: 0 0 24px;
+        height: 2px;
+    }
+}
+
+/* =====================
+   TABLET
+===================== */
+@media (max-width: 991px) {
+    .timeline {
+        gap: 10px;
+    }
+
+    .timeline-step {
+        min-width: 75px;
+    }
+
+    .timeline-step .circle {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+
+    .timeline-step span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .timeline-step small {
+        display: block;
+        font-size: 8px;
+        opacity: 0.6;
+    }
+}
+
+/* =====================
+   IPHONE
+===================== */
+@media (max-width: 767px) {
+    .timeline {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 14px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .timeline-step {
+        min-width: 68px;
+        flex-shrink: 0;
+    }
+
+    .timeline-step .circle {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .timeline-step span {
+        font-size: 11px;
+    }
+
+    .line {
+        width: 30px;
+        flex-shrink: 0;
+    }
+}
+
+
+
+
+
+
+/* إخفاء شريط التمرير الأفقي على الويب */
+.timeline::-webkit-scrollbar {
+    height: 0;
+}
+
+
+/* ============= PROJECT SUMMARY (right) ============= */
+.project-summary .project-summary-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+}
+
+.project-summary .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.project-summary .edit-btn {
+    background: #0f4b6b;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.project-summary .card-row {
+    margin-bottom: 10px;
+}
+
+.project-summary .info-label {
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.project-summary .info-value {
+    font-size: 15px;
+    color: #1f2937;
+    font-weight: 600;
+    text-align: right;
+}
+
+.project-summary .info-status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 3px 10px;
+    background: #fef3c7;
+    color: #b45309;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* team members */
+.team-members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.team-member-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid var(--light-gray);
+}
+
+.member-initial {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e5a8e, #0f4b6b);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.member-name {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/*      تقارير أسبوعية       */
+
+.weekly-reports-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    margin-top: 24px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.weekly-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.weekly-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #0b3a6a;
+}
+
+.weekly-header h3 span {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+.weekly-empty {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.weekly-empty i {
+    font-size: 54px;
+    color: #d1d5db;
+    margin-bottom: 16px;
+}
+
+.empty-title {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.empty-sub {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+
+/* ============================= */
+/*      تعليقات المشرفين       */
+
+.supervisor-comments-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 16px;
+    color: #0b3a6a;
+}
+
+.section-title span {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* Empty State */
+.comments-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.comments-empty i {
+    font-size: 48px;
+    color: #d1d5db;
+    margin-bottom: 15px;
+}
+
+.comments-empty p {
+    font-size: 14px;
+}
+
+/* Comment Card */
+.comment-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    animation: fadeUp .3s ease;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: #0b3a6a;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #111827;
+    line-height: 1.6;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

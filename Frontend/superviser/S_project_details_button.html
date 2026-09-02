@@ -1,0 +1,1144 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تفاصيل المشروع</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/style_menu.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: #f5f7fb;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: #0b3a6a;
+    }
+
+    .page {
+      padding: 30px 40px;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .back-btn {
+      border: 1px solid #d1d5db;
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .title p {
+      margin: 4px 0 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .05);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .members-count {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .members-count i {
+      background: #f3e8ff;
+      color: #9333ea;
+      padding: 6px;
+      border-radius: 50%;
+    }
+
+    .members {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .member-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      justify-content: space-between;
+    }
+
+    .member-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #0b3a6a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      flex: 0 0 auto;
+    }
+
+    .member-info {
+      min-width: 0;
+    }
+
+    .member-info h4 {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .member-info small {
+      color: #64748b;
+      font-size: 13px;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 520px;
+    }
+
+    .role-badge {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid #d1d5db;
+      background: #f8fafc;
+      color: #0b3a6a;
+      flex: 0 0 auto;
+    }
+
+    .role-badge.owner {
+      background: #fff7ed;
+      border-color: #fed7aa;
+      color: #9a3412;
+    }
+
+    .description h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .description p {
+      margin: 0;
+      line-height: 1.7;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    .section-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* Card */
+    .stage-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid #e5e7eb;
+      position: relative;
+    }
+
+    /* Status Colors */
+    .stage--green {
+      border-right: 6px solid #22c55e;
+    }
+
+    .stage--blue {
+      border-right: 6px solid #2563eb;
+    }
+
+    .stage--gray {
+      border-right: 6px solid #9ca3af;
+    }
+
+    /* Header */
+    .stage-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .stage-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .stage-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex: 0 0 auto;
+    }
+
+    .stage--green .stage-number {
+      background: #22c55e;
+    }
+
+    .stage--blue .stage-number {
+      background: #2563eb;
+    }
+
+    .stage--gray .stage-number {
+      background: #9ca3af;
+    }
+
+    /* Badge */
+    .stage-badge {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .stage--green .stage-badge {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .stage--blue .stage-badge {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .stage--gray .stage-badge {
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    /* Submissions Grid */
+    .submissions-grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .submission-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .submission-card.done {
+      border-color: #bbf7d0;
+      background: #f0fdf4;
+    }
+
+    .submission-card.pending {
+      background: #f9fafb;
+    }
+
+    .submission-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      margin-bottom: 6px;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .submission-title {
+      font-size: 14px;
+    }
+
+    .submission-meta {
+      font-size: 13px;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .comment-box {
+      margin-top: 10px;
+      background: #f1f5f9;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 13px;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    .files-list {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .file-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 8px 10px;
+      background: #fff;
+      text-decoration: none;
+      color: #0b3a6a;
+      font-size: 13px;
+    }
+
+    .file-link span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .empty {
+      margin-top: 16px;
+      color: #9ca3af;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .comment-modal {
+      background: #fff;
+      width: 420px;
+      max-width: 90%;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+      padding: 20px 22px;
+      animation: fadeUp .25s ease;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #0b3a6a;
+    }
+
+    .close-btn {
+      border: none;
+      background: transparent;
+      font-size: 22px;
+      cursor: pointer;
+      color: #64748b;
+    }
+
+    .modal-body label {
+      font-size: 14px;
+      color: #334155;
+    }
+
+    .modal-body textarea {
+      width: 100%;
+      height: 120px;
+      margin-top: 8px;
+      border-radius: 14px;
+      border: 1px solid #cbd5f5;
+      padding: 12px;
+      font-size: 14px;
+      resize: none;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .modal-body textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn-primary {
+      background: #0b3a6a;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-secondary {
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      padding: 8px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 6px;
+    }
+
+    .submission-actions-top {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .action-chip {
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .action-chip.primary {
+      background: #d8b12a;
+      border-color: #d8b12a;
+      color: #111827;
+    }
+
+    .action-chip i {
+      font-size: 16px;
+    }
+
+    .action-chip:disabled{
+      opacity:.55;
+      cursor:not-allowed;
+    }
+
+    input[type="number"]{
+      outline:none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <div class="header-right">
+      <div class="logo-circle">🎓</div>
+      <div>
+        <div class="university-name">جامعة الرموك</div>
+        <div class="university-subtitle">منصة مشاريع التخرج</div>
+        <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+      </div>
+    </div>
+
+    <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+        stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 21H5a2 0 0 1-2-2V5a2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    function handleLogout() {
+      try { localStorage.removeItem("token"); } catch { }
+      window.location.href = '/superviser/S_login.html';
+    }
+  </script>
+
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <div class="user-profile">
+        <div class="user-avatar" id="menuUserAvatar">د</div>
+        <div class="user-info">
+          <div class="user-name" id="menuUserName">مشرف</div>
+          <div class="user-role">supervisor</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="/superviser/S_Dashboard.html" class="menu-item">
+          <i class="fas fa-th-large menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">لوحة التحكم</span>
+            <span class="menu-item-en">Dashboard</span>
+          </div>
+        </a>
+
+        <a href="/superviser/S_team_management.html" class="menu-item">
+          <i class="fas fa-lightbulb menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">إدارة الفرق</span>
+            <span class="menu-item-en">Team Management</span>
+          </div>
+        </a>
+
+        <a href="/superviser/S_projects.html" class="menu-item active">
+          <i class="fas fa-calendar-alt menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">المشاريع</span>
+            <span class="menu-item-en">Projects</span>
+          </div>
+        </a>
+
+        <a href="/superviser/S_PhasesManager.html" class="menu-item">
+          <i class="fas fa-user-circle menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar"> إدارة المراحل</span>
+            <span class="menu-item-en">Stage management</span>
+          </div>
+        </a>
+
+        <a href="/superviser/S_messages.html" class="menu-item">
+          <i class="fas fa-comment-alt menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">المحادثات</span>
+            <span class="menu-item-en">Messages</span>
+          </div>
+        </a>
+
+        <a href="/superviser/S_notifications.html" class="menu-item">
+          <i class="fas fa-bell menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الإشعارات</span>
+            <span class="menu-item-en">Notifications</span>
+          </div>
+        </a>
+
+        <a href="/superviser/S_profile.html" class="menu-item">
+          <i class="fas fa-user-circle menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الملف الشخصي</span>
+            <span class="menu-item-en">Profile</span>
+          </div>
+        </a>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <div class="page-header">
+        <div class="title">
+          <h1 id="pageTitle">تفاصيل المشروع</h1>
+          <p id="projectTitle">—</p>
+        </div>
+        <button class="back-btn" onclick="history.back()">→ العودة للقائمة</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>نظرة عامة على المشروع</h3>
+          <div class="members-count">
+            <i class="bi bi-people"></i>
+            <span id="membersCount">—</span>
+          </div>
+        </div>
+
+        <div class="members" id="membersList"></div>
+
+        <div class="section-header-flex">
+          <div class="description" style="flex:1;min-width:260px;">
+            <h4>وصف المشروع:</h4>
+            <p id="projectDescription"></p>
+          </div>
+
+          <div class="card" id="progressSection" style="display:none; margin-top:0; min-width:260px; flex:0 0 320px;">
+            <h4>نسبة الإنجاز الإجمالية</h4>
+            <div style="margin-top:10px;">
+              <span id="progressValue">0%</span>
+              <div style="height:10px;background:#e5e7eb;border-radius:6px;overflow:hidden;margin-top:6px;">
+                <div id="progressBar" style="height:100%;width:0%;background:#0b3a6a;transition:width .4s;"></div>
+              </div>
+              <div class="hint" id="progressHint"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="stagesSection" style="display:none; margin-top:20px;">
+        <div class="card-header">
+          <h3>مراحل المشروع</h3>
+        </div>
+        <div id="stagesContainer"></div>
+      </div>
+
+      <!-- Comment Modal -->
+      <div class="modal-overlay" id="commentModal">
+        <div class="comment-modal">
+          <div class="modal-header">
+            <h3>تعليق على التسليم</h3>
+            <button class="close-btn" onclick="closeModal()">×</button>
+          </div>
+
+          <div class="modal-body">
+            <label>التعليق</label>
+            <textarea id="commentText" placeholder="اكتب ملاحظاتك على التسليم..."></textarea>
+            <div class="hint" id="commentHint"></div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-primary" onclick="saveComment()">حفظ التعليق</button>
+            <button class="btn-secondary" onclick="closeModal()">إلغاء</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grade Modal -->
+      <div class="modal-overlay" id="gradeModal">
+        <div class="comment-modal">
+          <div class="modal-header">
+            <h3>تقييم المرحلة</h3>
+            <button class="close-btn" onclick="closeGradeModal()">×</button>
+          </div>
+
+          <div class="modal-body">
+            <label>العلامة (من 100)</label>
+            <input
+              type="number"
+              id="gradeValue"
+              min="0"
+              max="100"
+              placeholder="مثال: 85"
+              style="width:100%;padding:10px;border-radius:10px;border:1px solid #cbd5e1;margin-top:6px;"
+            />
+
+            <label style="margin-top:12px;display:block;">ملاحظة (اختياري)</label>
+            <textarea id="gradeNote" placeholder="ملاحظات على أداء المرحلة..."></textarea>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-primary" onclick="saveGrade()">حفظ التقييم</button>
+            <button class="btn-secondary" onclick="closeGradeModal()">إلغاء</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // =============================
+        // API Settings
+        // =============================
+        const API_BASE = "https://nonverbalized-gushier-alessandra.ngrok-free.dev";
+        const token = (() => { try { return localStorage.getItem("token"); } catch { return null; } })();
+
+        async function apiFetch(path, options = {}) {
+          const headers = options.headers ? { ...options.headers } : {};
+          headers["ngrok-skip-browser-warning"] = "true";
+          headers["Accept"] = "application/json";
+          if (token) headers["Authorization"] = `Bearer ${token}`;
+          if (options.body && !headers["Content-Type"]) headers["Content-Type"] = "application/json";
+
+          const res = await fetch(API_BASE + path, { ...options, headers, cache: "no-store" });
+
+          if (res.status === 401 || res.status === 403) {
+            try { localStorage.removeItem("token"); } catch { }
+            window.location.href = "/superviser/S_login.html";
+            return null;
+          }
+
+          const ct = res.headers.get("content-type") || "";
+          const txt = await res.text();
+
+          if (!res.ok) {
+            try {
+              if (ct.includes("application/json")) {
+                const j = txt ? JSON.parse(txt) : {};
+                throw new Error(j.message || `HTTP ${res.status}`);
+              }
+            } catch (e) {
+              throw new Error(txt || `HTTP ${res.status}`);
+            }
+          }
+
+          if (!txt) return null;
+
+          if (txt.trim().startsWith("<")) {
+            console.error("API returned HTML:", txt.slice(0, 200));
+            throw new Error("API رجع HTML بدل JSON (غالباً ngrok warning)");
+          }
+
+          return JSON.parse(txt);
+        }
+
+        function formatDate(dt) {
+          if (!dt) return "";
+          const d = new Date(dt);
+          if (isNaN(d.getTime())) return String(dt);
+          return d.toLocaleString("ar-EG");
+        }
+
+        // =============================
+        // Read Params
+        // =============================
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get("id") || params.get("projectId");
+
+        if (!projectId) {
+          alert("projectId غير موجود بالرابط");
+          history.back();
+        }
+
+        // =============================
+        // Helpers
+        // =============================
+        function getStageStatus(stage) {
+          const s = (stage.status || "").toLowerCase();
+          if (s === "done" || s === "completed") return "completed";
+          if (s === "open" || s === "submitted") return "in_progress";
+          return "not_started";
+        }
+
+        function getStageClass(status) {
+          if (status === "completed") return "stage--green";
+          if (status === "in_progress") return "stage--blue";
+          return "stage--gray";
+        }
+
+        function getStageLabel(status) {
+          if (status === "completed") return "مكتملة";
+          if (status === "in_progress") return "قيد التنفيذ";
+          return "مقفلة/لم تبدأ";
+        }
+
+        function calcOverallProgress(milestones) {
+          if (!milestones || !milestones.length) return { percent: 0, done: 0, total: 0 };
+          const total = milestones.length;
+          const done = milestones.filter(m => getStageStatus(m) === "completed").length;
+          const percent = Math.round((done / total) * 100);
+          return { percent, done, total };
+        }
+
+        function escapeHtml(str) {
+          return String(str)
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+        }
+
+        // ✅ FIX: إزالة تكرار المالك
+        function dedupeMembers(members) {
+          const map = new Map();
+
+          (members || []).forEach(m => {
+            const key = (m.studentId != null)
+              ? `id:${m.studentId}`
+              : (m.email ? `email:${String(m.email).toLowerCase()}` : `name:${(m.name || m.fullName || "").toLowerCase()}`);
+
+            const isOwner = (m.isOwner === true) || String(m.role || "").toLowerCase() === "owner";
+
+            if (!map.has(key)) {
+              map.set(key, { ...m, __isOwner: isOwner });
+              return;
+            }
+
+            const existing = map.get(key);
+            const existingIsOwner = existing.__isOwner === true;
+
+            if (!existingIsOwner && isOwner) {
+              map.set(key, { ...m, __isOwner: true });
+              return;
+            }
+
+            const score = (x) => (x.email ? 2 : 0) + ((x.name || x.fullName) ? 1 : 0);
+            if (score(m) > score(existing)) {
+              map.set(key, { ...m, __isOwner: existingIsOwner || isOwner });
+            }
+          });
+
+          const arr = Array.from(map.values());
+          arr.sort((a, b) => (b.__isOwner ? 1 : 0) - (a.__isOwner ? 1 : 0));
+          return arr;
+        }
+
+        function renderMembers(members) {
+          const membersList = document.getElementById("membersList");
+          membersList.innerHTML = "";
+
+          const clean = dedupeMembers(members);
+
+          if (!clean || !clean.length) {
+            membersList.innerHTML = `<div class="empty">لا يوجد أعضاء</div>`;
+            return;
+          }
+
+          clean.forEach(member => {
+            const name = member.name || member.fullName || member.studentName || "طالب";
+            const email = member.email || "";
+            const isOwner = member.__isOwner === true;
+
+            membersList.innerHTML += `
+              <div class="member-card">
+                <div class="member-left">
+                  <div class="avatar">${(name[0] || "ط")}</div>
+                  <div class="member-info">
+                    <h4>${name}</h4>
+                    <small>${email}</small>
+                  </div>
+                </div>
+                ${isOwner ? `<span class="role-badge owner">مالك الفريق</span>` : `<span class="role-badge">عضو</span>`}
+              </div>
+            `;
+          });
+        }
+
+        // ✅ اجمع تسليمات المرحلة من أي شكل يرجعه الباك
+        function normalizeStageSubmissions(stage) {
+          if (Array.isArray(stage.submissions) && stage.submissions.length) return stage.submissions;
+          if (stage.latestSubmission) return [stage.latestSubmission];
+          if (stage.latestsubmission) return [stage.latestsubmission];
+          if (stage.mySubmission) return [stage.mySubmission];
+          if (stage.submission) return [stage.submission];
+          if (stage.latest) return [stage.latest];
+          return [];
+        }
+
+        function renderStages(milestones) {
+          const container = document.getElementById("stagesContainer");
+          container.innerHTML = "";
+
+          if (!milestones || !milestones.length) {
+            container.innerHTML = `<div class="empty">لا توجد مراحل</div>`;
+            return;
+          }
+
+          milestones.forEach(stage => {
+            const status = getStageStatus(stage);
+            const stageNo = stage.order ?? stage.milestoneId ?? stage.id ?? "";
+            const title = stage.name || stage.title || "مرحلة";
+
+            const submissions = normalizeStageSubmissions(stage);
+
+            // ✅ آخر تسليم لاستخدام زر التعليق مرة واحدة لكل مرحلة
+            const latestSub = submissions.length
+              ? submissions.reduce((a, b) => {
+                  const da = new Date(a.uploadedAt || a.createdAt || a.submittedAt || 0).getTime();
+                  const db = new Date(b.uploadedAt || b.createdAt || b.submittedAt || 0).getTime();
+                  return db >= da ? b : a;
+                })
+              : null;
+
+            const latestSubId = latestSub ? (latestSub.submissionId ?? latestSub.id) : null;
+            const latestComment = latestSub ? (latestSub.supervisorComment || "") : "";
+
+            const submissionsHtml = submissions.length ? `
+              <div class="submissions-grid">
+                ${submissions.map(sub => renderSubmissionCard(sub)).join("")}
+              </div>
+            ` : `<div class="empty">لا يوجد تسليمات لهذه المرحلة</div>`;
+
+            container.innerHTML += `
+              <div class="stage-card ${getStageClass(status)}">
+                <div class="stage-header">
+                  <div>
+                    <span class="stage-badge">${getStageLabel(status)}</span>
+                    <div class="stage-title">${title}</div>
+                    <div class="hint">
+                      ${stage.startAt ? `📅 من: ${formatDate(stage.startAt)}` : ""}
+                      ${stage.endAt ? ` | إلى: ${formatDate(stage.endAt)}` : ""}
+                    </div>
+                  </div>
+                  <div class="stage-number">${stageNo}</div>
+                </div>
+
+                <!-- ✅ الزرين مرة واحدة لكل مرحلة -->
+                <div class="submission-actions-top">
+                  <button
+                    type="button"
+                    class="action-chip js-stage-comment-btn"
+                    data-submission-id="${latestSubId ?? ""}"
+                    data-comment="${escapeHtml(latestComment)}"
+                    ${latestSubId ? "" : "disabled"}
+                    title="${latestSubId ? "" : "لا يوجد تسليم لعمل تعليق"}"
+                  >
+                    <i class="bi bi-chat"></i>
+                    ${latestComment ? "تعديل تعليق" : "إضافة تعليق"}
+                  </button>
+
+                  <button
+                    type="button"
+                    class="action-chip primary js-stage-grade-btn"
+                    data-milestone-id="${stage.milestoneId ?? stage.id ?? ""}"
+                  >
+                    <i class="bi bi-star"></i>
+                    تقييم الطلاب
+                  </button>
+                </div>
+
+                <h4 style="margin-top:16px;">التسليمات (${submissions.length}):</h4>
+                ${submissionsHtml}
+              </div>
+            `;
+          });
+        }
+
+        function renderSubmissionCard(sub) {
+          const studentName = sub.studentName || sub.ownerName || "طالب";
+          const uploadedAt = sub.uploadedAt || sub.createdAt || sub.submittedAt;
+          const status = (sub.status || "").toLowerCase();
+
+          const isDone = status === "approved" || status === "done";
+          const cardClass = isDone ? "done" : "pending";
+
+          const comment = (sub.supervisorComment || "").trim();
+          const files = Array.isArray(sub.files) ? sub.files : [];
+
+          return `
+            <div class="submission-card ${cardClass}">
+              <div class="submission-header">
+                <span class="submission-title">👤 ${studentName}</span>
+                <span>${isDone ? "✔️" : "⏳"}</span>
+              </div>
+
+              <div class="submission-meta">
+                الحالة: <strong>${sub.status || "Submitted"}</strong><br>
+                ${uploadedAt ? `📅 ${formatDate(uploadedAt)}` : ""}
+              </div>
+
+              ${files.length ? `
+                <div class="files-list">
+                  ${files.map(f => `
+                    <a class="file-link" href="${f.url || ("/" + (f.filePath || ""))}" target="_blank">
+                      <span>📄 ${f.name || f.originalFileName || "ملف"}</span>
+                      <span>⬇</span>
+                    </a>
+                  `).join("")}
+                </div>
+              ` : `<div class="hint">لا يوجد ملفات مرفقة</div>`}
+
+              ${comment ? `
+                <div class="comment-box">
+                  <strong>💬 تعليق المشرف:</strong><br>
+                  ${escapeHtml(comment).replace(/\n/g, "<br>")}
+                </div>
+              ` : ``}
+            </div>
+          `;
+        }
+
+        // =============================
+        // Comment Modal state
+        // =============================
+        let currentSubmissionId = null;
+
+        function openCommentModal(submissionId, currentComment) {
+          currentSubmissionId = submissionId;
+          document.getElementById("commentText").value = currentComment || "";
+          document.getElementById("commentHint").textContent = submissionId ? `SubmissionId: ${submissionId}` : "";
+          document.getElementById("commentModal").style.display = "flex";
+        }
+
+        function closeModal() {
+          document.getElementById("commentModal").style.display = "none";
+          document.getElementById("commentText").value = "";
+          document.getElementById("commentHint").textContent = "";
+          currentSubmissionId = null;
+        }
+
+        async function saveComment() {
+          const text = document.getElementById("commentText").value.trim();
+          if (!currentSubmissionId) return;
+
+          try {
+            await apiFetch(`/api/supervisor/projects/submissions/${currentSubmissionId}/review`, {
+              method: "PUT",
+              body: JSON.stringify({
+                status: "Approved",
+                supervisorComment: text
+              })
+            });
+
+            closeModal();
+            await loadProject();
+          } catch (e) {
+            alert("فشل حفظ التعليق: " + e.message);
+          }
+        }
+
+        // =============================
+        // Grade Modal state
+        // =============================
+        let currentMilestoneId = null;
+
+        function openGradeModal(milestoneId) {
+          currentMilestoneId = milestoneId;
+          document.getElementById("gradeValue").value = "";
+          document.getElementById("gradeNote").value = "";
+          document.getElementById("gradeModal").style.display = "flex";
+        }
+
+        function closeGradeModal() {
+          document.getElementById("gradeModal").style.display = "none";
+          currentMilestoneId = null;
+        }
+
+        async function saveGrade() {
+          const grade = Number(document.getElementById("gradeValue").value);
+          const note = (document.getElementById("gradeNote").value || "").trim();
+
+          if (!currentMilestoneId) return;
+
+          if (Number.isNaN(grade) || grade < 0 || grade > 100) {
+            alert("الرجاء إدخال علامة صحيحة بين 0 و 100");
+            return;
+          }
+
+          try {
+            await apiFetch(`/api/supervisor/milestones/${currentMilestoneId}/grade`, {
+              method: "POST",
+              body: JSON.stringify({ grade, note })
+            });
+
+            closeGradeModal();
+            alert("تم حفظ التقييم بنجاح ✅");
+            await loadProject();
+          } catch (e) {
+            alert("فشل حفظ التقييم: " + e.message);
+          }
+        }
+
+        // =============================
+        // Load project
+        // =============================
+        async function loadProject() {
+          try {
+            const data = await apiFetch(`/api/supervisor/projects/${projectId}/details`);
+            if (!data) return;
+
+            document.getElementById("projectTitle").textContent = data.title || "—";
+            document.getElementById("pageTitle").textContent = `تفاصيل المشروع #${data.projectId || projectId}`;
+            document.getElementById("projectDescription").textContent = data.description || "—";
+
+            const members = data.members || [];
+            const cleanMembers = dedupeMembers(members);
+            document.getElementById("membersCount").textContent = `أعضاء الفريق (${cleanMembers.length} طلاب)`;
+            renderMembers(members);
+
+            const milestones = data.milestones || [];
+            const stagesSection = document.getElementById("stagesSection");
+            const progressSection = document.getElementById("progressSection");
+            const progressBar = document.getElementById("progressBar");
+            const progressValue = document.getElementById("progressValue");
+            const progressHint = document.getElementById("progressHint");
+
+            if (milestones.length) {
+              stagesSection.style.display = "block";
+              renderStages(milestones);
+
+              const { percent, done, total } = calcOverallProgress(milestones);
+              progressSection.style.display = "block";
+              progressBar.style.width = percent + "%";
+              progressValue.textContent = percent + "%";
+              progressHint.textContent = `مراحل مكتملة: ${done} من ${total}`;
+            } else {
+              stagesSection.style.display = "none";
+              progressSection.style.display = "none";
+            }
+          } catch (e) {
+            alert("فشل تحميل بيانات المشروع: " + e.message);
+          }
+        }
+
+        document.getElementById("stagesContainer").addEventListener("click", function (e) {
+          const stageCommentBtn = e.target.closest(".js-stage-comment-btn");
+          if (stageCommentBtn && !stageCommentBtn.disabled) {
+            const submissionId = Number(stageCommentBtn.dataset.submissionId);
+            const comment = (stageCommentBtn.dataset.comment || "");
+            openCommentModal(submissionId, comment);
+            return;
+          }
+
+          const stageGradeBtn = e.target.closest(".js-stage-grade-btn");
+          if (stageGradeBtn) {
+            const milestoneId = Number(stageGradeBtn.dataset.milestoneId);
+            openGradeModal(milestoneId);
+            return;
+          }
+        });
+
+        // Start
+        loadProject();
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

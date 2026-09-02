@@ -1,0 +1,458 @@
+/* Main Header */
+.main-header {
+    background: linear-gradient(180deg, #083d6b, #062e4d);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.main-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.main-header p {
+    font-size: 14px;
+    color: #dbeafe;
+    margin: 1px;
+}
+
+.main-header .header-icon {
+    font-size: 36px;
+    /* حجم الأيقونة */
+
+    margin-left: 20px;
+    /* مسافة بين الأيقونة والنصوص */
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial;
+    background: #f5f7fa;
+    padding: 20px;
+}
+
+
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 20px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    overflow: hidden;
+}
+
+.team-header {
+    background: linear-gradient(180deg, #083d6b, #062e4d);
+    color: white;
+    padding: 18px;
+    position: relative;
+}
+
+.team-counter {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(255, 255, 255, .15);
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.team-body {
+    padding: 16px;
+}
+
+.member-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.member-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #0b4a87;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.member-actions button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.icon-btn i {
+    font-size: 18px;
+}
+
+/* زر النقل */
+.icon-btn.transfer {
+    color: #2563eb;
+}
+
+.icon-btn.transfer:hover {
+    background: #eff6ff;
+    transform: translateY(-1px);
+}
+
+/* زر الحذف */
+.icon-btn.delete {
+    color: #dc2626;
+}
+
+.icon-btn.delete:hover {
+    background: #fee2e2;
+    transform: translateY(-1px);
+}
+
+.member-actions {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed #94a3b8;
+    border-radius: 10px;
+    background: #f8fafc;
+    cursor: pointer;
+    color: #0b4a87;
+}
+
+.add-btn:hover {
+    border-color: #0b4a87;
+    border-width: 1px;
+    background-color: rgba(0, 0, 0, 0.032);
+
+}
+
+
+
+
+
+
+/* القسم كامل */
+.no-team-section {
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    margin-bottom: 20px;
+}
+
+/* الشريط الرمادي */
+.no-team-header {
+    background: linear-gradient(180deg, #f3f4f6, #e5e7eb);
+    padding: 14px 18px;
+    margin-bottom: 10px;
+}
+
+
+/* العنوان */
+.no-team-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* العدد */
+.no-team-count {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* الأيقونة */
+.no-team-header-right i {
+    font-size: 25px;
+    color: #0f172a;
+}
+
+.no-team-title {
+    margin: 24px 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* الحاوية */
+.no-team-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    /* ✅ يلف الكروت */
+
+    padding: 18px;
+
+}
+
+/* الكرت */
+.no-team-card {
+    background: #ffffff;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #dbe1ea;
+    min-width: 260px;
+    /* ✅ نفس العرض */
+    flex: 1 1 260px;
+    /* ✅ Grid مرن */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* الاسم */
+.no-team-card .name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+/* التخصص */
+.no-team-card .major {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* الأفاتار */
+.no-team-card .avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #64748b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+
+/* ===== Modal ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    width: 320px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.modal-actions .primary {
+    background: #0b4a87;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+/* Toast */
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #16a34a;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: none;
+}
+
+/* =========================
+   Modal Overlay
+========================= */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(2px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* =========================
+   Modal Container
+========================= */
+.modal {
+    background: #ffffff;
+    width: 420px;
+    max-width: 92%;
+    border-radius: 14px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    padding: 20px 22px 18px;
+    animation: modalIn 0.25s ease;
+    direction: rtl;
+}
+
+/* Animation */
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================
+   Modal Header
+========================= */
+.modal h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+
+
+/* Sub text */
+.modal small,
+.modal p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 12px;
+}
+
+/* =========================
+   Info Box (Current Team)
+========================= */
+.modal .info-box {
+    background: #f0f7ff;
+    border: 1px solid #dbeafe;
+    color: #1d4ed8;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* =========================
+   Select
+========================= */
+.modal select {
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    margin-bottom: 18px;
+}
+
+.modal select:focus {
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* =========================
+   Modal Actions
+========================= */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Cancel */
+.modal-actions button:first-child {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: #334155;
+}
+
+/* Primary */
+.modal-actions .primary {
+    background: #8aa3bd;
+    color: #ffffff;
+}
+
+.modal-actions .primary:hover {
+    filter: brightness(0.95);
+}
+
+/* =========================
+   Disabled Primary (like image)
+========================= */
+.modal-actions .primary:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.85;
+}

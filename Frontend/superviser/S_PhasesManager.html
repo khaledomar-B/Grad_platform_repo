@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stage Management - Graduation Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="/superviser/S_Dashboard.js" defer></script>
+    <link rel="stylesheet" href="/style_menu.css">
+    <script src="/superviser/S_PhasesManager.js" defer></script>
+    <link rel="stylesheet" href="/superviser/S_PhasesManager.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- toggle button for mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <!-- university info -->
+        <div class="header-right">
+            <div class="logo-circle">🎓</div>
+            <div>
+                <div class="university-name">جامعة الرموك</div>
+                <div class="university-subtitle">منصة مشاريع التخرج</div>
+                <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+            </div>
+        </div>
+
+        <!-- logout button -->
+        <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar"></div>
+                <div class="user-info">
+                    <span class="user-name" id="menuUserName"></span>
+                    <div class="user-role">supervisor</div>
+                </div>
+            </div>
+
+
+            <nav class="menu">
+                <a href="/superviser/S_Dashboard.html" class="menu-item ">
+                    <i class="fas fa-th-large menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">لوحة التحكم</span>
+                        <span class="menu-item-en">Dashboard</span>
+                    </div>
+
+                </a>
+
+                <a href="/superviser/S_team_management.html" class="menu-item ">
+                    <i class="fas fa-lightbulb menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">إدارة الفرق</span>
+                        <span class="menu-item-en">Team Management</span>
+                    </div>
+
+                </a>
+
+                <a href="/superviser/S_projects.html" class="menu-item">
+                    <i class="fas fa-calendar-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">المشاريع</span>
+                        <span class="menu-item-en">Projects</span>
+                    </div>
+
+                </a>
+                <a href="/superviser/S_PhasesManager.html" class="menu-item active">
+                    <i class="fas fa-user-circle menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar"> إدارة المراحل</span>
+                        <span class="menu-item-en">Stage management</span>
+                    </div>
+                </a>
+
+                <a href="./S_messages.html" class="menu-item">
+                    <i class="fas fa-comment-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">المحادثات</span>
+                        <span class="menu-item-en">Messages</span>
+                    </div>
+                </a>
+
+
+                <a href="./S_notifications.html" class="menu-item">
+                    <i class="fas fa-bell menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الإشعارات</span>
+                        <span class="menu-item-en">Notifications</span>
+                    </div>
+
+                </a>
+
+                <a href="./S_profile.html" class="menu-item">
+                    <i class="fas fa-user-circle menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الملف الشخصي</span>
+                        <span class="menu-item-en">Profile</span>
+                    </div>
+
+                </a>
+            </nav>
+        </aside>
+
+
+
+        <!-- محتوى الصفحة -->
+        <main class="main-content">
+            <section class="phases-page">
+
+                <!-- هيدر الصفحة -->
+                <header class="phases-page-header">
+                    <div class="phases-icon-circle">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <div>
+                        <h1 class="phases-title">إدارة مراحل المشروع</h1>
+                        <p class="phases-subtitle">
+                            قم بتحديد المراحل، المخرجات، والمواعيد النهائية لكل مشروع تخرج.
+                        </p>
+                    </div>
+                </header>
+
+                <!-- شريط اختيار المشروع + ملخص -->
+                <section class="phases-toolbar">
+                    <div class="field" style="min-width:260px">
+  <label class="field-label">اختر المشروع</label>
+  <select id="projectSelect" class="field-input"></select>
+</div>
+
+                    <div class="project-summary">
+                        <div class="summary-card">
+                            <span class="summary-label">عدد المراحل</span>
+                            <span id="summaryPhasesCount" class="summary-value">0</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">المراحل النشطة</span>
+                            <span id="summaryActiveCount" class="summary-value">0</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">نسبة الإنجاز</span>
+                            <span id="summaryProgress" class="summary-value">0%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- نموذج إضافة مرحلة جديدة -->
+                <section class="add-phase-shell">
+                    <header class="add-phase-header">
+                        <h2 class="add-phase-title">
+                            <i class="fa-solid fa-plus-circle"></i>
+                            إضافة مرحلة جديدة
+                        </h2>
+                        <p class="add-phase-hint">
+                            أدخل تفاصيل المرحلة ثم اضغط <strong>إضافة</strong>. يمكنك تعديلها لاحقاً.
+                        </p>
+                    </header>
+
+                    <form id="addPhaseForm" class="add-phase-form">
+                        <div class="form-row">
+                            <div class="field">
+                                <label class="field-label">اسم المرحلة</label>
+                                <input type="text" id="phaseTitleInput" class="field-input"
+                                    placeholder="مثال: تحليل المتطلبات" required />
+                            </div>
+                            <div class="field">
+                                <label class="field-label">تاريخ التسليم النهائي</label>
+                                <input type="date" id="phaseDeadlineInput" class="field-input" required />
+                            </div>
+                            <div class="field field-small">
+                                <label class="field-label">ترتيب المرحلة</label>
+                                <input type="number" id="phaseOrderInput" class="field-input" min="1" value="1"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="field-label">وصف المرحلة</label>
+                            <textarea id="phaseDescriptionInput" class="field-input field-textarea" rows="2"
+                                placeholder="اكتب شرحاً موجزاً لما يجب على الطلاب إنجازه في هذه المرحلة..."></textarea>
+                        </div>
+
+                        <div class="add-phase-actions">
+                            <button type="submit" class="btn-primary">
+                                <i class="fa-solid fa-plus"></i>
+                                إضافة المرحلة
+                            </button>
+                            <button type="button" id="resetFormBtn" class="btn-soft">
+                                إعادة تعيين الحقول
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- قائمة المراحل -->
+                <section class="phases-list-shell">
+                    <header class="phases-list-header">
+                        <div>
+                            <h2 class="phases-list-title">
+                                <i class="fa-solid fa-layer-group"></i>
+                                مراحل المشروع
+                            </h2>
+                            <p class="phases-list-subtitle">
+                                يمكنك إعادة ترتيب المراحل، قفلها أو فتحها، وتعديل المخرجات المطلوبة لكل مرحلة.
+                            </p>
+                        </div>
+
+                        <div class="phases-list-tools">
+                            <button id="expandAllBtn" class="btn-soft small">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                فتح الكل
+                            </button>
+                            <button id="collapseAllBtn" class="btn-soft small">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                طيّ الكل
+                            </button>
+                        </div>
+                    </header>
+
+                    <div id="phasesContainer" class="phases-container">
+                        <!-- الكروت تُملى من الـ JS -->
+                    </div>
+                </section>
+
+            </section>
+        </main>
+        <!-- ===== Set Dates Modal ===== -->
+<div class="modal-overlay" id="datesModal" style="display:none;">
+  <div class="modal">
+    <h3 id="datesModalTitle">تحديد موعد المرحلة</h3>
+    <p>اختر تاريخ البداية والنهاية لهذه المرحلة.</p>
+
+    <label class="field-label">تاريخ البداية</label>
+    <input type="date" id="phaseStartDateInput" class="field-input" />
+
+    <label class="field-label" style="margin-top:10px;">تاريخ النهاية</label>
+    <input type="date" id="phaseEndDateInput" class="field-input" />
+
+    <div class="modal-actions" style="margin-top:14px; display:flex; gap:10px; justify-content:flex-end;">
+      <button type="button" onclick="closeDatesModal()">إلغاء</button>
+      <button type="button" class="primary" onclick="savePhaseDates()">حفظ</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+
+</html>

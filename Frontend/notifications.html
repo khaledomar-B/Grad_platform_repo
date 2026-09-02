@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>الإشعارات - منصة مشاريع التخرج</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- نفس ملفات التصميم عندك -->
+  <link rel="stylesheet" href="style_menu.css">
+  <link rel="stylesheet" href="style_notifications.css">
+
+  <!-- سكربت الداش (للمينو/التوجل/اللوج آوت) -->
+  <script src="DashScript.js" defer></script>
+
+  <!-- سكربت الإشعارات (Dynamic API) -->
+  <script src="notifications.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <div class="header-right">
+      <div class="logo-circle">🎓</div>
+      <div>
+        <div class="university-name">جامعة الرموك</div>
+        <div class="university-subtitle">منصة مشاريع التخرج</div>
+        <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+      </div>
+    </div>
+
+    <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+        stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="user-profile">
+        <div class="user-avatar"></div>
+        <div class="user-info">
+          <span class="user-name" id="menuUserName"></span>
+          <div class="user-role">طالب</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html" class="menu-item">
+          <i class="fas fa-th-large menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">لوحة التحكم</span>
+            <span class="menu-item-en">Dashboard</span>
+          </div>
+        </a>
+
+        <a href="IdeasGenerator.html" class="menu-item">
+          <i class="fas fa-lightbulb menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">أفكار ذكية</span>
+            <span class="menu-item-en">AI Ideas Generator</span>
+          </div>
+        </a>
+
+        <a href="progress&phases.html" class="menu-item">
+          <i class="fas fa-calendar-alt menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">التقدم والمراحل</span>
+            <span class="menu-item-en">Progress & Phases</span>
+          </div>
+        </a>
+
+        <a href="projectDetails.html" class="menu-item">
+          <i class="fas fa-folder menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">تفاصيل المشروع</span>
+            <span class="menu-item-en">Project Details</span>
+          </div>
+        </a>
+
+        <a href="messages.html" class="menu-item">
+          <i class="fas fa-comment-alt menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">المحادثات</span>
+            <span class="menu-item-en">Messages</span>
+          </div>
+        </a>
+
+        <a href="all_teams.html" class="menu-item">
+          <i class="fas fa-users menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">جميع الفرق</span>
+            <span class="menu-item-en">All Teams</span>
+          </div>
+        </a>
+
+        <a href="FindTeammates.html" class="menu-item">
+          <i class="fas fa-user-friends menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">البحث عن زملاء</span>
+            <span class="menu-item-en">Find Teammates</span>
+          </div>
+        </a>
+
+        <a href="notifications.html" class="menu-item active">
+          <i class="fas fa-bell menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الإشعارات</span>
+            <span class="menu-item-en">Notifications</span>
+          </div>
+        </a>
+
+        <a href="profile.html" class="menu-item">
+          <i class="fas fa-user-circle menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الملف الشخصي</span>
+            <span class="menu-item-en">Profile</span>
+          </div>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <div>
+          <h1>الإشعارات</h1>
+          <!-- ✅ هذا النص رح يتغير تلقائياً من notifications.js -->
+          <p>جاري تحميل الإشعارات...</p>
+        </div>
+
+        <!-- ✅ مربوط بزر mark all في notifications.js -->
+        <button class="mark-all-read-btn" type="button">
+          <i class="fas fa-check"></i>
+          تعليم الكل كمقروء
+        </button>
+      </div>
+
+      <div class="notifications-container">
+        <div class="notifications-header">
+          <div class="notifications-header-text">
+            <div class="title-ar">جميع الإشعارات</div>
+            <div class="title-en">All Notifications</div>
+          </div>
+
+          <div class="notifications-header-icon">
+            <i class="fas fa-bell"></i>
+            <!-- ✅ هذا الـ badge رح يتحدث من notifications.js -->
+            <span class="badge">0</span>
+          </div>
+        </div>
+
+        <!-- ✅ خليها فاضية: JS رح يبني الإشعارات هون -->
+        <ul class="notifications-list"></ul>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

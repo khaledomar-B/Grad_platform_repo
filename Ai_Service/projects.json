@@ -1,0 +1,777 @@
+[
+    {
+        "id": 1,
+        "title": "AI-Powered Chatbot for Mental Health",
+        "summary": "A conversational chatbot that uses natural language processing to provide emotional support, mood tracking, and mental health resources while encouraging users to seek professional help when needed."
+    },
+    {
+        "id": 2,
+        "title": "E-commerce Fake Product and Review Detection System",
+        "summary": "A machine learning system that analyzes product listings, seller profiles, and customer reviews to detect counterfeit products and fraudulent feedback on e-commerce platforms."
+    },
+    {
+        "id": 3,
+        "title": "Travel Companion Finder System",
+        "summary": "A matchmaking platform that connects travelers with compatible companions based on destination, budget, interests, and travel dates using recommendation algorithms."
+    },
+    {
+        "id": 4,
+        "title": "Multi-Disease Prediction System",
+        "summary": "A predictive analytics application that uses medical and lifestyle data to estimate the risk of multiple diseases, helping support early diagnosis and preventive healthcare."
+    },
+    {
+        "id": 5,
+        "title": "Multi-Factor Authentication System",
+        "summary": "A secure authentication framework that combines passwords, biometrics, one-time codes, or hardware tokens to reduce account takeover and unauthorized access."
+    },
+    {
+        "id": 6,
+        "title": "Credit Card Fraud Detection System",
+        "summary": "A real-time fraud detection engine that monitors credit card transactions and uses machine learning to flag suspicious patterns and potentially fraudulent activity."
+    },
+    {
+        "id": 7,
+        "title": "Smart Campus Surveillance and Guidance System",
+        "summary": "An IoT-enabled smart campus solution that integrates surveillance cameras, sensors, and navigation features to monitor safety and guide students around campus."
+    },
+    {
+        "id": 8,
+        "title": "Blockchain-Based Fake Product Detection",
+        "summary": "A blockchain solution that records product origins and supply chain events to verify authenticity and prevent counterfeit goods from entering the market."
+    },
+    {
+        "id": 9,
+        "title": "Organ Donation Information App",
+        "summary": "A mobile application that educates users about organ donation, allows them to register interest, and provides information on hospitals and legal procedures."
+    },
+    {
+        "id": 10,
+        "title": "Deepfake Detection for Speech and Emotions",
+        "summary": "A system that analyzes voice patterns, prosody, and emotional cues to determine whether an audio clip has been synthetically generated or manipulated."
+    },
+    {
+        "id": 11,
+        "title": "Facial Biometric Attendance System",
+        "summary": "An attendance management system that uses facial recognition to automatically mark student or employee presence and store records securely."
+    },
+    {
+        "id": 12,
+        "title": "Fingerprint-Based ATM System",
+        "summary": "An ATM interface that replaces PIN-based authentication with fingerprint biometrics to improve security and reduce card fraud."
+    },
+    {
+        "id": 13,
+        "title": "Fingerprint Voting System",
+        "summary": "A biometric voting platform where voters authenticate using fingerprints to prevent duplicate votes and ensure secure, verifiable elections."
+    },
+    {
+        "id": 14,
+        "title": "Railway Tracking and Train Arrival Prediction System",
+        "summary": "A system that tracks trains using GPS and historical data to predict arrival times and provide real-time updates to passengers."
+    },
+    {
+        "id": 15,
+        "title": "Driver Drowsiness Detection System",
+        "summary": "A computer vision-based system that monitors driver facial expressions and eye movements to detect drowsiness and trigger alerts."
+    },
+    {
+        "id": 16,
+        "title": "Lost Item Tracking App",
+        "summary": "A mobile application that uses QR codes, NFC tags, or Bluetooth trackers to help users locate lost personal items and contact the finder."
+    },
+    {
+        "id": 17,
+        "title": "Human and Robot Detection System",
+        "summary": "A computer vision solution that distinguishes between humans and robots in a monitored area to support safety, security, or collaborative robotics."
+    },
+    {
+        "id": 18,
+        "title": "Medicine Tracker and Reminder App",
+        "summary": "A mobile app that helps users manage prescriptions, schedule doses, and receive notifications to improve medication adherence."
+    },
+    {
+        "id": 19,
+        "title": "Calorie Intake Tracking App",
+        "summary": "A nutrition-focused app that lets users log meals, estimate calorie intake, and track progress toward health and fitness goals."
+    },
+    {
+        "id": 20,
+        "title": "Online Medical Consultation and Subscription App",
+        "summary": "A telehealth platform that connects patients with doctors for online consultations, prescriptions, and subscription-based medical follow-ups."
+    },
+    {
+        "id": 21,
+        "title": "Money Laundering Detection System",
+        "summary": "An analytics system that monitors financial transactions and customer behavior to detect patterns associated with money laundering activities."
+    },
+    {
+        "id": 22,
+        "title": "GPS Vehicle Tracking App",
+        "summary": "A real-time vehicle tracking solution that uses GPS data to monitor routes, speeds, and locations for fleets or personal vehicles."
+    },
+    {
+        "id": 23,
+        "title": "Mobile Phone Tracking App",
+        "summary": "An application that enables users to locate lost or stolen mobile phones, track location history, and trigger security actions remotely."
+    },
+    {
+        "id": 24,
+        "title": "Gamified Health and Fitness Tracking App",
+        "summary": "A mobile app that turns fitness goals into game-like challenges, rewarding users for physical activity and healthy habits with points or achievements."
+    },
+    {
+        "id": 25,
+        "title": "Human-Robot Interaction Interface",
+        "summary": "A software interface that enables intuitive communication with robots using gestures, voice commands, or touch controls to improve usability."
+    },
+    {
+        "id": 26,
+        "title": "Fake News Detection System",
+        "summary": "A natural language processing system that analyzes news articles and social media posts to classify content as legitimate or potentially fake."
+    },
+    {
+        "id": 27,
+        "title": "Secure E-commerce Platform",
+        "summary": "A full-stack e-commerce website that emphasizes secure authentication, encrypted payments, and safe storage of customer and order data."
+    },
+    {
+        "id": 28,
+        "title": "Smart Traffic Light Control System",
+        "summary": "A traffic management prototype that uses sensors and algorithms to dynamically adjust traffic light timings based on real-time vehicle flow."
+    },
+    {
+        "id": 29,
+        "title": "Library Management System",
+        "summary": "An application that manages book catalogs, user registrations, borrowing records, and overdue notifications for libraries."
+    },
+    {
+        "id": 30,
+        "title": "AI Chatbot Platform",
+        "summary": "A framework for building AI-powered chatbots that can answer user queries, provide information, and integrate with websites or messaging apps."
+    },
+    {
+        "id": 31,
+        "title": "Image Recognition System",
+        "summary": "A computer vision project that uses deep learning to detect and classify objects in images for applications like surveillance or sorting."
+    },
+    {
+        "id": 32,
+        "title": "Sign Language Recognition System",
+        "summary": "A gesture-recognition system that uses cameras and machine learning to convert sign language into text or speech in real time."
+    },
+    {
+        "id": 33,
+        "title": "Recommendation System Engine",
+        "summary": "A recommendation engine that suggests products, movies, or content to users based on their past behavior and item similarities."
+    },
+    {
+        "id": 34,
+        "title": "Sentiment Analysis Platform",
+        "summary": "A text analytics system that classifies opinions in reviews or social media posts as positive, negative, or neutral to support decision-making."
+    },
+    {
+        "id": 35,
+        "title": "Enterprise Cybersecurity Framework",
+        "summary": "A structured framework that defines policies, controls, and monitoring tools to improve an organization's overall cybersecurity posture."
+    },
+    {
+        "id": 36,
+        "title": "Augmented Reality Application",
+        "summary": "An AR application that overlays digital information on the physical world using a mobile camera for gaming, education, or marketing."
+    },
+    {
+        "id": 37,
+        "title": "Virtual Private Network System",
+        "summary": "A VPN solution that encrypts internet traffic to provide users with secure, private access to online resources and bypass censorship."
+    },
+    {
+        "id": 38,
+        "title": "Network Intrusion Detection System",
+        "summary": "A system that monitors network traffic and logs to detect suspicious patterns and potential cyberattacks in real time."
+    },
+    {
+        "id": 39,
+        "title": "Medical Image Analysis System",
+        "summary": "A computer vision solution that processes medical images such as X-rays or MRIs to assist in diagnosing diseases."
+    },
+    {
+        "id": 40,
+        "title": "Online Learning Platform",
+        "summary": "A web platform that delivers courses, quizzes, and progress tracking to support remote and self-paced learning."
+    },
+    {
+        "id": 41,
+        "title": "SMS Spam Filtering System",
+        "summary": "A classification model that filters incoming SMS messages to distinguish spam from legitimate content using machine learning."
+    },
+    {
+        "id": 42,
+        "title": "Network and Application Vulnerability Scanner",
+        "summary": "A security tool that scans systems and web applications for common vulnerabilities and misconfigurations and generates reports."
+    },
+    {
+        "id": 43,
+        "title": "Weather Forecasting Application",
+        "summary": "An application that aggregates weather data from APIs and uses models to provide localized forecasts and alerts."
+    },
+    {
+        "id": 44,
+        "title": "Smart Farming and Agriculture Monitoring System",
+        "summary": "An IoT-based solution that uses sensors and data analytics to monitor soil, moisture, and environmental conditions for precision farming."
+    },
+    {
+        "id": 45,
+        "title": "Cardiac Disease Risk Prediction Tool",
+        "summary": "A machine learning model that predicts the risk of heart disease based on patient health metrics and lifestyle factors."
+    },
+    {
+        "id": 46,
+        "title": "Election Data Analysis Platform",
+        "summary": "A data analytics project that visualizes and analyzes election results to identify trends, patterns, and voter behaviors."
+    },
+    {
+        "id": 47,
+        "title": "Web Scraping Tool with BeautifulSoup",
+        "summary": "A Python-based tool that uses BeautifulSoup to scrape, parse, and structure data from HTML or XML web pages."
+    },
+    {
+        "id": 48,
+        "title": "Hotel Booking Website",
+        "summary": "A web application that allows users to search for hotels, view availability, make reservations, and manage bookings."
+    },
+    {
+        "id": 49,
+        "title": "Academic Performance Evaluation System",
+        "summary": "A system that tracks student grades and attendance to evaluate performance, identify weaknesses, and generate personalized feedback."
+    },
+    {
+        "id": 50,
+        "title": "Social Media Application",
+        "summary": "A social networking app that enables users to create profiles, share posts, interact with others, and receive real-time updates."
+    },
+    {
+        "id": 51,
+        "title": "Food Delivery Application",
+        "summary": "A platform that connects restaurants, delivery personnel, and customers, allowing users to browse menus, place orders, and track deliveries."
+    },
+    {
+        "id": 52,
+        "title": "Predictive Analytics Tool",
+        "summary": "A generic analytics solution that uses historical data and machine learning to forecast future outcomes across different domains."
+    },
+    {
+        "id": 53,
+        "title": "Gold Price Prediction System",
+        "summary": "A time series forecasting model that predicts gold prices based on historical data and economic indicators."
+    },
+    {
+        "id": 54,
+        "title": "Plant Disease and Pest Detection System",
+        "summary": "A machine learning-based system that analyzes crop images to detect diseases and pest infestations at an early stage."
+    },
+    {
+        "id": 55,
+        "title": "Autonomous Drone Deployment Simulator",
+        "summary": "A simulation environment that models the deployment of autonomous drones in civilian or military scenarios to assess risks and ethics."
+    },
+    {
+        "id": 56,
+        "title": "VR Therapy Application",
+        "summary": "A virtual reality application designed for therapeutic use, such as exposure therapy, pain distraction, or social skills training."
+    },
+    {
+        "id": 57,
+        "title": "Carbon Footprint Tracking App",
+        "summary": "A mobile or web app that estimates a user's carbon footprint based on transportation, energy usage, diet, and consumption habits."
+    },
+    {
+        "id": 58,
+        "title": "Quantum-Resilient Cryptography Analysis",
+        "summary": "A research-oriented project that analyzes the vulnerability of traditional cryptographic algorithms to quantum attacks and explores post-quantum alternatives."
+    },
+    {
+        "id": 59,
+        "title": "Phishing Detection System",
+        "summary": "A system that analyzes URLs, email content, and web pages to detect potential phishing attempts and warn users."
+    },
+    {
+        "id": 60,
+        "title": "Customer Segmentation System with Clustering",
+        "summary": "A data mining solution that segments customers into groups using clustering algorithms based on purchasing behavior and demographics."
+    },
+    {
+        "id": 61,
+        "title": "Blog Management System",
+        "summary": "A full-stack application that manages blog posts, user accounts, comments, and categories with an intuitive editor interface."
+    },
+    {
+        "id": 62,
+        "title": "Fitness Tracker App with Step Counter",
+        "summary": "A mobile app that uses smartphone sensors to track steps, distance, and calories burned, and visualizes progress with charts."
+    },
+    {
+        "id": 63,
+        "title": "Handwritten Digit Recognition System",
+        "summary": "A deep learning model trained on handwritten digits, such as MNIST, to automatically recognize and classify numeric characters."
+    },
+    {
+        "id": 64,
+        "title": "Fingerprint Reader and Access Control System",
+        "summary": "A biometric access control solution that uses fingerprint sensors to authenticate users and unlock doors or systems."
+    },
+    {
+        "id": 65,
+        "title": "House Price Prediction System",
+        "summary": "A regression-based model that predicts house prices from features such as location, size, and amenities."
+    },
+    {
+        "id": 66,
+        "title": "Gamified Language Learning App",
+        "summary": "A language learning application that teaches vocabulary and grammar using games, quizzes, and reward mechanisms."
+    },
+    {
+        "id": 67,
+        "title": "Biometric Attendance System",
+        "summary": "An attendance system that uses fingerprints or facial recognition to automatically record and store attendance data."
+    },
+    {
+        "id": 68,
+        "title": "Chatbot-Based Music Recommendation System",
+        "summary": "A conversational bot that recommends songs based on user mood, preferences, and listening history using music APIs."
+    },
+    {
+        "id": 69,
+        "title": "Personal Portfolio Website",
+        "summary": "A personal website that showcases an individual's skills, projects, and contact information using modern web design."
+    },
+    {
+        "id": 70,
+        "title": "Personal Finance Management Application",
+        "summary": "A mobile app that helps users track expenses, create budgets, monitor savings, and visualize financial habits."
+    },
+    {
+        "id": 71,
+        "title": "Social Media Trends Analysis Tool",
+        "summary": "A data analytics tool that collects and analyzes social media posts to identify trending topics and user behavior patterns."
+    },
+    {
+        "id": 72,
+        "title": "Stock Market Prediction Tool",
+        "summary": "An application that uses historical stock data and machine learning models to forecast future price movements or trends."
+    },
+    {
+        "id": 73,
+        "title": "Local Business Information Platform",
+        "summary": "A website or app that aggregates information about local businesses, including services, availability, and community resources."
+    },
+    {
+        "id": 74,
+        "title": "Generative AI Art Creator",
+        "summary": "A creative application that uses generative models to produce AI-generated images, animations, or audio based on user prompts."
+    },
+    {
+        "id": 75,
+        "title": "Lightweight ERP System for Small Businesses",
+        "summary": "An enterprise resource planning system tailored for small businesses that integrates finance, purchasing, inventory, and basic HR into a cost-effective platform."
+    },
+    {
+        "id": 76,
+        "title": "Blockchain-Based Supply Chain Management System",
+        "summary": "A decentralized application that tracks goods throughout the supply chain using blockchain to improve transparency, traceability, and fraud prevention."
+    },
+    {
+        "id": 77,
+        "title": "AI-Driven Customer Relationship Management Tool",
+        "summary": "A CRM platform that uses machine learning to forecast customer behavior, personalize communication, and prioritize leads for sales teams."
+    },
+    {
+        "id": 78,
+        "title": "Cybersecurity Threat Intelligence Platform",
+        "summary": "A system that aggregates, analyzes, and visualizes cybersecurity threat data to help organizations detect emerging risks and respond early."
+    },
+    {
+        "id": 79,
+        "title": "IoT Smart Campus Facility Management System",
+        "summary": "An IoT-based campus management solution that monitors energy usage, security, and maintenance needs across university facilities."
+    },
+    {
+        "id": 80,
+        "title": "Remote Patient Monitoring Health Information System",
+        "summary": "A healthcare platform that collects data from wearable devices to monitor patient vitals remotely and alert clinicians to abnormal readings."
+    },
+    {
+        "id": 81,
+        "title": "Mobile Payment and Digital Wallet App",
+        "summary": "A secure mobile wallet that supports peer-to-peer transfers, bill payments, and transaction history tracking using encrypted communication."
+    },
+    {
+        "id": 82,
+        "title": "Social Media Analytics Dashboard",
+        "summary": "A dashboard that analyzes social media metrics, brand mentions, and engagement to support marketing decisions and reputation management."
+    },
+    {
+        "id": 83,
+        "title": "E-Government Services Portal",
+        "summary": "A unified web portal that allows citizens to access government services, submit applications, and communicate with public officials online."
+    },
+    {
+        "id": 84,
+        "title": "AI-Based Sustainable Energy Management System",
+        "summary": "An energy monitoring system that uses smart sensors and AI to optimize energy consumption in buildings or communities and reduce costs."
+    },
+    {
+        "id": 85,
+        "title": "Augmented Reality Platform for Education",
+        "summary": "An AR application that enhances learning by providing interactive 3D visualizations of complex academic concepts."
+    },
+    {
+        "id": 86,
+        "title": "VR Training Simulations for High-Risk Jobs",
+        "summary": "Virtual reality training modules that simulate high-risk scenarios for professionals such as surgeons, pilots, or firefighters."
+    },
+    {
+        "id": 87,
+        "title": "Disaster Management Information System",
+        "summary": "A coordination platform that manages resources, volunteers, and communication before, during, and after natural disasters."
+    },
+    {
+        "id": 88,
+        "title": "Retail Analytics and Inventory Optimization System",
+        "summary": "A data-driven system that forecasts product demand, optimizes inventory levels, and reduces waste in retail operations."
+    },
+    {
+        "id": 89,
+        "title": "Smart Agriculture Information System",
+        "summary": "An integrated platform that uses IoT sensors and predictive models to guide irrigation, fertilization, and harvesting decisions."
+    },
+    {
+        "id": 90,
+        "title": "Federated Learning Framework for Privacy-Preserving AI",
+        "summary": "A system that trains machine learning models across multiple devices or organizations without sharing raw data, preserving privacy."
+    },
+    {
+        "id": 91,
+        "title": "Quantum Computing Applications Prototype",
+        "summary": "A project that explores quantum algorithms for optimization, cryptography, or simulation and demonstrates them on small-scale problems."
+    },
+    {
+        "id": 92,
+        "title": "Edge Computing Platform for IoT Analytics",
+        "summary": "A framework that performs data processing at the edge of the network on IoT devices to reduce latency and bandwidth usage."
+    },
+    {
+        "id": 93,
+        "title": "Blockchain Platform for Supply Chain Transparency",
+        "summary": "A blockchain-based ledger that records supply chain transactions, making product origins and logistics traceable and auditable."
+    },
+    {
+        "id": 94,
+        "title": "AR and VR Learning Experience Platform",
+        "summary": "A combined AR/VR platform that delivers immersive educational experiences and evaluates their impact on learning outcomes."
+    },
+    {
+        "id": 95,
+        "title": "AI-Enhanced Cybersecurity Framework",
+        "summary": "A cybersecurity architecture that integrates AI techniques to detect adversarial attacks and protect AI-enabled systems."
+    },
+    {
+        "id": 96,
+        "title": "Digital Twin Platform for Smart Cities",
+        "summary": "A platform that builds digital replicas of city infrastructure to simulate, monitor, and optimize urban planning and operations."
+    },
+    {
+        "id": 97,
+        "title": "Ethical and Transparent AI Decision-Making Framework",
+        "summary": "A framework that focuses on algorithmic fairness, interpretability, and governance to ensure AI systems make ethical decisions."
+    },
+    {
+        "id": 98,
+        "title": "Wearable Health Analytics Platform",
+        "summary": "A big data platform that processes streams of health data from wearables to detect patterns, predict risks, and support personalized care."
+    },
+    {
+        "id": 99,
+        "title": "AI-Driven Predictive Maintenance System",
+        "summary": "An industrial system that monitors equipment sensor data to predict failures before they occur and schedule maintenance proactively."
+    },
+    {
+        "id": 100,
+        "title": "Hospital Treatment Cost Prediction System",
+        "summary": "A predictive model that estimates hospital treatment costs using patient characteristics and clinical data to support planning and insurance."
+    },
+    {
+        "id": 101,
+        "title": "YouTube Comments Sentiment Analysis Dashboard",
+        "summary": "A data science project that scrapes YouTube comments, applies NLP-based sentiment analysis, and visualizes audience opinions over time."
+    },
+    {
+        "id": 102,
+        "title": "Illegal Fishing Activity Classification System",
+        "summary": "A classification model that uses vessel GPS and behavioral data to identify potentially illegal fishing activities in real time."
+    },
+    {
+        "id": 103,
+        "title": "Bank Customer Segmentation Analytics",
+        "summary": "A clustering-based solution that segments bank customers using transaction and demographic data to support targeted marketing."
+    },
+    {
+        "id": 104,
+        "title": "Cryptocurrency Price Prediction with LSTM",
+        "summary": "A time series forecasting model that uses LSTM neural networks to predict future price movements of cryptocurrencies such as Dogecoin."
+    },
+    {
+        "id": 105,
+        "title": "Book Recommendation System",
+        "summary": "A recommender system that suggests books to users based on their ratings, reading history, and similarity to other users."
+    },
+    {
+        "id": 106,
+        "title": "Age and Gender Prediction from Face Images",
+        "summary": "A deep learning model that analyzes facial images to estimate a person's age group and gender."
+    },
+    {
+        "id": 107,
+        "title": "Speech Emotion Recognition for Customer Satisfaction",
+        "summary": "A system that processes customer service call audio to classify emotional states and measure satisfaction levels."
+    },
+    {
+        "id": 108,
+        "title": "Travel Agency Customer Service Chatbot",
+        "summary": "An AI chatbot that answers travel-related questions, suggests packages, and automates basic customer service tasks for travel agencies."
+    },
+    {
+        "id": 109,
+        "title": "Metallic Surface Defect Detection System",
+        "summary": "A computer vision system that detects and classifies defects on metallic surfaces in manufacturing environments using deep learning."
+    },
+    {
+        "id": 110,
+        "title": "AI-Powered Intrusion Detection System",
+        "summary": "An intrusion detection system that uses machine learning models to identify anomalies and cyberattacks in network traffic in real time."
+    },
+    {
+        "id": 111,
+        "title": "Reinforcement Learning-Based Adaptive Firewall",
+        "summary": "A firewall that dynamically updates its rules using reinforcement learning based on feedback from observed traffic and attack patterns."
+    },
+    {
+        "id": 112,
+        "title": "IoT Honeypot Deception Network",
+        "summary": "A simulated network of vulnerable IoT devices that acts as a honeypot to attract attackers and log their behavior for analysis."
+    },
+    {
+        "id": 113,
+        "title": "Real-Time Deepfake Video and Audio Detection System",
+        "summary": "A multimodal system that analyzes visual and audio cues to detect manipulated or deepfake media content in real time."
+    },
+    {
+        "id": 114,
+        "title": "Secure AI Model Deployment Monitor",
+        "summary": "A monitoring system that tracks access to deployed ML models, detects suspicious queries, and flags potential model theft or poisoning."
+    },
+    {
+        "id": 115,
+        "title": "Third-Party Vendor Cyber Risk Simulator",
+        "summary": "A simulation tool that models cyber risks introduced by third-party vendors and visualizes potential incident scenarios and impacts."
+    },
+    {
+        "id": 116,
+        "title": "CI/CD Pipeline Security Exposure Scanner",
+        "summary": "A tool that scans CI/CD configurations, container images, and deployment scripts for secrets, vulnerabilities, and misconfigurations."
+    },
+    {
+        "id": 117,
+        "title": "Voice Phishing Detection System",
+        "summary": "A vishing detection system that analyzes audio and transcripts of calls to identify social engineering attempts and fraudulent intent."
+    },
+    {
+        "id": 118,
+        "title": "CTF Challenge Generator and Solver Platform",
+        "summary": "A platform that automatically generates capture-the-flag cybersecurity challenges and includes bots or tools to solve them for training."
+    },
+    {
+        "id": 119,
+        "title": "Smart Grid Cyber-Physical Intrusion Detection System",
+        "summary": "An IDS tailored for smart grids that correlates SCADA data and sensor readings to detect tampering and false data injection attacks."
+    },
+    {
+        "id": 120,
+        "title": "Phishing Simulation and Training Platform",
+        "summary": "A web platform that sends simulated phishing emails to users, tracks responses, and provides training to improve awareness."
+    },
+    {
+        "id": 121,
+        "title": "Android Application Vulnerability Scanner",
+        "summary": "A static and dynamic analysis tool that scans Android APKs for security weaknesses such as hardcoded credentials or excessive permissions."
+    },
+    {
+        "id": 122,
+        "title": "Network Traffic Anomaly Detection with Machine Learning",
+        "summary": "An unsupervised ML system that models normal network behavior and flags anomalies such as port scans or DDoS attacks."
+    },
+    {
+        "id": 123,
+        "title": "Biometric Authentication with Liveness Detection",
+        "summary": "A biometric access system that incorporates liveness detection to prevent spoofing using photos, videos, or fake fingerprints."
+    },
+    {
+        "id": 124,
+        "title": "Malware Detection and Classification Platform",
+        "summary": "A platform that classifies files as benign or malicious based on static and behavioral features using ML or deep learning models."
+    },
+    {
+        "id": 125,
+        "title": "IoT Firmware Vulnerability Scanner",
+        "summary": "A tool that unpacks IoT firmware images and scans them for hardcoded secrets, outdated libraries, and known vulnerabilities."
+    },
+    {
+        "id": 126,
+        "title": "Insider Threat Detection with Deception Artifacts",
+        "summary": "A system that deploys decoy documents or credentials and monitors access to detect potential insider threats."
+    },
+    {
+        "id": 127,
+        "title": "Automated Incident Response Orchestration System",
+        "summary": "An automation engine that triggers predefined response actions such as blocking IPs or isolating hosts when security incidents occur."
+    },
+    {
+        "id": 128,
+        "title": "Ransomware Detection and Containment Engine",
+        "summary": "A system that detects ransomware behavior through file activity patterns and automatically isolates affected systems and shared drives."
+    },
+    {
+        "id": 129,
+        "title": "V2X Security Simulation Platform",
+        "summary": "A simulation environment that models secure vehicle-to-everything communication and tests message authentication and spoofing defenses."
+    },
+    {
+        "id": 130,
+        "title": "Federated Learning with Secure Aggregation",
+        "summary": "A federated learning setup that uses secure aggregation techniques to combine model updates without revealing individual client data."
+    },
+    {
+        "id": 131,
+        "title": "Social Engineering Awareness Training Game",
+        "summary": "An interactive game that simulates social engineering scenarios and teaches users how to recognize and resist manipulation."
+    },
+    {
+        "id": 132,
+        "title": "SME Cyber Exposure Monitoring Dashboard",
+        "summary": "A lightweight dashboard for small businesses that periodically scans digital assets and highlights exposed services and misconfigurations."
+    },
+    {
+        "id": 133,
+        "title": "AI Agent for CTF Challenge Solving",
+        "summary": "A reinforcement learning-based agent trained to solve basic cybersecurity puzzles and challenges in CTF environments."
+    },
+    {
+        "id": 134,
+        "title": "Digital Footprint Visualization Tool",
+        "summary": "A privacy awareness tool that aggregates publicly available user data and visualizes their digital footprint across platforms."
+    },
+    {
+        "id": 135,
+        "title": "Social Engineering Prevention Toolkit",
+        "summary": "A toolkit that analyzes messages and links for social engineering cues and provides educational tips and micro-quizzes to users."
+    },
+    {
+        "id": 136,
+        "title": "Password Strength Evolution Tracker",
+        "summary": "A tool that tracks how a user's passwords improve over time and offers feedback and suggestions for stronger password practices."
+    },
+    {
+        "id": 137,
+        "title": "Cyber Hygiene Education Game",
+        "summary": "A gamified learning application that teaches basic cybersecurity practices such as safe browsing, updates, and password management."
+    },
+    {
+        "id": 138,
+        "title": "Children's Online Safety Analyzer",
+        "summary": "A web tool that evaluates websites and apps for child-friendliness, content risks, and privacy practices, providing simple ratings."
+    },
+    {
+        "id": 139,
+        "title": "Dark Web Data Leak Monitoring Assistant",
+        "summary": "A monitoring tool that searches dark web marketplaces and forums for leaked credentials or sensitive data related to users or organizations."
+    },
+    {
+        "id": 140,
+        "title": "Digital Legacy Protection System",
+        "summary": "A secure platform that stores user preferences and access instructions for digital accounts to be managed after their death."
+    },
+    {
+        "id": 141,
+        "title": "Smart IoT Device Threat Sandbox",
+        "summary": "A sandbox environment that tests IoT devices for insecure behaviors and vulnerabilities before connecting them to a live network."
+    },
+    {
+        "id": 142,
+        "title": "Cyber Insurance Impact Simulation Model",
+        "summary": "A simulation model that evaluates how different cyberattack scenarios impact insurance costs, payouts, and risk-sharing."
+    },
+    {
+        "id": 143,
+        "title": "Digital Forensics Timeline Generator",
+        "summary": "A forensic tool that parses system and application logs to reconstruct chronological timelines of cyber incidents."
+    },
+    {
+        "id": 144,
+        "title": "Voice Deepfake Detection Tool",
+        "summary": "An audio analysis system that examines speech patterns and acoustic features to detect AI-generated or manipulated voices."
+    },
+    {
+        "id": 145,
+        "title": "Blockchain-Based Identity Recovery System",
+        "summary": "A blockchain system that helps users securely prove identity ownership and recover control after identity theft without revealing sensitive data."
+    },
+    {
+        "id": 146,
+        "title": "Brain–Computer Interface Cybersecurity Risk Analysis",
+        "summary": "A research project that investigates potential cyber threats to brain–computer interface systems and proposes security safeguards."
+    },
+    {
+        "id": 147,
+        "title": "Quantum Cryptography Attack Simulation",
+        "summary": "A simulation that models how quantum algorithms could break classical cryptographic schemes and evaluates quantum-resistant alternatives."
+    },
+    {
+        "id": 148,
+        "title": "Cybersecurity in Space Communication Systems",
+        "summary": "A study and prototype focusing on securing satellite and space communication channels against interception and tampering."
+    },
+    {
+        "id": 149,
+        "title": "DNA Data Storage Security Analysis",
+        "summary": "A security analysis project that explores how digital data stored in DNA could be attacked or protected using cryptographic techniques."
+    },
+    {
+        "id": 150,
+        "title": "Security Framework for Human Augmentation Technologies",
+        "summary": "A framework that evaluates and secures wearable and implantable smart devices against cyberattacks and data breaches."
+    },
+    {
+        "id": 151,
+        "title": "Self-Healing Network Architecture Simulator",
+        "summary": "A simulation that models networks capable of detecting attacks, isolating compromised nodes, and automatically recovering services."
+    },
+    {
+        "id": 152,
+        "title": "AI-Generated Cyber Threat Simulation Platform",
+        "summary": "A platform that uses AI to generate realistic cyberattack scenarios to test defenses and train security teams."
+    },
+    {
+        "id": 153,
+        "title": "Emotional Manipulation Analysis in Cyber Campaigns",
+        "summary": "An analytical system that studies how cyber campaigns exploit emotions like fear or anger in phishing, scams, and misinformation."
+    },
+    {
+        "id": 154,
+        "title": "Ethical Guidelines Platform for Offensive Cyber Education",
+        "summary": "A platform that defines and presents ethical rules, case studies, and legal boundaries for teaching offensive cybersecurity techniques."
+    },
+    {
+        "id": 155,
+        "title": "AI-Powered Academic Integrity Assistant",
+        "summary": "A system that evaluates student submissions to detect plagiarism, AI-generated content, improper citations, and similarity to previous academic works, providing clear feedback and suggestions for improving originality and academic writing."
+    }
+]

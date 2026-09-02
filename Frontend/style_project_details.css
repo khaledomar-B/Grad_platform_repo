@@ -1,0 +1,1147 @@
+/* Main Header */
+:root {
+    --header-height: 72px;
+    --sidebar-width: 280px;
+    --deep-blue: #06324a;
+    --mid-blue: #0f4b6b;
+    --light-blue: #1e5a8e;
+    --accent: #ffd34a;
+    --border-color: #e5e7eb;
+    --text-gray: #6b7280;
+}
+
+/* Main Header */
+.main-header {
+    background: linear-gradient(180deg, var(--mid-blue) 0%, var(--deep-blue) 100%);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.main-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.main-header p {
+    font-size: 14px;
+    color: #dbeafe;
+    margin: 1px;
+}
+
+.main-header .header-icon {
+    font-size: 36px;
+    /* حجم الأيقونة */
+    color: #ffd700;
+    /* لون الأيقونة */
+    margin-left: 20px;
+    /* مسافة بين الأيقونة والنصوص */
+}
+
+.project-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    /* ضمان أن المحتوى لا يتجاوز عرض الشاشة */
+    box-sizing: border-box;
+    /* تضمين الـ padding ضمن عرض العنصر */
+    margin: 0 auto;
+    /* محاذاة العنصر إلى المنتصف */
+}
+
+/* Project Header */
+.project-header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-status .status-label {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-stats {
+    display: flex;
+    gap: 20px;
+    /* مسافة بين العناصر */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Stat Item */
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* مسافة بين الأيقونة والمحتوى */
+    text-align: left;
+    /* محاذاة النصوص */
+}
+
+/* Circle Icon */
+.stat-icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    /* لون الخلفية */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-icon {
+    font-size: 24px;
+    color: #0f4b6b;
+    /* لون الأيقونة */
+}
+
+/* Stat Content */
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    /* ترتيب الرقم والنص عموديًا */
+    align-items: center;
+    /* محاذاة الرقم والنص إلى المنتصف */
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f4b6b;
+    /* لون الرقم */
+    margin-bottom: 5px;
+    /* مسافة بين الرقم والنص */
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6b7280;
+    /* لون النص */
+    margin-top: 0;
+    /* إزالة أي مسافة إضافية */
+}
+
+
+/* Responsive Design for Small Screens */
+@media screen and (max-width: 768px) {
+    .project-stats {
+        flex-wrap: wrap;
+        /* السماح للعناصر بالانتقال إلى الصف التالي */
+        gap: 15px;
+        /* تقليل المسافة بين العناصر */
+        justify-content: center;
+        /* محاذاة العناصر إلى المنتصف */
+    }
+
+    .stat-item {
+        width: 45%;
+        /* تقليل عرض العنصر ليكون مناسبًا للشاشة الصغيرة */
+        text-align: center;
+        /* محاذاة النصوص إلى المنتصف */
+    }
+
+    .stat-icon-circle {
+        width: 40px;
+        /* تقليل حجم الدائرة */
+        height: 40px;
+        /* تقليل حجم الدائرة */
+    }
+
+    .stat-icon {
+        font-size: 20px;
+        /* تقليل حجم الأيقونة */
+    }
+
+    .stat-value {
+        font-size: 16px;
+        /* تقليل حجم الرقم */
+    }
+
+    .stat-label {
+        font-size: 12px;
+        /* تقليل حجم النص */
+    }
+}
+
+/*project title section*/
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* مسافة بين النص والأيقونة */
+}
+
+.project-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.project-title i {
+    font-size: 24px;
+    color: #06324a;
+    /* لون الأيقونة */
+}
+
+/* Project Summary Section */
+.project-summary {
+    text-align: right;
+    /* محاذاة النصوص إلى اليمين */
+    margin-top: 20px;
+}
+
+.project-summary h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.project-summary p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Project Deadline and Supervisor Section */
+.project-deadline,
+.project-supervisor,
+.project-major {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.deadline-date {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+/* Project Documents Container */
+.project-documents {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.documents-header {
+    display: flex;
+    flex-direction: column;
+    /* ترتيب العناصر عموديًا */
+    align-items: flex-start;
+    /* محاذاة العناصر إلى اليسار */
+    gap: 10px;
+    /* مسافة بين العنوان والنص */
+}
+
+.documents-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* مسافة بين الأيقونة والنص */
+}
+
+.documents-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.documents-title i {
+    font-size: 24px;
+    color: #06324a;
+    /* لون الأيقونة */
+}
+
+.documents-header p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Divider */
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 20px 0;
+}
+
+/* Documents Note Section */
+.documents-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf2fd;
+    /* لون الخلفية */
+    padding: 5px 20px;
+    border-radius: 8px;
+    border: 1px solid #2563eb;
+    /* لون الحدود */
+    margin-top: 10px;
+}
+
+.note-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* مسافة بين الأيقونة والنص */
+}
+
+.note-icon {
+    font-size: 20px;
+    color: #2563eb;
+    /* لون أيقونة الملاحظة */
+}
+
+.note-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.note-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.note-text span {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+
+
+
+/* Proposal Section */
+.project-proposal {
+    display: flex;
+    justify-content: flex-start;
+    /* محاذاة العنصر إلى اليسار */
+    align-items: center;
+    margin-top: 15px;
+}
+
+.proposal-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* مسافة بين العناصر */
+    font-size: 16px;
+    /* حجم النص */
+    font-weight: bold;
+    /* جعل النصوص عريضة */
+}
+
+.proposal-count {
+    font-size: 16px;
+    /* حجم الرقم */
+    font-weight: bold;
+    /* جعل الرقم عريض */
+    color: #262729;
+    /* لون الرقم */
+    background-color: #f5f5f5e3;
+    /* خلفية الرقم */
+    padding: 6px 12px;
+    /* زيادة حجم الخلفية */
+    border-radius: 8px;
+    /* جعل الحواف دائرية */
+
+}
+
+.proposal-icon {
+    font-size: 25px;
+    /* حجم الأيقونة */
+    color: #2563eb;
+    /* لون الأيقونة */
+}
+
+.proposal-label {
+    font-size: 16px;
+    /* حجم النص */
+    font-weight: bold;
+    /* جعل النص عريض */
+    color: #0e0f11;
+    /* لون النص */
+}
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    padding: 24px;
+    padding: 8px;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+/* Card */
+.card {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    padding: 20px;
+
+}
+
+
+/* زر رفع ملف */
+.upload-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #06324a;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.upload-btn i {
+    font-size: 16px;
+}
+
+/* عناوين الأقسام */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.section-count {
+    background: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.file-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* ألوان حسب الفئة */
+.bg-proposal {
+    background: #e9f0ff;
+    border-color: #bcd3ff;
+}
+
+.bg-requirements {
+    background: #ecffec;
+    border-color: #b2ffb2;
+}
+
+.bg-design {
+    background: #f7eaff;
+    border-color: #e3c8ff;
+}
+
+.bg-reports {
+    background: #fff3e0;
+    border-color: #ffd29c;
+}
+
+.bg-presentations {
+    background: #ffeeff;
+    border-color: #fbc2f2;
+}
+
+.bg-other {
+    background: #eeeeee;
+    border-color: #cfcfcf;
+}
+
+.file-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* مسافة بين العناصر */
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #d7d7d7;
+    background-color: #f7eaff;
+    /* لون الخلفية */
+    direction: rtl;
+}
+
+.file-icon {
+    font-size: 32px;
+    color: #ff3b30;
+    /* لون الأيقونة */
+}
+
+.file-info {
+    flex: 1;
+    text-align: right;
+}
+
+.file-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #0e0f11;
+}
+
+.file-meta {
+    font-size: 13px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-meta i {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.download-btn {
+    background: white;
+    border: 1px solid #2563eb;
+    padding: 7px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    margin-right: auto;
+    /* دفع الزر إلى الجانب الأيسر */
+}
+
+.trash-icon {
+    cursor: pointer;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+#drop-zone {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 28px;
+    border: 2px dashed #06324a;
+    border-radius: 10px;
+    text-align: center;
+    color: #06324a;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    background: white;
+}
+
+.modal-overlay {
+    display: none;
+    /* إخفاء المودال افتراضيًا */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+/*#################################################*/
+
+
+/* زر إضافة تقنية */
+.add-tech-btn {
+    background: #06324a;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+/* عنوان */
+.tech-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+/* Container */
+.tech-container {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
+}
+
+@media (max-width: 600px) {
+    .tech-container {
+        padding: 10px;
+    }
+
+    .tech-header {
+        font-size: 15px;
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+
+    .add-tech-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    .tech-body {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .tech-col-title {
+        font-size: 14px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .badges {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* الأعمدة */
+/* الوضع الافتراضي: شاشات كبيرة */
+.tech-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+
+}
+
+.tech-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+/* تابلت و iPhone (عمودين) */
+@media (max-width: 900px) {
+    .tech-body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* موبايل صغير جدًا (اختياري) */
+@media (max-width: 480px) {
+    .tech-body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.tech-col-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.count {
+    background: #f1f1f1;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* badges */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge i {
+    cursor: pointer;
+    font-size: 11px;
+}
+
+/* ألوان */
+.frontend {
+    background: #e8f1ff;
+    color: #2563eb;
+}
+
+.backend {
+    background: #e7f7ee;
+    color: #1b8a5a;
+}
+
+.ai {
+    background: #fff4dd;
+    color: #b45309;
+}
+
+.db {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.devops {
+    background: #ffe4e6;
+    color: #be123c;
+}
+
+.other {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+@media (max-width: 600px) {
+    .tech-header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .tech-header {
+        font-size: 15px;
+        gap: 6px;
+        text-align: center;
+    }
+}
+
+/* Animation */
+.count-animate {
+    animation: pop .3s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.3)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: white;
+    width: 420px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.modal-desc {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 10px 0;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.primary-btn {
+    background: #06324a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    border: 1px solid #ccc;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*##############################################*/
+
+
+.team-section {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
+}
+
+
+.team-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.member-card {
+    background: white;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #06324a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.role {
+    color: #2563eb;
+    font-size: 14px;
+    margin: 4px 0 10px;
+}
+
+.member-meta {
+    font-size: 13px;
+    color: #6b7280;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    border: 1px solid #dbeafe;
+    color: #2563eb;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+/* ############################################## */
+
+/* ===== Section ===== */
+.links-section {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    max-width: 900px;
+    margin: auto;
+    margin-top: 32px;
+}
+
+.links-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ===== Grid ===== */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* ===== Card ===== */
+.link-card {
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .25s;
+    position: relative;
+}
+
+.link-card:hover {
+    background: #f8fbff;
+}
+
+/* ===== Info ===== */
+.link-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.link-title {
+    font-weight: 600;
+}
+
+.link-desc {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* ===== Icons ===== */
+.link-icon {
+    font-size: 22px;
+    color: #2563eb;
+}
+
+/* ===== Edit button ===== */
+.edit-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+/* ===== Add link button ===== */
+.add-link-btn {
+    margin-top: 6px;
+    background: #eef2ff;
+    color: #2563eb;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.add-link-btn:hover {
+    background: #e0e7ff;
+}
+
+/* ===== Modal ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: #fff;
+    width: 380px;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background: #06324a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    border: 1px solid #ccc;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:600px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,379 @@
+title,description,label
+Personalized Travel Planner,"Recommends itineraries based on user preferences, budget & current events; integrates map & scheduling.",Data Science
+Smart Grid Load Balancing System,Adjusts power loads dynamically using predicted demand to reduce wastage and peak loads.,IoT
+Food Waste Prediction for Restaurants,Predict daily demand & leftover for restaurants to reduce waste & optimize supply orders.,Data Science
+IoT-Based Smart Lighting for Offices,Adaptive lighting based on occupancy & natural light to save energy and enhance comfort.,IoT
+Optimized Route Planner for Delivery fleets,Minimize fuel/time using VRP heuristics; handle real-time traffic and constraints.,Data Science
+IoT Soil Health Monitoring,"Sensor array measures pH, moisture, minerals; data drives adaptive fertilizer recommendation.",IoT
+IoT-based Disaster Prediction Using Weather Data,Uses sensor networks and weather forecasts to predict flood/storm risk locally.,IoT
+Smart Water Leak Detection in Buildings,Sensors detect leaks; system shuts off valves and notifies residents.,IoT
+IoT Smart Garden with Weather Prediction,Garden monitors weather and automates watering & shading.,IoT
+Fraud Detection in Insurance Claims,Detect exaggerated claims via statistical & ML anomaly detection.,Data Science
+Remote Learning Analytics Dashboard,"Analytics for student engagement, time-on-task, assignment trends in remote learning platforms.",Data Science
+Predictive Maintenance for Factory Equipment,Sensors detect wear & anomalies; schedule maintenance before failures.,IoT
+Predictive Analytics for HR Attrition,Predict which employees are likely to resign based on survey & performance data.,Data Science
+IoT-based Flood Gate Control System,Automates flood gates depending on water level and predicted flood risk.,IoT
+Inventory Management with Demand Forecasting,"Forecast stock needs, auto reorder, optimize storage.",Data Science
+Smart Warehouse Temperature & Humidity Control,IoT sensors regulate environment for sensitive goods; trigger alarms.,IoT
+Real-Time Forest Fire Prediction Dashboard,Weather + satellite data feed show imminent risk zones.,Data Science
+Automated ML Pipeline Builder,"Tool to automate data cleaning, feature selection, model selection & deployment.",AI
+AI-Assisted Financial Portfolio Rebalancer,Analyzes investments and suggests rebalancing to optimize returns vs risk.,Data Science
+IoT Smart Refrigerator with Food Freshness Sensor,"Senses spoilage gases & temperatures, alerts when foods are about to go bad.",IoT
+"Real-Time Sports Analytics Dashboard""",Loads live sports data; shows visual stats & predictive metrics.,Data Science
+"IoT-based Smart Thermostat""",Learns user patterns & weather; automatically adjusts home heating/cooling.,IoT
+Remote Crop Yield Control via MQTT,"Design and prototype an IoT system for monitoring crop yield using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+AI-powered Noise Monitoring Predictor,This project develops an AI model to noise monitoring by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+Smart Emotion Recognition using IoT,"Design and prototype an IoT system for monitoring emotion recognition using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Marketplace for Gesture Control,"Build a web platform that enables users to manage and interact with gesture control data, featuring authentication, dashboards, and real-time updates.",Web
+Marketplace for Fraud,"Build a web platform that enables users to manage and interact with fraud data, featuring authentication, dashboards, and real-time updates.",Web
+Marketplace for Speech Emotion,"Build a web platform that enables users to manage and interact with speech emotion data, featuring authentication, dashboards, and real-time updates.",Web
+AI-powered License Plate Predictor,This project develops an AI model to license plate by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+VR Training Simulator for Customer Churn,Create an immersive AR/VR experience to visualize or simulate customer churn for training and interactive exploration.,Mobile
+Smart Handwritten Digits using IoT,"Design and prototype an IoT system for monitoring handwritten digits using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+VR Training Simulator for Ride Sharing,Create an immersive AR/VR experience to visualize or simulate ride sharing for training and interactive exploration.,Mobile
+Progressive Web App for Handwritten Digits,"Build a web platform that enables users to manage and interact with handwritten digits data, featuring authentication, dashboards, and real-time updates.",Web
+HR Analytics Chatbot with NLP,"Build an NLP system to process hr analytics text, performing classification, summarization or conversational tasks.",AI
+Waste Sorting Platform with Real-time Features,"Build a web platform that enables users to manage and interact with waste sorting data, featuring authentication, dashboards, and real-time updates.",Web
+Data-driven Inventory Recommendation Engine,A data-driven project that collects and analyses inventory data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Remote Customer Churn Control via MQTT,"Design and prototype an IoT system for monitoring customer churn using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Text Classification for Time Series Forecasting,"Build an NLP system to process time series forecasting text, performing classification, summarization or conversational tasks.",AI
+Medical Imaging Analysis and Prediction System,A data-driven project that collects and analyses medical imaging data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+IoT-based Parking Slot Detection Monitoring System,"Design and prototype an IoT system for monitoring parking slot detection using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Autonomous Inventory with Reinforcement Learning,This project develops an AI model to inventory by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+Text Classification for Autonomous Delivery,"Build an NLP system to process autonomous delivery text, performing classification, summarization or conversational tasks.",AI
+Progressive Web App for Autonomous Delivery,"Build a web platform that enables users to manage and interact with autonomous delivery data, featuring authentication, dashboards, and real-time updates.",Web
+Smart Noise Monitoring using Deep Learning,This project develops an AI model to noise monitoring by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+AR-based Deception Detection Visualization,Create an immersive AR/VR experience to visualize or simulate deception detection for training and interactive exploration.,Mobile
+VR Training Simulator for Student Performance,Create an immersive AR/VR experience to visualize or simulate student performance for training and interactive exploration.,Mobile
+Progressive Web App for Water Quality,"Build a web platform that enables users to manage and interact with water quality data, featuring authentication, dashboards, and real-time updates.",Web
+Text Classification for Parking,"Build an NLP system to process parking text, performing classification, summarization or conversational tasks.",AI
+AR-based Resume Screening Visualization,Create an immersive AR/VR experience to visualize or simulate resume screening for training and interactive exploration.,Mobile
+Progressive Web App for Remote Monitoring,"Build a web platform that enables users to manage and interact with remote monitoring data, featuring authentication, dashboards, and real-time updates.",Web
+Predictive Model for Virtual Classroom,A data-driven project that collects and analyses virtual classroom data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Air Quality Platform with Real-time Features,"Build a web platform that enables users to manage and interact with air quality data, featuring authentication, dashboards, and real-time updates.",Web
+AI-powered Speech Emotion Predictor,This project develops an AI model to speech emotion by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+Progressive Web App for Medical Imaging,"Build a web platform that enables users to manage and interact with medical imaging data, featuring authentication, dashboards, and real-time updates.",Web
+Text Classification for Fake News,"Build an NLP system to process fake news text, performing classification, summarization or conversational tasks.",AI
+Predictive Model for Face Mask Detection,A data-driven project that collects and analyses face mask detection data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Deepfake Detection Detection using CNNs,This project develops an AI model to deepfake detection by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+VR Training Simulator for Traffic,Create an immersive AR/VR experience to visualize or simulate traffic for training and interactive exploration.,Mobile
+Predictive Model for Student Performance,A data-driven project that collects and analyses student performance data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Disaster Response Platform with Real-time Features,"Build a web platform that enables users to manage and interact with disaster response data, featuring authentication, dashboards, and real-time updates.",Web
+Autonomous Traffic with Reinforcement Learning,This project develops an AI model to traffic by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+Autonomous Autonomous Delivery with Reinforcement Learning,This project develops an AI model to autonomous delivery by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+IoT-based Handwritten Digits Monitoring System,"Design and prototype an IoT system for monitoring handwritten digits using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Smart Student Performance using IoT,"Design and prototype an IoT system for monitoring student performance using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Remote Resume Screening Control via MQTT,"Design and prototype an IoT system for monitoring resume screening using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Smart Autonomous Delivery using IoT,"Design and prototype an IoT system for monitoring autonomous delivery using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+AR-based Document Summarization Visualization,Create an immersive AR/VR experience to visualize or simulate document summarization for training and interactive exploration.,Mobile
+Waste Management Detection using CNNs,This project develops an AI model to waste management by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+Marketplace for Attendance,"Build a web platform that enables users to manage and interact with attendance data, featuring authentication, dashboards, and real-time updates.",Web
+Remote Supply Chain Control via MQTT,"Design and prototype an IoT system for monitoring supply chain using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Predictive Model for Elderly Care,A data-driven project that collects and analyses elderly care data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+AR-based Deepfake Detection Visualization,Create an immersive AR/VR experience to visualize or simulate deepfake detection for training and interactive exploration.,Mobile
+Customer Churn Chatbot with NLP,"Build an NLP system to process customer churn text, performing classification, summarization or conversational tasks.",AI
+Energy Trading Analysis and Prediction System,A data-driven project that collects and analyses energy trading data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+AR-based Water Quality Visualization,Create an immersive AR/VR experience to visualize or simulate water quality for training and interactive exploration.,Mobile
+Healthcare Analysis and Prediction System,A data-driven project that collects and analyses healthcare data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+IoT-based Healthcare Monitoring System,"Design and prototype an IoT system for monitoring healthcare using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Text Classification for Air Quality,"Build an NLP system to process air quality text, performing classification, summarization or conversational tasks.",AI
+Remote Document Summarization Control via MQTT,"Design and prototype an IoT system for monitoring document summarization using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Marketplace for Parking,"Build a web platform that enables users to manage and interact with parking data, featuring authentication, dashboards, and real-time updates.",Web
+Text Classification for Plant Disease,"Build an NLP system to process plant disease text, performing classification, summarization or conversational tasks.",AI
+Data-driven Sentiment Recommendation Engine,A data-driven project that collects and analyses sentiment data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Drone Navigation Analysis and Prediction System,A data-driven project that collects and analyses drone navigation data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Student Performance Chatbot with NLP,"Build an NLP system to process student performance text, performing classification, summarization or conversational tasks.",AI
+Remote Resume Parsing Control via MQTT,"Design and prototype an IoT system for monitoring resume parsing using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+AR-based Sentiment Visualization,Create an immersive AR/VR experience to visualize or simulate sentiment for training and interactive exploration.,Mobile
+Remote Crowd Counting Control via MQTT,"Design and prototype an IoT system for monitoring crowd counting using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Text Classification for Retail Sales,"Build an NLP system to process retail sales text, performing classification, summarization or conversational tasks.",AI
+VR Training Simulator for Language Learning,Create an immersive AR/VR experience to visualize or simulate language learning for training and interactive exploration.,Mobile
+AI-powered Language Learning Predictor,This project develops an AI model to language learning by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+Smart Customer Churn using Deep Learning,This project develops an AI model to customer churn by training deep neural networks on relevant datasets and evaluating performance on accuracy and robustness metrics.,AI
+Time Series Forecasting Analysis and Prediction System,A data-driven project that collects and analyses time series forecasting data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Data-driven Supply Chain Recommendation Engine,A data-driven project that collects and analyses supply chain data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Traffic Sign Platform with Real-time Features,"Build a web platform that enables users to manage and interact with traffic sign data, featuring authentication, dashboards, and real-time updates.",Web
+IoT-based Sign Language Monitoring System,"Design and prototype an IoT system for monitoring sign language using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Drone Navigation Platform with Real-time Features,"Build a web platform that enables users to manage and interact with drone navigation data, featuring authentication, dashboards, and real-time updates.",Web
+VR Training Simulator for Medical Imaging,Create an immersive AR/VR experience to visualize or simulate medical imaging for training and interactive exploration.,Mobile
+Text Classification for Parking Slot Detection,"Build an NLP system to process parking slot detection text, performing classification, summarization or conversational tasks.",AI
+Text Classification for Deepfake Detection,"Build an NLP system to process deepfake detection text, performing classification, summarization or conversational tasks.",AI
+Traffic Analysis and Prediction System,A data-driven project that collects and analyses traffic data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+VR Training Simulator for License Plate,Create an immersive AR/VR experience to visualize or simulate license plate for training and interactive exploration.,Mobile
+Smart Face Mask Detection using IoT,"Design and prototype an IoT system for monitoring face mask detection using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Data-driven Retail Sales Recommendation Engine,A data-driven project that collects and analyses retail sales data to build predictive models and visualizations to guide stakeholders' decisions.,Data Science
+Marketplace for Supply Chain,"Build a web platform that enables users to manage and interact with supply chain data, featuring authentication, dashboards, and real-time updates.",Web
+Smart Weather using IoT,"Design and prototype an IoT system for monitoring weather using sensors, microcontrollers and cloud services for data logging and remote control.",IoT
+Marketplace for Remote Monitoring,"Build a web platform that enables users to manage and interact with remote monitoring data, featuring authentication, dashboards, and real-time updates.",Web
+CryptocurrencyPrediction,Predict Cryptocurrency Price with Deep Learning,AI
+Gesture-Controlled-Virtual-Mouse,"Virtually controlling computer using hand-gestures and voice commands. Using MediaPipe, OpenCV Python.",AI
+Finding-missing-person-using-AI,The project focuses on Tracking missing people. We are using Image processing and Machine learning along with Postgres Database.,AI
+Health-Care-Chatbot,It is a medical chatbot that will provide quick answers to FAQs by setting up rule-based keyword chatbots.,AI
+Recipe-Generation-from-Food-Image,"An Application for Generating a cooking recipe consist of title, ingredients and instructions from an food image using Deep Learning.",AI
+Ecommerce-Website,"Final Year Project for students as Ecommerce website especially different webpages. Top class Website Development project that made by combination of front end programming languages such as HTML, CSS & JS.",Mobile
+Live-Chatbot-for-Final-Year-Project,Chatbot system for Final Year Project. Chatbot made in Python using Natural Language Toolkit especially Machine Learning. Easy to Understand and Implement.,AI
+dl_accelerator,Deep Learning Accelerator Based on Eyeriss V2 Architecture with custom RISC-V extended instructions,AI
+Fake-News-Detection-Project,"Final Year Fake News Detection using Machine learning Project with  Report, PPT, Code, Research Paper, Documents and Video Explanation.",AI
+uMe,Online Chatting Application (Android) || Messaging App || Firebase,Mobile
+online-course-registration-,"online course registration by using html,css,js,and php and final year and engineering project - for demo",Mobile
+MALWARE-DETECTION-FINAL-YEAR-PROJECT,"Final Year Malware Detection Project with PPT, Research Paper, code and Synopsis. Malware detection project by Machine Learning ALgorithms.",AI
+project-defude,Refocus an image just by clicking on it with no additional data,AI
+Final-Year-Machine-Learning-Stock-Price-Prediction-Project,Final Year B.tech Project on Machine Learning Stock Prediction through Deep Learning,AI
+marvin,Web app to automatically generate subjective or an objective test and evaluate user responses without any human intervention in an efficient and automatic manner using machine learning and natural language processing.,AI
+Ai-Healthcare-Chatbot,see live demo of chatbot. follow the link,AI
+diabetic-retinopathy,A Django application developped for classification of a diabetes complication that affects eyes,Mobile
+Final-Year-Disease-Prediction-Project,Final Year Project Diseases Prediction System through Machine Learning. Disease Prediction system with code and documents,AI
+Network-Intrusion-Detection-Project,Network Intrusion Detection System Project using Machine Learning with code and Documents,AI
+100-AI-Machine-learning-Deep-learning-Computer-vision-NLP,100+  AI Machine learning Deep learning Computer vision NLP Projects with code,AI
+FaceMask-Detection-using-Deeplearning,"A python tool to detect if a person is wearing a mask or not in real-time using deep learning techniques. It works with images, videos, and real-time videos as well.",AI
+Data-Duplication-Removal-using-Machine-Learning,Final Year Project as Deletion of Duplicated data using Machine learning project with source code and Report.,AI
+PostGraduation,University management platform dedicated for post-graduation in computer science field using django rest framework.,Mobile
+Blasa.v2,blasa ride-sharing android app with firebase,Mobile
+Google-Stock-Price-Prediction-by-Deep-Learning,Top Class Stock Price Prediction Project through Machine Learning Algorithms for Google. Easy Understanding and Implementation. B.tech Final Year College Project.,AI
+Image-Security-by-Triple-DES-Final-Year-Project,B.tech Cryptogaphy Final Year Project on ENCRYPTION & DECRYPTION of IMAGE through Triple DES.,AI
+Android-Malware-Detection-Using-Machine-Learning,Android Malware Detection Using Machine Learning Project with Source Code and Documents Plus Video Explanation,Mobile
+YOLOv3-Cloud-Based-Fire-Detection,"Custom Object detection using YOLOv3 on the cloud. It is trained to detect Fire in a given frame. It can be largely used for Wildfires, fire accidents, etc.",AI
+Co2-Emission-Prediction-Using-Machine-Learning,Final year Co2 Emission Prediction Using Machine Learning Project with source code and documents. Btech Final Year Project,AI
+fantasy-sports-prediction,We have used our skill of machine learning along with our passion for cricket to predict the performance of players in the upcoming matches using ML Algorithms like random-forest and XG Boost,AI
+Codo-File,"Codo-File is a code editor that primarily supports JavaScript and Python, with partial Dart support. Additionally, it features a real-time website editor where you can create your own website in the browser using HTML, CSS, and JavaScript. The project also includes an image-to-text feature and a voice-to-text feature .",AI
+Intruder-Detection-and-Automatic-Email-Alerting-system,Using OpenCV and face_recognition to detect unknown faces and send automatic email alert to the admin,AI
+Fake-News-Detection-using-machine-learning,"Full stack Fake News Detection using machine learning Project Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",AI
+image_caption_generator,"An Image captioning web application combines the power of React.js for front-end, Flask and Node.js for back-end, utilizing the MERN stack. Users can upload images and instantly receive automatic captions. Authenticated users have access to extra features like translating captions and text-to-speech functionality.",AI
+B.tech-Project-Rainfall-Predication-in-India,Rainfall Prediction using Machine Learning. India Rainfall Prediction for 115 years.  Rainfall Project with Code and Documents,AI
+AI-MedLab,"AI-based medical laboratory is a project that aims to use artificial intelligence (AI), machine learning (ML) to improve the quality and efficiency of laboratory medicine. There are three modules like customer or local person, doctor and lab assistant. This project we built in MERN Stack.",AI
+YOLOv3-Object-Tracking,"Object tracking with YOLOv3, YOLOv3-tiny, Deep Sort and Tensorflow. This repository implements YOLOv3 and Deep SORT in order to perfrom real-time object tracking.",AI
+Eco-fertilization,Nutrient Value Recommendation System for crops w.r.t rainfall patterns embedded with rainfall prediction system.,IoT
+Heart-disease-prediction-system-Project,Heart disease prediction system Project using Machine Learning with Code and Report,AI
+UPI-Fraud-Detection-Using-Machine-Learning,UPI Fraud Detection Using Machine Learning with Source Code and documents,AI
+10-Deep-Learning-Final-Year-Project-Ideas-Deep-learning-final-year-projects-with-source-code,"Deep learning final year projects offer students the opportunity to explore the latest advancements in artificial intelligence and apply them to real-world problems. One project idea is developing a Deep Learning-Based Image Classification System, which uses convolutional neural networks (CNNs) to classify images into different categories.",AI
+Genetic-Algorithms-for-Swarm-Parameter-Tuning,"Swarming behaviour is based on aggregation of simple drones exhibiting basic instinctive reactions to stimuli. However, to achieve overall balanced/interesting behaviour the relative importance of these instincts, as well their internal parameters, must be tuned. In this project, you will learn how to apply Genetic Programming as means of such tuning, and attempt to achieve a series of non-trivial swarm-level behaviours.",Mobile
+Malaria-Identification-System,Malaria Identification System Using Deep Learning,AI
+spot_hub,"Spot Hub is a mobile application that provides personalized food and hotel recommendations based on user preferences and location. The app also allows businesses to create profiles and promote their products, providing users with a comprehensive guide to local dining and hospitality options.",Mobile
+FYP,android application use for your personal budget management system,Mobile
+smartkisan,FYP project for colleague of mine in Python/Django. Fully working website with customized django admin panel.,Mobile
+learn-managment-system-mern,"""LMS Learn"" is a full-featured Learning Management System (LMS) built using the MERN stack (MongoDB, Express, React, Node.js). It provides an intuitive platform for managing courses, students, and instructors, offering seamless user authentication, course enrollment, and progress tracking. 🚀",Mobile
+15-Machine-Learning-Projects-For-Final-Year-AI-ML-projects-for-final-year-with-Source-Code,"Machine learning projects offer final-year students the opportunity to apply theoretical concepts to real-world problems. Projects include Home Value Prediction , where students develop a model to predict house prices based on factors like average income and crime rate.",AI
+10-advance-machine-learning-projects-with-source-code-ML-projects-with-source-code,"Advanced machine learning projects offer a challenging and rewarding experience, allowing developers to apply theoretical concepts to real-world problems. One project idea is developing a Deep Learning-Based Image Classification System , which uses convolutional neural networks (CNNs) to classify images into different categories.",AI
+15-advance-AI-Projects-for-Final-Year-Machine-Learning-Projects-for-Final-Year-with-Source-Code,"Advanced AI projects for final year students offer a challenging and rewarding experience, allowing them to apply theoretical concepts to real-world problems. One project idea is developing a Deep Learning-Based Medical Diagnosis System , which uses convolutional neural networks (CNNs) to analyze medical images and diagnose diseases.",AI
+Artificial-Intelligence-FYP-project-ideas-Artificial-Intelligence-advance-Project-Ideas-AI-FYP,Artificial Intelligence (AI) final year projects offer students the opportunity to explore the latest advancements in AI and apply them to real-world problems. One project idea is developing a Sentiment Analysis Tool that uses natural language processing (NLP) and machine learning algorithms to analyze text data and predict sentiment,AI
+20-Artificial-Intelligence-FYP-project-ideas-Artificial-Intelligence-advance-Project-Ideas,"Artificial Intelligence (AI) final year projects offer students the opportunity to explore the latest advancements in AI and apply them to real-world problems. Project ideas include developing a Deep Learning-Based Medical Diagnosis System , a Natural Language Processing (NLP) Based Chatbot",AI
+50-machine-learning-projects-with-source-code-advanced-machine-learning-projects-with-Source-Code,"Here are some exciting machine learning projects with source code that you can explore. Beginner-Friendly Projects include Home Value Prediction , where you'll build a model to predict house prices based on factors like average income and crime rate",AI
+30-Final-Year-Projects-for-Computer-Science-major-projects-for-cse-final-year-students-with-code-,"Final year projects are a crucial part of the computer science curriculum, allowing students to apply theoretical concepts to real-world problems. For computer science students, project ideas include developing a Chatbot Using Natural Language Processing",AI
+Machine-Learning-projects-for-final-year-Machine-Learning-Final-Year-Project-Ideas,"Machine learning final year projects offer students the opportunity to explore the latest advancements in artificial intelligence and apply them to real-world problems. One popular project idea is developing a ""Handwritten Character Recognition System"" using convolutional neural networks (CNNs) and deep learning techniques.",AI
+adaTanam,"Final Year Project (E-Market for Small Scale Farmers): Cloud-hosted web-based e-commerce platform using React, Spring Boot and deployed to various Azure services.",Mobile
+Ecommerce-Store-Forever-MERN,"A full-stack e-commerce application with a React.js frontend (user and admin panels) and a Node.js/Express.js backend, featuring product management, shopping cart, order processing (Stripe/COD), and user authentication. MongoDB is used for data storage.",Mobile
+reviews-classifier,"This is my final year project ""customer reviews classification and analysis system using data mining and nlp"". It analyzes and then classifies the customer reviews on the basis of their fakeness, sentiments, contexts and topics discussed. The reviews are taken from various e-commerce platforms like daraz and amazon.",AI
+30-Days-Of-JavaScript,"30 days of JavaScript programming challenge is a step-by-step guide to learn JavaScript programming language in 30 days. This challenge may take more than 100 days,  please just follow your own pace. These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",Mobile
+reactjs-interview-questions,List of top 500 ReactJS Interview Questions & Answers....Coding exercise questions are coming soon!!,Mobile
+bert,TensorFlow code and pre-trained models for BERT,AI
+pytorch-image-models,"The largest collection of PyTorch image encoders / backbones. Including train, eval, inference, export scripts, and pretrained weights -- ResNet, ResNeXT, EfficientNet, NFNet, Vision Transformer (ViT), MobileNetV4, MobileNet-V3 & V2, RegNet, DPN, CSPNet, Swin Transformer, MaxViT, CoAtNet, ConvNeXt, and more",AI
+tuning_playbook,A playbook for systematically maximizing the performance of deep learning models.,AI
+javascript-interview-questions,List of 1000 JavaScript Interview Questions,Mobile
+eslint,Find and fix problems in your JavaScript code.,Mobile
+Mask_RCNN,Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow,AI
+vit-pytorch,"Implementation of Vision Transformer, a simple way to achieve SOTA in vision classification with only a single transformer encoder, in Pytorch",AI
+xbmc,"Kodi is an award-winning free and open source home theater/media center software and entertainment hub for digital media. With its beautiful interface and powerful skinning engine, it's available for Android, BSD, Linux, macOS, iOS, tvOS and Windows.",Mobile
+spellbook-of-modern-webdev,"A Big Picture, Thesaurus, and Taxonomy of Modern JavaScript Web Development",Mobile
+pytorch-deep-learning,Materials for the Learn PyTorch for Deep Learning: Zero to Mastery course.,AI
+tiny11builder,Scripts to build a trimmed-down Windows 11 image.,AI
+RWKV-LM,"RWKV (pronounced RwaKuv) is an RNN with great LLM performance, which can also be directly trained like a GPT transformer (parallelizable). We are at RWKV-7 ""Goose"". So it's combining the best of RNN and transformer - great performance, linear time, constant space (no kv-cache), fast training, infinite ctx_len, and free sentence embedding.",AI
+DALLE2-pytorch,"Implementation of DALL-E 2, OpenAI's updated text-to-image synthesis neural network,  in Pytorch",AI
+stylegan2,StyleGAN2 - Official TensorFlow Implementation,AI
+segmentation_models.pytorch,Semantic segmentation models with 500+ pretrained convolutional and transformer-based backbones.,AI
+grype,A vulnerability scanner for container images and filesystems,AI
+unmaintainable-code,"A more maintainable, easier to share version of the infamous http://mindprod.com/jgloss/unmain.html",Mobile
+tpot,A Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming.,AI
+GroundingDINO,"[ECCV 2024] Official implementation of the paper ""Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection""",AI
+Pikaday,"A refreshing JavaScript Datepicker — lightweight, no dependencies, modular CSS",Mobile
+gocv,"Go package for computer vision using OpenCV 4 and beyond. Includes support for DNN, CUDA, OpenCV Contrib, and OpenVINO.",AI
+DevOps-Bash-tools,"1000+ DevOps Bash Scripts - AWS, GCP, Kubernetes, Docker, CI/CD, APIs, SQL, PostgreSQL, MySQL, Hive, Impala, Kafka, Hadoop, Jenkins, GitHub, GitLab, BitBucket, Azure DevOps, TeamCity, Spotify, MP3, LDAP, Code/Build Linting, pkg mgmt for Linux, Mac, Python, Perl, Ruby, NodeJS, Golang, Advanced dotfiles: .bashrc, .vimrc, .gitconfig, .screenrc, tmux..",Mobile
+machine-learning-course,:speech_balloon: Machine Learning Course with Python:,AI
+nmt,TensorFlow Neural Machine Translation Tutorial,AI
+pytorch-metric-learning,"The easiest way to use deep metric learning in your application. Modular, flexible, and extensible. Written in PyTorch.",AI
+t81_558_deep_learning,T81-558: Keras - Applications of Deep Neural Networks @Washington University in St. Louis,AI
+rfcs,RFCs for changes to React,Mobile
+DALLE-pytorch,"Implementation / replication of DALL-E, OpenAI's Text to Image Transformer, in Pytorch",AI
+doctr,"docTR (Document Text Recognition) - a seamless, high-performing & accessible library for OCR-related tasks powered by Deep Learning.",AI
+awesome-css,:art: A curated contents of amazing CSS :),Mobile
+The-Forge,"The Forge Cross-Platform Framework PC Windows, Steamdeck (native), Ray Tracing, macOS / iOS, Android, XBOX, PS4, PS5, Switch, Quest 2",Mobile
+SUPIR,SUPIR aims at developing Practical Algorithms for Photo-Realistic Image Restoration In the Wild. Our new online demo is also released at suppixel.ai.,AI
+Pluto.jl,🎈 Simple reactive notebooks for Julia,Mobile
+semantic-segmentation-pytorch,Pytorch implementation for Semantic Segmentation/Scene Parsing on MIT ADE20K dataset,AI
+awesome-reverse-engineering,Reverse Engineering Resources About All Platforms(Windows/Linux/macOS/Android/iOS/IoT) And Every Aspect! (More than 3500 open source tools and 2300 posts&videos),IoT
+cookiecutter-flask,"A flask template with Bootstrap, asset bundling+minification with webpack, starter templates, and registration/authentication. For use with cookiecutter.",Mobile
+MaterialDateTimePicker,Pick a date or time on Android in style,Mobile
+Reinforcement-Learning,Learn Deep Reinforcement Learning in 60 days! Lectures & Code in Python. Reinforcement Learning + Deep Learning,AI
+Person_reID_baseline_pytorch,":bouncing_ball_person: Pytorch ReID: A tiny, friendly, strong pytorch implement of person re-id / vehicle re-id baseline. Tutorial 👉https://github.com/layumi/Person_reID_baseline_pytorch/tree/master/tutorial",AI
+grobid,A machine learning software for extracting information from scholarly documents,AI
+EconML,"ALICE (Automated Learning and Intelligence for Causation and Economics) is a Microsoft Research project aimed at applying Artificial Intelligence concepts to economic decision making. One of its  goals is to build a toolkit that combines state-of-the-art machine learning techniques with econometrics in order to bring automation to complex causal inference problems. To date, the ALICE Python SDK (econml) implements orthogonal machine learning algorithms such as the double machine learning work of Chernozhukov et al. This toolkit is designed to measure the causal effect of some treatment variabl",AI
+Dollar,A functional tool-belt for Swift Language similar to Lo-Dash or Underscore.js in Javascript,Mobile
+HunyuanDiT,Hunyuan-DiT : A Powerful Multi-Resolution Diffusion Transformer with Fine-Grained Chinese Understanding,AI
+awesome-machine-learning-interpretability,A curated list of awesome responsible machine learning resources.,AI
+stylegan2-pytorch,"Simplest working implementation of Stylegan2, state of the art generative adversarial network, in Pytorch. Enabling everyone to experience disentanglement",AI
+Deformable-DETR,Deformable DETR: Deformable Transformers for End-to-End Object Detection.,AI
+hallo2,[ICLR 2025] Hallo2: Long-Duration and High-Resolution Audio-driven Portrait Image Animation,AI
+rrule,JavaScript library for working with recurrence rules for calendar dates as defined in the iCalendar RFC and more.,Mobile
+XLeRobot,XLeRobot: Practical Dual-Arm Mobile Home Robot for $660,Mobile
+LSTM-Human-Activity-Recognition,Human Activity Recognition example using TensorFlow on smartphone sensors dataset and an LSTM RNN. Classifying the type of movement amongst six activity categories - Guillaume Chevalier,IoT
+nodejs-basics,Node.js Basics ( v18.x ),Mobile
+Torch-Pruning,"[CVPR 2023] DepGraph: Towards Any Structural Pruning; LLMs, Vision Foundation Models, etc.",AI
+Linly,Chinese-LLaMA 1&2、Chinese-Falcon 基础模型；ChatFlow中文对话模型；中文OpenLLaMA模型；NLP预训练/指令微调数据集,AI
+AndroidStandardDevelop,:star2: Best practices in Android develop(final).,Mobile
+image-segmentation-keras,"Implementation of Segnet, FCN, UNet , PSPNet and other models in Keras.",AI
+awesome-deeplearning-resources,Deep Learning and deep reinforcement learning research papers and some codes,AI
+RapidRAW,"A beautiful, non-destructive, and GPU-accelerated RAW image editor built with performance in mind.",AI
+awesome-deep-learning-music,List of articles related to deep learning applied to music,AI
+src,Source-code used in Kiwi Browser for Android,Mobile
+easy-markdown-editor,"EasyMDE: A simple, beautiful, and embeddable JavaScript Markdown editor. Delightful editing for beginners and experts alike. Features built-in autosaving and spell checking.",Mobile
+nerf_pl,NeRF (Neural Radiance Fields) and NeRF in the Wild using pytorch-lightning,AI
+table-transformer,Table Transformer (TATR) is a deep learning model for extracting tables from unstructured documents (PDFs and images). This is also the official repository for the PubTables-1M dataset and GriTS evaluation metric.,AI
+MusePose,MusePose: a Pose-Driven Image-to-Video Framework for Virtual Human Generation,AI
+setfit,Efficient few-shot learning with Sentence Transformers,AI
+GLIP,Grounded Language-Image Pre-training,AI
+mtcnn,"MTCNN face detection implementation for TensorFlow, as a PIP package.",AI
+contrastive-unpaired-translation,"Contrastive unpaired image-to-image translation, faster and lighter training than cyclegan (ECCV 2020, in PyTorch)",AI
+LISA,"Project Page for ""LISA: Reasoning Segmentation via Large Language Model""",AI
+pytorch-kaldi,"pytorch-kaldi is a project for developing state-of-the-art DNN/RNN hybrid speech recognition systems. The DNN part is managed by pytorch, while feature extraction, label computation, and decoding are performed with the kaldi toolkit.",AI
+pytorch-3dunet,3D U-Net model for volumetric semantic segmentation written in pytorch,AI
+subword-nmt,Unsupervised Word Segmentation for Neural Machine Translation and Text Generation,AI
+android-inapp-billing-v3,A lightweight implementation of Android In-app Billing Version 3,Mobile
+THREE.js-PathTracing-Renderer,"Real-time PathTracing with global illumination and progressive rendering, all on top of the Three.js WebGL framework. Click here for Live Demo: https://erichlof.github.io/THREE.js-PathTracing-Renderer/Geometry_Showcase.html",Mobile
+deeplearning-biology,A list of deep learning implementations in biology,AI
+macos_ui,Flutter widgets and themes implementing the current macOS design language.,Mobile
+CoOp,"Prompt Learning for Vision-Language Models (IJCV'22, CVPR'22)",AI
+Chat-Haruhi-Suzumiya,"Chat凉宫春日, An open sourced Role-Playing chatbot Cheng Li, Ziang Leng, and others.",AI
+pytorch-styleguide,An unofficial styleguide and best practices summary for PyTorch,AI
+cambrian,Cambrian-1 is a family of multimodal LLMs with a vision-centric design.,AI
+benchmark_VAE,Unifying Variational Autoencoder (VAE) implementations in Pytorch (NeurIPS 2022),AI
+oidn,Intel® Open Image Denoise library,AI
+Advanced-Deep-Learning-with-Keras,"Advanced Deep Learning with Keras, published by Packt",AI
+ICEdit,[NeurIPS 2025] Image editing is worth a single LoRA! 0.1% training data for fantastic image editing! Surpasses GPT-4o in ID persistence~ MoE ckpt released! Only 4GB VRAM is enough to run!,AI
+Datejs,A JavaScript Date and Time Library,Mobile
+Make-It-3D,[ICCV 2023] Make-It-3D: High-Fidelity 3D Creation from A Single Image with Diffusion Prior,AI
+Atlas,Atlas: End-to-End 3D Scene Reconstruction from Posed Images,AI
+few-shot-vid2vid,Pytorch implementation for few-shot photorealistic video-to-video translation.,AI
+votenet,Deep Hough Voting for 3D Object Detection in Point Clouds,AI
+PixelVision8,Pixel Vision 8's core philosophy is to teach retro game development with streamlined workflows. PV8 is also a platform that standardizes 8-bit fantasy console limitations built on top of the open-source C# game engine based on MonoGame.,AI
+PWC-Net,"PWC-Net: CNNs for Optical Flow Using Pyramid, Warping, and Cost Volume, CVPR 2018 (Oral)",AI
+handtracking,Building a Real-time Hand-Detector using Neural Networks (SSD) on Tensorflow,AI
+alphafold2,"To eventually become an unofficial Pytorch implementation / replication of Alphafold2, as details of the architecture get released",AI
+Magic123,[ICLR24] Official PyTorch Implementation of Magic123: One Image to High-Quality 3D Object Generation Using Both 2D and 3D Diffusion Priors,AI
+imitation,Clean PyTorch implementations of imitation and reward learning algorithms,AI
+media-kit,A cross-platform video player & audio player for Flutter & Dart.,Mobile
+VRT,VRT: A Video Restoration Transformer (official repository),AI
+RandLA-Net,"🔥RandLA-Net in Tensorflow (CVPR 2020, Oral & IEEE TPAMI 2021)",AI
+SAKHI-1.0---PANIC-BUTTON-ANDROID-APP-FOR-WOMEN-SAFETY,"The aim of the project is to develop an Android application that lets its users to send notifications in case of an emergency or a panic situation. The users can send multiple text messages and emails on the press of a single button. The phone numbers, email ids and the contents of the text and email messages can be set from within the application. The text messages and emails sent, along with the content, also have the last known location of the user. This is very helpful in tracking the whereabouts of the person.",Mobile
+FinalYearProject,Final Year Project on Pneumonia Detection and Classification using Deep Learning for the degree of Btech Computer Science & Engineering,AI
+NED-Admission-LLM-Chatbot-FYP,"This is the final year project of university, in which my group is developing a chatbot for university admissions using LLMS and RAG. The bot is powered by Langchain and FastAPI. The UI and frontend is developed in Next.js.",AI
+AI-Chatbot-Final-Year-Project,"AI chatbot used to communication with End user through online on platforms such websites and application. Btech college project. Project Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",AI
+Brain-Stroke-Detection,"This project involves developing a system to detect brain strokes from medical images, such as CT or MRI scans. The system uses image processing and machine learning techniques to identify and classify stroke regions within the brain, aiming to provide early diagnosis and assist medical professionals in treatment planning.",AI
+wifi-controlled-multiwii,Controlling Arduino based MultiWii drone using esp8266,IoT
+finpro,":books: :rocket: Finpro - An Android Based Final Project Management System || Proyek Akhir || Skripsi || Manajemen Proyek Akhir - Skripsi || Bimbingan, Monev, Sidang",Mobile
+WeSee,"Final year college project, based on Digital Image Processing, Computer Vision and Deep Learning. It is aimed towards helping visually impaired people to access digital media and information of their surrounding, through text recognition and objection classification.",AI
+fingerprint-attendance,Arduino & Biometric (Fingerprint) based attendance system with desktop client. (A final year CS project made at GAC-CBE),IoT
+Criminal-Management-System,"Criminal Management System using HTML ,CSS ,JS ,PHP ,MySQL",Mobile
+puri,Order Management System built with React and Firebase,Mobile
+Skin-Disease-Detection-through-Image-Analysis,Detection of Skin Disease using CNN. Detects five types of disease.,AI
+Full-Stack-Credit-Card-Fraud-Detection-Project,Full Stack Credit Card Fraud Detection Using Machine Learning with Code and Documents Plus Youtube Explanation Video,AI
+Arduino-Project,"Explore Arduino Uno projects! From smart homes to robots, IoT, and wearables, this playlist guides you through diverse creations. Step-by-step videos help you innovate and learn. Start making! 🛠️🤖✨",IoT
+Image-Chain-Blockchain-Project,"Final Year ImageChain Blockchain Project is application of Blockchain. Project Include Code, Documents with Video Explanation",AI
+Image-Recognition-Project,Beautiful Image recognition and Classification Project for final year college students.,AI
+Blind-Nav-Android-App-for-Blind-persons,"Android, Kotlin, Jetpack-Compose An innovative Android application designed to assist visually impaired individuals in navigating their surroundings and environments. Powered by advanced AI integration, this app provides real-time guidance and support, ensuring safer and more independent mobility.",Mobile
+WellCare,"An online wellness portal that connects users to physiotherapists, nutritionists and gym trainers and provides one-to-one monitoring which would help in improving a person's health and enhancing the overall well-being of an individual.",IoT
+Surveillance-Rover,A multipurpose Wireless Surveillance Rover an Electronics project made with arduino.,IoT
+smart-home-intrusuion-system,Final year project for ECE-IoT based Smart Security Home Automation System,IoT
+proxy,Proxy - A Leave Request & Teacher Arrangement System for Computer Science Engineering final year project. Simplify leave requests & manage teacher schedules. Built with React.,Mobile
+HandWritting,Text to hand writting convertor using Reactjs,Mobile
+phishdetector-fyp,PhishDetector - Realtime detection of phishing sites using Machine Learning | NUST Final Year Project (FYP-SEECS) 2023,AI
+Real-Estate-Price-Prediction-Using-Machine-Learning-Project,Real Estate Price Prediction Using Machine Learning Project with Code and Datatsets,AI
+legal-aid-chatbot,This project is an AI-powered legal chatbot developed as a final year project for a Computer Science degree.,AI
+Multiple-NewsFeed-Reader,An android app for Multiple NewsFeed Reader. This was built for a friend as his final year project some years back.,Mobile
+VenomX-Windows-Voice-Assistant,"VenomX is an advanced voice assistant for Windows, utilizing Python and AI for NLP, information retrieval, and YOLO-based object detection. It offers voice interaction, task scheduling, app management, and entertainment features. Designed to simplify tasks and demonstrate cutting-edge AI capabilities.",AI
+e15-4yp-sports-action-recognition,"This includes a novel method to measure the quality of the actions performed in Olympic weightlifting using human action recognition in videos. Human action recognition is a well-studied problem in computer vision and on the other hand action quality assessment is researched and experimented comparatively low. This is due to the lack of datasets that can be used to assess the quality of actions. In this research, we introduce a method to assess player techniques in weightlifting by using skeleton-based human action recognition. Furthermore, we introduce a new video dataset for action recogniti",AI
+HomeStay-Booking,"Homestay Reservation System Welcome to the Homestay Reservation System! This project is a web-based application designed to streamline the process of booking homestay accommodations. Developed using ReactJS, this system provides an intuitive and responsive user interface, ensuring a seamless experience for both hosts and guests.",Mobile
+sign2text,Sign Language to Text Translation using Machine Learning and Open CV. Implemented using Landmark Module and Random Forest Algorithm. B.Tech final year project 2024.,AI
+Edu-Vision,"EduVision is a powerful AI-based study platform built for students and academic project seekers. It digitizes handwritten notes using OCR (Azure), summarizes them with AI, and generates quiz questions to aid in exam preparation.  Ideal for final-year projects, EduVision includes a full-featured frontend (React + Tailwind), intelligent Python/Node.j",AI
+cyberbully-detection-using-ML,This project contains the file of my undergraduate Final Year Project.  This project aims to expose cyberbullying in Twitter by using Machine Learning to classify whether the tweet is suspicious or not. A deployment has been created using streamlit.,AI
+Breast-Cancer-Detection-Using-Machine-Learning,"Breast Cancer Detection Using Machine Learning Project Code, PPT, Synopsis, Report and Video Explanation",AI
+Full-Stack-Fake-News-Detection,Full Stack Fake News Detection using machine learning with code and documents plus youtube video explanation,AI
+BE-Final-Year-Project,BE IT Final Year Machine Learning Project,AI
+Docs-Scanner,"Created a document scanner using Python, OpenCV. Implement edge detection, Contour detection, perspective transform and thresholding.",AI
+liuyap-ZERO-App,"ZERO App is a mobile application aimed at reducing food waste, built using Flutter and Firebase. The app allows users to donate surplus food, find local food banks, and track their contributions. It features a user-friendly interface, real-time data updates, and secure authentication.",Mobile
+Ransomware-Detection-System-using-Machine-Learning,B.tech Ransomware Detection System Based on Machine Learning Project,AI
+NovelCorona-Pneumonia-Prediction_V2,"Predicting Noval Corona, Pneumonia, Healthy from X-ray scans using Deep Learning. Trained dataset on Resnet50, VGG16, and a Custom model.",AI
+Reel-Rec,Reel Rec - A Movie Recommendation AI designed to change the way movie enthusiasts discover and enjoy  favorite films. Made using Django & Tailwind CSS.,Mobile
+vision-based-adas,"This is my bachelor's thesis, which contains three main features: lane detection, road segmentation, and a Forward Collision Warning (FCW) system",AI
+forum-backend,An open-source online forum for Bahir Dar University built using Django Rest Framework Under Google Developers Student Club (GDSC) Bahir Dar.,Mobile
+Turf-Booking-Project,A website to take and manage bookings on a turf using python django.,Mobile
+AI-Career-Forge,"🚀 Built AI Career Forge – a full-stack AI-powered platform that helps users build, analyze, and match resumes with job descriptions. Used React, Express, Firebase, and Google Generative AI to make resume building smarter and faster.",Mobile
+Sign-Talk---Bridge-the-Gap-of-Communication,"SignTalk is an android based application in which Hearing, or speech impaired persons can easily communicate with normal persons and vice versa without any central human interpreter.",Mobile
+radiology-assistant,Hand gesture tool for radiology image transformation - Final year project,AI
+Images-or-Scanned-Documents-into-Searchable-PDFs,"This is a Flask Based Project to convert Images, Scanned Documents or Multiple Page PDF into Searchable PDF",AI
+Book-To-Comics,"This is a Book-To-Comic API , using GPT and stable diffusion model to generate a image and text",AI
+Crime-Prediction-Using-Machine-Learning-Project,Crime Prediction System Using Machine Learning Project with source code and documents plus youtube explanation,AI
+Final_year_project,Final year software project coordination tool powered by Python Django,Mobile
+holmes,Holmes: Image forgery detection tool with streamlit + electron,AI
+AgroVoiceAI,"AgroVoiceAI is an advanced agricultural assistant powered by cutting-edge AI technology. It provides guidance and information on various aspects of farming to optimize practices and achieve better results. It has features like personalised chatbot, realtime soil testing, weather info, daily market info, soil based crop recommendation",AI
+Potato-Disease-Prediction-Project,"Potato Disease Detection Project using Machine learning with Code, Documents and video Explanation",AI
+Fake-Review-Detection-Using-Machine-Learning,Fake Review Detection System Using Machine Learning with source code and documents. It is full stack web application project with code and documents.,AI
+Personal-management-system-Personal-wellbeing-,"The personal maintenance system I have developed is focused on daily upkeep tasks, including adding required documents, pictures, notes, work time, and gym activities. It has been built using MySQL for the database management and HTML and CSS for the front-end interface.",Mobile
+LockDawn,LockDawn: An Android-Based 3D Adventure Game In Understanding The Importance Of Safety Protocols For The COVID-19 Pandemic,Mobile
+BlindsEye_IoT,Blind’s Eye : IoT based real-time surrounding identification and object detection,AI
+StockMarketPrediction,Stock Market Prediction using Machine Learning done as a final year university project. It uses LSSVR to train the model and is programmed in R,AI
+Fall-Detection-for-Elderly-People-Using-IOT,"A model which is used to solve the risk of elderly people from falling.Using Raspberry pi, the datas are captured and computed.The values are measured by accelerometer sensor. This system measures the fall of a person and sends message or call to the respective caretaker,once the fall of the elderly person is detected.",IoT
+EasyGo-Admin,This is an android application designed for admin to manage all details of EasyGo app.,Mobile
+AI_Resume_Analyzer,"The AI Resume Analyzer is a Streamlit-based application that provides detailed resume analysis, skill recommendations, job search tools, and career insights. Utilizing NLP and machine learning, it helps users identify strengths and improvement areas, suggest relevant courses, and find job opportunities tailored to their profiles.",AI
+pestdetection,"it is a 🌿 real-time pest detection system for urban gardens. It uses the lightweight 🤖 YOLOv8 Nano model to identify pests like 🐜 aphids and 🦟 fruit flies, optimized for edge devices like the 🍃 Raspberry Pi 4.",AI
+Car-Price-Prediction-Project,Car Price Prediction Project through Machine Learning Algorithm with Video Implementation,AI
+Smart_wireless_water_meter_with_Web_DB,"💧 An IoT-based Smart Water Meter system for real-time monitoring of water quality (pH, TDS) and flow rate using ESP32 and Arduino UNO. It includes automatic motor control, cloud logging via ThingSpeak, and a web dashboard for remote access.",IoT
+A-Novel-Approach-for-Hand-Gesture-Recognition-Volume-Control,This project presented a program that allowed user to perform hand gestures for easy Volume control. It is a vision-based hand Gesture system that does not require any special markers or gloves and can operate in real-time on a commodity PC/ laptop with low-cost cameras.​,AI
+ActivityMoodTracker,Final year project application developed using react native,Mobile
+trash-to-treasure-mobile-client-app,"Part of my Final Year Project (FYP), this mobile app rewards users for recycling by scanning QR codes, tracking recycling history, and redeeming points at partnered stores. Integrated with an AI-based Trash Classification Module, it promotes sustainability through gamification and real-time tracking.",Mobile
+Computer-Automation,Computer Automation using OpenCv and MediaPipe - Virtually controlling computer using hand-gestures and voice commands.,AI
+My-Netflix-Application,"This project is a movie real-world web application that involves five main parts: Frontend using React, Backend using Node & Java to provide REST APIs management and finally two Databases modeling using MongoDB and PostgreSQL.",Mobile
+Questioner,An Offline Android Quiz Project,Mobile
+LockDawn-Completed-Script,LockDawn: An Android-Based 3D Adventure Game In Understanding The Importance Of Safety Protocols For The COVID-19 Pandemic,Mobile
+video-steganography,This is a final year project created by CSIT students for 7th semester. It is a simple website that can hide text inside videos or images.,AI
+Cyber-Threat-Detection-Using-Machine-Learning,"Cyber threat detection using machine learning is a proactive approach to cybersecurity that involves training machine learning algorithms. Project Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",AI
+multiple-event-listener-javascript,An Event listener for multiple javascript elements,Mobile
+Movie-recommender-bot,"MovieBot. A Movie Recommendation Bot built with Flask, HTML CSS, and Cosine Similarity ML Model!",Mobile
+Third-Year-MERN-Project,"This project is a comprehensive solution for managing a final year collage project using modern web technologies. It utilizes the MERN stack (MongoDB, Express.js, React.js, Node.js) for backend and frontend development, Redux for state management, Firebase for google authentication and real-time database features, and Tailwind CSS for styling. :)",Mobile
+ChromaticScan,A ResNet 34-based Algorithm for Robust Plant Disease Detection with 99.2% Accuracy Across 39 Different Classes of Plant Leaf Images.,AI
+NetScan,:mag_right: :iphone: [FYP][GrAL][TFG] An Android app thas scan domains and networks,Mobile
+Stock-Prediction-React-Project,"The Stock Prediction React Project is a web-based application that utilizes machine learning algorithms and financial data to predict stock prices.  Stock Prediction Project Project Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",Mobile
+holmes2,home for digital image analysis tools/ personal streamlit experiment,AI
+Genetic-Algorithms-for-Swarm-Parameter-Tuning-Unity,"Swarming behaviour is based on aggregation of simple drones exhibiting basic instinctive reactions to stimuli. However, to achieve overall balanced/interesting behaviour the relative importance of these instincts, as well their internal parameters, must be tuned. In this project, you will learn how to apply Genetic Programming as means of such tuning, and attempt to achieve a series of non-trivial swarm-level behaviours.",Mobile
+KIET--final-year-project-Steganography,"Steganography is the practice of concealing a message within another medium, such as an image, audio, or video file, without attracting attention",AI
+flex-lingo,"FlexLingo is a final year IoT project that serves as a flex sensor-based sign language translator. It uses Random Forest and BiLSTM models to interpret real-time hand gestures, translating them into spoken words or text via an Arduino smart glove and a React web interface.",IoT
+ArduRMMMQ,Ardu[R]eal-Time Operating System [MM] Magic Mirror [MQ] MQ Gas Sensor - RTOS Project,IoT
+haulXpress,Final year project of a mobile app for requesting rides for long and heavy duty,Mobile
+Decentralized-voting-system-using-blockchain,"Decentralized voting system developed using Flask, PHP, and JavaScript, featuring a face recognition authentication mechanism. It includes three dashboards: Admin, Miner, and User. Vote transactions are distributed across multiple systems within the network.",Mobile
+MindEase,MindEase is a mental health assistant that combines IoT hardware with AI to provide emotional support. It uses an ESP32 for audio input/output and integrates with AI models and cloud services for natural language understanding and response generation.,IoT
+AnePhysioBE,REST API backend of the final year project application for physiotherapist written in Spring Boot using Java,IoT
+Cyber-Security-Final-Year-Projects-Github,"Cyber threat detection using machine learning is a proactive approach to cybersecurity that involves training machine learning algorithms. Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",AI
+Heart-Disease-Prediction-Using-Machine-Learning,The project involves training a machine learning model (Logistic Regression) to predict whether someone is suffering from a heart disease or not with 87% accuracy.,AI
+Brain-Tumor-prediction-classification-project,"This project implements a deep learning model using Convolutional Neural Networks (CNNs) for the classification of brain tumors in MRI scans. The model is trained on a large dataset of MRI images, which includes 4 types of tumors. {meningioma_tumor , glioma_tumor , pituitary_tumor , no_tumor}",AI
+Imagify,"Imagify is an AI-powered image generation SaaS web application built with the MERN stack. It leverages the Clipdrop API to create high-quality, AI-generated images. The app features a secure login/signup system, a user-friendly interface, and seamless integration between the client and server for an enhanced user experience.",AI
+SisonkeBankingApp,"A java mobile application prototype for Sisonke Bank. The main objectives of the application is to allow clients to create an account, login, view account balances and transfer between accounts.",Mobile
+repota,"A CRUD web app for automobile technicians to manage service reports, developed for my BSc dissertation.",Mobile
+Blog-Portal-Backend,"Full Stack Blog Portal Application (Spring Boot, ReactJS, MongoDB, Docker, Kubernetes, Terraform)",Mobile
+FYP_Malaysia-CPI-Forecasting,This Final Year Project compares the performance of four machine and deep learning models in predicting Malaysia's CPI using various input structures.,AI
+Co2-Emission-Prediction-Using-Machine-learning,"The CO2 Emission Prediction project aims to develop a machine learning model that can accurately predict CO2 emissions. Project Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",AI
+Smart-Route-Monitoring-App,"Smart Route Monitoring is a safety-focused React Native app that simulates route travel using checkpoints and triggers SOS alerts if the user misses a checkpoint. Features include Google Maps integration, dual navigation modes, and native SMS support for emergency response.",Mobile
+FCP-CSC-18-1080,"Welcome to the Federal University Dutse (FUD) Mentor-Mentee App! This Flutter and Dart-powered application, with Sqflite and Firebase integration, is designed to connect students and staffs for seamless mentorship experiences.",Mobile
+MangotypeDetection,I make Project on Machine Learning and Artificial Intelligence using python. This project use for Mango Type Detection with leaf...I train a model with my own dataset...,AI
+locknroll,A mobile app to control a custom-built smart door lock using Firebase.,Mobile
+VU-FYP-survey_builder,"Survey Builder, Final year project, Virtual University of Pakistan - PHP/HTML/Javascript/jQuery/AJAX/XAMP/MySQL",Mobile
+Students-Marks-Prediction-Project,Prediction of marks of students using Machine Learning algorithms.,AI
+lotus_femalehealthchatbot,Lotus - Female Health Chatbot,AI
+Stock-price-prediction-using-Deep-learning-project,"This project aims to develop a deep learning-based model for predicting stock prices. Stock Price Predicton Using Deep Learning Project Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",AI
+Blog-Portal-Frontend,"Full Stack Blog Portal Application (Spring Boot, ReactJS, MongoDB, Docker, Kubernetes, Terraform)",Mobile
+mohit-youtube,"🎬 Build your own YouTube! A modern YouTube clone with React, TypeScript & Material-UI, featuring seamless playback, infinite scroll, dark mode & more – fast, responsive, and feature-packed! 🚀🎥",Mobile
+Android-Malware-Detection-Project,"The Android Malware Detection Project aims to design and develop a system that can detect and identify malicious software (malware) on Android devices. Project Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",Mobile
+pcos-app-aly,"Final Year Project — PCOS & Insulin Resistance wellness app (React Native + Expo + Firebase). Track cycles, meals & symptoms, get insights, gentle nudges, and pro content.",Mobile
+mob_monitoring_api,This repository contains the code for the API backend of the Mob Monitoring System built using C# .NET Framework. The API backend provides a scalable and efficient way to manage and store data for the mobile app. The backend includes features like CRUD operations for managing mobbed events.,Mobile
+RogiDoot-VirtualCare,"RogiDoot-VirtualCare is an advanced open-source project integrating a mobile app and IoT-enabled diagnostic hardware to provide comprehensive and accessible healthcare solutions, especially in rural areas. This project harnesses custom AI technology to deliver accurate diagnoses, tailored treatment suggestions, and valuable health references.",IoT
+7th_sem_project_machine_learning,machine learning project using logistic regresion and random forest with hyper tuned,AI
+Triple-DES-project-Image-security-by-Triple-DES,"This project aims to provide a secure way to transmit and store images using the Triple Data Encryption Standard (Triple DES) algorithm Project Includes Source Code, PPT, Synopsis, Report, Documents, Base Research Paper & Video tutorials",AI
+Non-Invasive-Blood-Group-Prediction-Using-Fingerprint-Analysis,"End-to-end system for non-invasive blood group prediction using fingerprint images, built with Python, TensorFlow, and Flask.",AI
+Neuro_Gambling_Scanner,"""Flutter app that predicts gambling addiction risk and provides real-time interventions using AI.""",Mobile

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard - Graduation Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="DashScript.js" defer></script>
+
+    <link rel="stylesheet" href="style_menu.css">
+    <link rel="stylesheet" href="IdeasGenerator.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <div id="sidebar-container"></div>
+
+    <!-- Header -->
+    <div class="header">
+        <!-- toggle button for mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <!-- university info -->
+        <div class="header-right">
+            <div class="logo-circle">🎓</div>
+            <div>
+                <div class="university-name">جامعة الرموك</div>
+                <div class="university-subtitle">منصة مشاريع التخرج</div>
+                <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+            </div>
+        </div>
+
+        <!-- logout button -->
+        <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar"></div>
+                <div class="user-info">
+                    <span class="user-name" id="menuUserName"></span>
+                    <div class="user-role">طالب</div>
+                </div>
+            </div>
+
+
+            <nav class="menu">
+                <a href="dashboard.html" class="menu-item">
+                    <i class="fas fa-th-large menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">لوحة التحكم</span>
+                        <span class="menu-item-en">Dashboard</span>
+                    </div>
+
+                </a>
+
+                <a href="IdeasGenerator.html" class="menu-item active">
+                    <i class="fas fa-lightbulb menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">أفكار ذكية</span>
+                        <span class="menu-item-en">AI Ideas Generator</span>
+                    </div>
+
+                </a>
+
+                <a href="progress&phases.html" class="menu-item">
+                    <i class="fas fa-calendar-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">التقدم والمراحل</span>
+                        <span class="menu-item-en">Progress & Phases</span>
+                    </div>
+
+                </a>
+
+                <a href="project_details.html" class="menu-item">
+                    <i class="fas fa-folder menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">تفاصيل المشروع</span>
+                        <span class="menu-item-en">Project Details</span>
+                    </div>
+
+                </a>
+
+                <a href="#" class="menu-item">
+                    <i class="fas fa-comment-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">المحادثات</span>
+                        <span class="menu-item-en">Messages</span>
+                    </div>
+                </a>
+
+                <a href="all_teams.html" class="menu-item">
+                    <i class="fas fa-users menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">جميع الفرق</span>
+                        <span class="menu-item-en">All Teams</span>
+                    </div>
+
+                </a>
+
+                <a href="FindTeammates.html" class="menu-item">
+                    <i class="fas fa-user-friends menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">البحث عن زملاء</span>
+                        <span class="menu-item-en">Find Teammates</span>
+                    </div>
+
+                </a>
+
+                <a href="notifications.html" class="menu-item">
+                    <i class="fas fa-bell menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الإشعارات</span>
+                        <span class="menu-item-en">Notifications</span>
+                    </div>
+
+                </a>
+
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user-circle menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الملف الشخصي</span>
+                        <span class="menu-item-en">Profile</span>
+                    </div>
+
+                </a>
+            </nav>
+        </aside>
+
+        <script>
+            function openCreateProjectPage() {
+                window.location.href = 'create_project_page.html'; // تأكد من أن المسار صحيح
+            }
+        </script>
+        <!-- Main Content Area -->
+        <div class="main-content">
+
+            <header class="ideas-page-header">
+                <div class="ideas-icon-circle">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <h1 class="ideas-title">مولّد أفكار المشاريع بالذكاء الاصطناعي</h1>
+                <p class="ideas-subtitle">احصل على اقتراحات مبتكرة لمشروع التخرج</p>
+            </header>
+
+            <!-- البطاقة الأساسية -->
+            <section class="ideas-shell">
+
+                <!-- الشريط الأزرق -->
+                <header class="ideas-shell-header">
+                    <div class="ideas-shell-header-right">
+                        <h2 class="ideas-shell-title">أدخل تفضيلاتك</h2>
+                        <p class="ideas-shell-text">املأ المعلومات التالية للحصول على أفكار مخصصة</p>
+                    </div>
+
+                    <div class="ideas-shell-header-icon">
+                        <div class="header-icon-circle">
+                            <i class="fa-regular fa-lightbulb"></i>
+                        </div>
+                    </div>
+                </header>
+                <!-- جسم البطاقة -->
+                <div class="ideas-shell-body">
+
+                    <!-- يسار -->
+                    <div class="ideas-shell-left"></div>
+
+                    <!-- يمين : الفورم -->
+                    <div class="ideas-shell-right">
+
+                        <form id="ideasForm" class="ideas-form" autocomplete="off">
+
+                            <!-- التخصص الأكاديمي -->
+                            <div class="form-group">
+                                <div class="field-top">
+                                    <div>
+                                        <span class="field-title">التخصص الأكاديمي</span>
+                                    </div>
+                                    <div class="field-icon">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </div>
+                                </div>
+
+                                <select id="majorSelect" class="field-input">
+                                    <option disabled selected>اختر التخصص الأكاديمي</option>
+                                    <option value="cs">علوم الحاسب - Computer Science</option>
+                                    <option value="se">هندسة البرمجيات - Software Engineering</option>
+                                    <option value="is">نظم المعلومات الحاسوبية - CIS</option>
+                                    <option value="it">تكنولوجيا المعلومات - IT</option>
+                                </select>
+                            </div>
+
+                            <!-- الاهتمامات -->
+                            <div class="form-group">
+                                <div class="field-top">
+                                    <div>
+                                        <span class="field-title">اهتماماتك (افصل بينها بفاصلة)</span>
+                                        <span class="field-hint">مثال: AI, IoT, Machine Learning, Mobile Apps</span>
+                                    </div>
+                                    <div class="field-icon">
+                                        <i class="fa-solid fa-bullseye"></i>
+                                    </div>
+                                </div>
+
+                                <textarea id="interestsInput" class="field-input field-textarea"
+                                    placeholder="اكتب اهتماماتك التقنية هنا..."></textarea>
+
+                                <button type="button" class="field-link">
+                                    أدخل مجالات اهتماماتك التقنية
+                                </button>
+                            </div>
+
+                            <!-- الكلمات المفتاحية -->
+                            <div class="form-group">
+                                <div class="field-top">
+                                    <div>
+                                        <span class="field-title">الكلمات المفتاحية (افصل بينها بفاصلة)</span>
+                                        <span class="field-hint">مثال: healthcare, automation, e-commerce</span>
+                                    </div>
+                                    <div class="field-icon">
+                                        <i class="fa-solid fa-hashtag"></i>
+                                    </div>
+                                </div>
+
+                                <textarea id="keywordsInput" class="field-input field-textarea"
+                                    placeholder="اكتب الكلمات المفتاحية..."></textarea>
+
+                                <button type="button" class="field-link">
+                                    أدخل المجالات أو القطاعات التي تودّ التركيز عليها
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- زر التوليد -->
+                <div class="ideas-submit-bar">
+                    <button id="generateIdeasBtn" class="ideas-submit-btn">
+                        <span class="btn-icon"><i class="fa-solid fa-bolt"></i></span>
+                        <span>توليد الأفكار</span>
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- لا أفكار -->
+            <section id="ideasEmptyState" class="ideas-empty-state">
+                <div class="empty-icon">
+                    <i class="fa-regular fa-lightbulb"></i>
+                </div>
+                <h3 class="empty-title">ابدأ بتوليد الأفكار</h3>
+                <p class="empty-text">املأ النموذج ثم اضغط <strong>توليد الأفكار</strong>.</p>
+            </section>
+
+            <!-- نتائج -->
+            <section id="ideasResults" class="ideas-results" style="display:none;">
+                <header class="ideas-results-header">
+                    <h3 class="results-title">
+                        الأفكار المقترحة <span id="ideasCount">(0)</span>
+                    </h3>
+                    <i class="fa-solid fa-circle-check"></i>
+                </header>
+
+                <div id="ideasList" class="ideas-list"></div>
+            </section>
+
+            </section>
+
+            </main>
+
+        </div>
+
+        <script src="IdeasGenerator.js"></script>
+
+
+    </div>
+
+    <script src="DashScript.js" defer></script>
+</body>
+
+</html>

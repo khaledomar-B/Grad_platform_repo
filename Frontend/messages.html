@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Messages - Graduation Projects</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="DashScript.js" defer></script>
+
+  <link rel="stylesheet" href="style_dashboard.css">
+  <link rel="stylesheet" href="style_menu.css">
+  <link rel="stylesheet" href="style_messages.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <div class="header-right">
+      <div class="logo-circle">🎓</div>
+      <div>
+        <div class="university-name">جامعة الرموك</div>
+        <div class="university-subtitle">منصة مشاريع التخرج</div>
+        <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+      </div>
+    </div>
+
+    <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+        stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+
+    /* ================================
+       Logout
+    ================================ */
+    function handleLogout() {
+      window.location.href = "/Frontend/Auth_Pages/login.html";
+    }
+
+  </script>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="user-profile">
+        <div class="user-avatar"></div>
+        <div class="user-info">
+          <span class="user-name" id="menuUserName"></span>
+          <div class="user-role">طالب</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html" class="menu-item">
+          <i class="fas fa-th-large menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">لوحة التحكم</span>
+            <span class="menu-item-en">Dashboard</span>
+          </div>
+        </a>
+
+        <a href="IdeasGenerator.html" class="menu-item">
+          <i class="fas fa-lightbulb menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">أفكار ذكية</span>
+            <span class="menu-item-en">AI Ideas Generator</span>
+          </div>
+        </a>
+
+        <a href="progress&phases.html" class="menu-item">
+          <i class="fas fa-calendar-alt menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">التقدم والمراحل</span>
+            <span class="menu-item-en">Progress & Phases</span>
+          </div>
+        </a>
+
+        <a href="project_details.html" class="menu-item">
+          <i class="fas fa-folder menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">تفاصيل المشروع</span>
+            <span class="menu-item-en">Project Details</span>
+          </div>
+        </a>
+
+        <a href="messages.html" class="menu-item active">
+          <i class="fas fa-comment-alt menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">المحادثات</span>
+            <span class="menu-item-en">Messages</span>
+          </div>
+        </a>
+
+        <a href="all_teams.html" class="menu-item">
+          <i class="fas fa-users menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">جميع الفرق</span>
+            <span class="menu-item-en">All Teams</span>
+          </div>
+        </a>
+
+        <a href="FindTeammates.html" class="menu-item">
+          <i class="fas fa-user-friends menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">البحث عن زملاء</span>
+            <span class="menu-item-en">Find Teammates</span>
+          </div>
+        </a>
+
+        <a href="notifications.html" class="menu-item">
+          <i class="fas fa-bell menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الإشعارات</span>
+            <span class="menu-item-en">Notifications</span>
+          </div>
+        </a>
+
+        <a href="profile.html" class="menu-item">
+          <i class="fas fa-user-circle menu-item-icon"></i>
+          <div class="menu-item-content">
+            <span class="menu-item-ar">الملف الشخصي</span>
+            <span class="menu-item-en">Profile</span>
+          </div>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="chat-layout" dir="rtl">
+
+        <!-- Chat List -->
+        <div class="chat-sidebar">
+          <h4>المحادثات</h4>
+          <div id="chatList"></div>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-window">
+
+          <div class="chat-header">
+            <div class="chat-title">
+              <span class="project-type" id="projectType">—</span>
+              <h3 id="projectTitle">اختر محادثة</h3>
+              <div class="chat-members" id="chatMembers"></div>
+            </div>
+          </div>
+
+          <div class="chat-messages" id="chatMessages"></div>
+
+          <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="اكتب رسالتك هنا..." />
+            <button type="button" onclick="sendMessage()">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const MSG_API_BASE = "https://nonverbalized-gushier-alessandra.ngrok-free.dev";
+    let activeProjectId = null;
+
+    function headersWithAuth() {
+      const token = localStorage.getItem("token");
+      return {
+        "ngrok-skip-browser-warning": "true",
+        ...(token ? { "Authorization": `Bearer ${token}` } : {})
+      };
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function getMyId() {
+      const token = localStorage.getItem("token");
+      if (!token) return null;
+      try {
+        const payload = JSON.parse(atob(token.split(".")[1]));
+        return Number(payload.id);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    async function loadMyProjects() {
+      const res = await fetch(`${MSG_API_BASE}/api/messages/my-projects`, {
+        headers: headersWithAuth()
+      });
+
+      if (!res.ok) {
+        console.error("❌ my-projects failed:", res.status, await res.text());
+        return;
+      }
+
+      const projects = await res.json();
+      renderChatList(projects);
+
+      if (projects.length > 0) openChat(projects[0].id);
+    }
+
+    function renderChatList(projects) {
+      const list = document.getElementById("chatList");
+      if (!list) return;
+
+      list.innerHTML = "";
+
+      projects.forEach(p => {
+        const item = document.createElement("div");
+        item.className = "chat-item";
+        item.dataset.projectId = p.id;
+
+        item.innerHTML = `
+          <div>
+            <strong>${escapeHtml(p.title)}</strong>
+            <p>اضغط لعرض الرسائل</p>
+            <small></small>
+          </div>
+        `;
+
+        item.addEventListener("click", () => openChat(p.id));
+        list.appendChild(item);
+      });
+    }
+
+    async function openChat(projectId) {
+      activeProjectId = projectId;
+
+      document.querySelectorAll(".chat-item").forEach(x => {
+        x.classList.toggle("active", Number(x.dataset.projectId) === Number(projectId));
+      });
+
+      document.getElementById("projectType").textContent = "—";
+      document.getElementById("projectTitle").textContent = "تحميل...";
+      document.getElementById("chatMembers").innerHTML = "";
+
+      await loadProjectHeader(projectId);
+      await loadProjectMessages(projectId);
+    }
+
+    async function loadProjectHeader(projectId) {
+      const res = await fetch(`${MSG_API_BASE}/api/messages/project/${projectId}/header`, {
+        headers: headersWithAuth()
+      });
+
+      if (!res.ok) {
+        console.error("❌ header failed:", res.status, await res.text());
+        const activeTitle = document.querySelector(`.chat-item[data-project-id="${projectId}"] strong`);
+        document.getElementById("projectTitle").textContent = activeTitle ? activeTitle.textContent : "محادثة";
+        document.getElementById("projectType").textContent = "—";
+        return;
+      }
+
+      const data = await res.json();
+
+      document.getElementById("projectTitle").textContent = data.title || "محادثة";
+
+      const typeText = (data.projectType || "").toLowerCase() === "individual"
+        ? "مشروع فردي"
+        : "مشروع جماعي";
+      document.getElementById("projectType").textContent = typeText;
+
+      const membersDiv = document.getElementById("chatMembers");
+      membersDiv.innerHTML = "";
+
+      (data.members || []).forEach(m => {
+        const span = document.createElement("span");
+        span.className = "member";
+        span.textContent = m.isOwner ? `${m.name} (Owner)` : m.name;
+        membersDiv.appendChild(span);
+      });
+
+      if (data.supervisor && data.supervisor.name) {
+        const sup = document.createElement("span");
+        sup.className = "member supervisor";
+        sup.textContent = data.supervisor.name;
+        membersDiv.appendChild(sup);
+      }
+    }
+
+    async function loadProjectMessages(projectId) {
+      const res = await fetch(`${MSG_API_BASE}/api/messages/project/${projectId}`, {
+        headers: headersWithAuth()
+      });
+
+      if (!res.ok) {
+        console.error("❌ get messages failed:", res.status, await res.text());
+        return;
+      }
+
+      const messages = await res.json();
+      renderMessages(messages);
+    }
+
+    function renderMessages(messages) {
+      const container = document.getElementById("chatMessages");
+      if (!container) return;
+
+      const myId = getMyId();
+      container.innerHTML = "";
+
+      messages.forEach(m => {
+        const isMine = myId !== null && Number(m.senderId) === Number(myId);
+        const directionClass = isMine ? "mine" : "theirs";
+
+        const t = new Date(m.sentAt);
+        const timeText = isNaN(t.getTime()) ? "" : t.toLocaleString("ar-JO");
+
+        container.innerHTML += `
+          <div class="message ${directionClass}">
+            <div class="bubble">
+              ${m.senderName ? `<div class="sender">${escapeHtml(m.senderName)}</div>` : ""}
+              ${escapeHtml(m.content)}
+            </div>
+            <div class="time">${timeText}</div>
+          </div>
+        `;
+      });
+
+      container.scrollTop = container.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("chatInput");
+      const text = input?.value.trim();
+      if (!text) return;
+
+      if (!activeProjectId) {
+        console.error("❌ No active project selected");
+        return;
+      }
+
+      const res = await fetch(`${MSG_API_BASE}/api/messages/project/${activeProjectId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...headersWithAuth()
+        },
+        body: JSON.stringify({ content: text })
+      });
+
+      if (!res.ok) {
+        console.error("❌ send message failed:", res.status, await res.text());
+        return;
+      }
+
+      input.value = "";
+      await loadProjectMessages(activeProjectId);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.getElementById("chatInput");
+      if (input) {
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") sendMessage();
+        });
+      }
+      loadMyProjects();
+    });
+  </script>
+
+</body>
+
+</html>

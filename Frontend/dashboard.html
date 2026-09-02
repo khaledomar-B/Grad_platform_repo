@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard - Graduation Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style_dashboard.css">
+    <link rel="stylesheet" href="style_menu.css">
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- toggle button for mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <!-- university info -->
+        <div class="header-right">
+            <div class="logo-circle">🎓</div>
+            <div>
+                <div class="university-name">جامعة الرموك</div>
+                <div class="university-subtitle">منصة مشاريع التخرج</div>
+                <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+            </div>
+        </div>
+
+        <!-- logout button -->
+        <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar"></div>
+                <div class="user-info">
+                    <span class="user-name" id="menuUserName"></span>
+                    <div class="user-role">طالب</div>
+                </div>
+            </div>
+
+
+            <nav class="menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-th-large menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">لوحة التحكم</span>
+                        <span class="menu-item-en">Dashboard</span>
+                    </div>
+
+                </a>
+
+                <a href="IdeasGenerator.html" class="menu-item">
+                    <i class="fas fa-lightbulb menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">أفكار ذكية</span>
+                        <span class="menu-item-en">AI Ideas Generator</span>
+                    </div>
+
+                </a>
+
+                <a href="progress&phases.html" class="menu-item">
+                    <i class="fas fa-calendar-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">التقدم والمراحل</span>
+                        <span class="menu-item-en">Progress & Phases</span>
+                    </div>
+
+                </a>
+
+                <a href="project_details.html" class="menu-item">
+                    <i class="fas fa-folder menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">تفاصيل المشروع</span>
+                        <span class="menu-item-en">Project Details</span>
+                    </div>
+
+                </a>
+
+                <a href="messages.html" class="menu-item">
+                    <i class="fas fa-comment-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">المحادثات</span>
+                        <span class="menu-item-en">Messages</span>
+                    </div>
+                </a>
+
+                <a href="all_teams.html" class="menu-item">
+                    <i class="fas fa-users menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">جميع الفرق</span>
+                        <span class="menu-item-en">All Teams</span>
+                    </div>
+
+                </a>
+
+                <a href="FindTeammates.html" class="menu-item">
+                    <i class="fas fa-user-friends menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">البحث عن زملاء</span>
+                        <span class="menu-item-en">Find Teammates</span>
+                    </div>
+
+                </a>
+
+                <a href="notifications.html" class="menu-item">
+                    <i class="fas fa-bell menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الإشعارات</span>
+                        <span class="menu-item-en">Notifications</span>
+                    </div>
+
+                </a>
+
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user-circle menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الملف الشخصي</span>
+                        <span class="menu-item-en">Profile</span>
+                    </div>
+
+                </a>
+            </nav>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="greeting">
+                <div class="greeting-title" id="welcomeText"></div>
+                <div class="greeting-subtitle" id="welcomeSubtitle"></div>
+            </div>
+
+
+            <div class="empty-state">
+                <div class="empty-icon">📄</div>
+                <div class="empty-title">لم تقم بإنشاء مشروع تخرج بعد</div>
+                <div class="empty-description">قم بإنشاء مشروع التخرج الخاص بك للبدء</div>
+                <!-- ...existing code until create-btn... -->
+
+                <button class="create-btn" id="openCreateProjectModal">
+                    <span>+</span>
+                    <span>إنشاء مشروع التخرج</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal" id="createProjectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">×</button>
+
+            <!-- Section for Project Type Selection -->
+            <div id="projectTypeSelection">
+                <h2 class="modal-title">إنشاء مشروع التخرج</h2>
+                <p class="modal-subtitle">اختر نوع المشروع</p>
+                <div class="project-options">
+                    <div class="project-option" id="individualProject" onclick="handleIndividualProject()">
+                        <div class="project-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>مشروع فردي</h3>
+                        <p>اعمل على مشروعك بشكل مستقل</p>
+                        <ul>
+                            <li>مسؤولية كاملة</li>
+                            <li>حرية في القرارات</li>
+                            <li>مناسب للمشاريع الصغيرة</li>
+                        </ul>
+                    </div>
+                    <div class="project-option" id="teamProject" onclick="handleTeamProject()">
+                        <div class="project-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>مشروع جماعي</h3>
+                        <p>اعمل مع فريق من الزملاء</p>
+                        <ul>
+                            <li>تقسيم المهام</li>
+                            <li>قرارات مشتركة</li>
+                            <li>مناسب للمشاريع الكبيرة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Modal Form for Individual Project -->
+            <div id="individualProjectForm" style="display: none;">
+                <h2 class="modal-title">إنشاء مشروع فردي</h2>
+                <p class="modal-subtitle">يمكنك إنشاء مشروع تخرج واحد فقط</p>
+                <form class="modal-form">
+                    <div class="form-group">
+                        <label class="form-label">عنوان المشروع</label>
+                        <input type="text" class="form-input" placeholder="نظام إدارة المكتبة الداخلي">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">وصف لمشروع</label>
+                        <textarea class="form-textarea" placeholder="وصف تفصيلي لمشروع التخرج..."></textarea>
+                    </div>
+                    <!-- Supervisor Selection -->
+                    <div class="form-group">
+                        <label class="form-label">المشرف (الدكتور)</label>
+                        <select class="form-input" id="supervisorSelectIndividual">
+                            <option value="">-- اختر المشرف --</option>
+                        </select>
+                    </div>
+
+
+                    <div class="project-category-card">
+
+                        <!-- Header -->
+                        <div class="project-category-header">
+                            <div class="header-title">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>تصنيف المشروع <span class="required">*</span></span>
+                            </div>
+                            <p class="header-subtitle">
+                                مطلوب لإعداد التقارير الإحصائية والإدارية وتصنيف المشاريع
+                            </p>
+                        </div>
+
+                        <!-- ✅ BODY -->
+                        <div class="project-category-body">
+
+                            <!-- Info Box -->
+                            <div class="project-category-info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong>مهم:</strong>
+                                    <p>
+                                        يُستخدم تصنيف المشروع في إعداد التقارير الإحصائية والإدارية للجامعة.
+                                        يرجى اختيار الفئة الأنسب لمشروعك.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Select -->
+                            <div class="category-field">
+                                <label>
+                                    الفئة الأكاديمية
+                                    <span class="required-badge">مطلوب</span>
+                                </label>
+
+                                <div class="select-wrapper">
+                                    <select class="category-select">
+                                        <option value="">اختر فئة المشروع...</option>
+                                        <option value="AI">الذكاء الاصطناعي (AI)</option>
+                                        <option value="Web">تطبيقات الويب (Web)</option>
+                                        <option value="Mobile">تطبيقات الموبايل (Mobile)</option>
+                                        <option value="IoT">إنترنت الأشياء (IoT)</option>
+                                        <option value="Data Science">علم البيانات (Data Science)</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+
+                            <!-- AI Button -->
+                            <button type="button" class="ai-suggest-btn" data-action="suggest-category">
+                                <i class="fas fa-brain"></i>
+                                اقتراح الفئة تلقائيًا (AI)
+                            </button>
+                            <div class="ai-category-result" style="display:none; margin-top:10px;">
+  <div><strong>اقتراح AI:</strong> <span class="ai-cat-label">-</span></div>
+  <div><strong>الثقة:</strong> <span class="ai-cat-confidence">-</span></div>
+</div>
+
+
+                            <!-- Warning -->
+                            <div class="category-warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                يجب اختيار فئة المشروع قبل المتابعة، استخدم الاقتراح الذكي أو اختر يدويًا.
+                            </div>
+
+                            <!-- Categories List -->
+                            <div class="category-list-box">
+                                <strong>الفئات المتاحة للتصنيف:</strong>
+
+                                <ul>
+                                    <li>
+                                        <span class="dot"></span>
+                                        <div>
+                                            <strong>الذكاء الاصطناعي (AI)</strong>
+                                            <small>Machine Learning, Deep Learning, NLP</small>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <span class="dot"></span>
+                                        <div>
+                                            <strong>تطبيقات الويب (Web)</strong>
+                                            <small>Websites, Web Apps, PWA</small>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <span class="dot"></span>
+                                        <div>
+                                            <strong>تطبيقات الموبايل (Mobile)</strong>
+                                            <small>Android, iOS, Cross-platform</small>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <span class="dot"></span>
+                                        <div>
+                                            <strong>إنترنت الأشياء (IoT)</strong>
+                                            <small>Sensors, Arduino, Raspberry Pi</small>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <span class="dot"></span>
+                                        <div>
+                                            <strong>علم البيانات (Data Science)</strong>
+                                            <small>Analytics, Visualization, Big Data</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- AI Originality Check Section -->
+                    <div class="ai-originality-check">
+                        <div class="ai-header">
+                            <i class="fas fa-search"></i>
+                            <span>AI Originality Check - التحقق من التشابه</span>
+                        </div>
+                        <div class="ai-body">
+                            <!-- Before Check -->
+                            <div class="ai-before-check" id="aiBeforeCheck">
+
+                                <button type="button" class="ai-search-btn" id="aiSearchBtn">
+                                    <i class="fas fa-search"></i>
+                                    بدء الفحص
+                                </button>
+                            </div>
+
+                            <!-- Loading State -->
+                            <div class="ai-loading" id="aiLoading" style="display: none;">
+                                <span>جاري الفحص...</span>
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+
+                            <!-- After Check -->
+                            <div class="ai-after-check" id="aiAfterCheck" style="display: none;">
+                                <div class="ai-result">
+                                    <div class="ai-percentage">
+                                        <span id="similarityPercentage">0%</span>
+                                        <div class="ai-progress-bar">
+                                            <div class="ai-progress" id="aiProgress" style="width: 0%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ai-status" id="aiStatus">
+                                        <span class="ai-status-text">تشابه منخفض - المشروع أصلي</span>
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="ai-description" id="aiDescription">
+                                    <span>الوصف:</span>
+                                    <p>مشروع يبدو أصليًا ويتطابق بنسبة منخفضة مع المشاريع السابقة.</p>
+                                </div>
+                                <button class="ai-recheck-btn" id="aiRecheckBtn">
+                                    <i class="fas fa-redo"></i>
+                                    إعادة الفحص
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" id="cancelBtn">إلغاء</button>
+                        <button type="button" class="btn-submit" id="submitProjectBtn"
+                            onclick="finishCreatingProject()">إنشاء المشروع</button>
+
+                    </div>
+            </div>
+
+            <!-- Modal Form for Team Project -->
+            <div id="teamProjectForm" style="display: none;">
+                <h2 class="modal-title">إنشاء مشروع التخرج</h2>
+                <p class="modal-subtitle">يمكنك إنشاء مشروع جماعي فقط</p>
+                <form class="modal-form">
+
+
+                    <!-- Project Title -->
+                    <div class="form-group">
+                        <label class="form-label">عنوان المشروع</label>
+                        <input type="text" class="form-input" placeholder="نظام تحليل بيانات ذكي">
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="form-group">
+                        <label class="form-label">وصف المشروع</label>
+                        <textarea class="form-textarea" placeholder="وصف تفصيلي لمشروع التخرج..."></textarea>
+                    </div>
+
+                    <!-- Supervisor Selection -->
+                    <div class="form-group">
+                        <label class="form-label">المشرف (الدكتور)</label>
+                        <select class="form-input" id="supervisorSelectTeam">
+                            <option value="">-- اختر المشرف --</option>
+                        </select>
+                    </div>
+
+
+
+
+                    <!-- Team Members Section -->
+                    <div class="form-group">
+                        <label class="form-label">أعضاء الفريق (اختياري)</label>
+                        <div class="members-container" id="membersContainer">
+                            <!-- Selected members will appear here -->
+                            <div class="selected-members" id="selectedMembers">
+                                <!-- Members will be dynamically added here -->
+                            </div>
+                        </div>
+                        <button type="button" class="add-members-btn" id="addMembersBtn">
+                            <i class="fas fa-user-plus"></i>
+                            إضافة عضو للفريق
+                        </button>
+
+                        <!-- Members Modal -->
+                        <div class="members-modal" id="membersModal">
+                            <div class="members-modal-content">
+                                <button class="modal-close" id="closeMembersModalBtn">×</button>
+                                <h3 class="modal-title">اختر أعضاء الفريق</h3>
+                                <input type="text" id="membersSearch" class="form-input" placeholder="ابحث عن طالب...">
+                                <div class="members-list" id="membersList">
+                                    <!-- List of members will be dynamically added here -->
+                                </div>
+                                <div class="modal-actions">
+                                    <button type="button" class="btn-cancel" id="cancelMembersBtn">إلغاء</button>
+                                    <button type="button" class="btn-submit" id="confirmMembersBtn">تأكيد</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="project-category-card">
+
+                        <!-- Header -->
+                        <div class="project-category-header">
+                            <div class="header-title">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>تصنيف المشروع <span class="required">*</span></span>
+                            </div>
+                            <p class="header-subtitle">
+                                مطلوب لإعداد التقارير الإحصائية والإدارية وتصنيف المشاريع
+                            </p>
+                        </div>
+
+                        <!-- ✅ BODY -->
+                        <div class="project-category-body">
+
+                            <!-- Info Box -->
+                            <div class="project-category-info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong>مهم:</strong>
+                                    <p>
+                                        يُستخدم تصنيف المشروع في إعداد التقارير الإحصائية والإدارية للجامعة.
+                                        يرجى اختيار الفئة الأنسب لمشروعك.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Select -->
+                            <div class="category-field">
+                                <label>
+                                    الفئة الأكاديمية
+                                    <span class="required-badge">مطلوب</span>
+                                </label>
+
+                                <div class="select-wrapper">
+                                    <select class="category-select">
+                                        <option value="">اختر فئة المشروع...</option>
+                                        <option value="AI">الذكاء الاصطناعي (AI)</option>
+                                        <option value="Web">تطبيقات الويب (Web)</option>
+                                        <option value="Mobile">تطبيقات الموبايل (Mobile)</option>
+                                        <option value="IoT">إنترنت الأشياء (IoT)</option>
+                                        <option value="Data Science">علم البيانات (Data Science)</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+
+                            <!-- AI Button -->
+                            <button type="button" class="ai-suggest-btn" data-action="suggest-category">
+                                <i class="fas fa-brain"></i>
+                                اقتراح الفئة تلقائيًا (AI)
+                            </button>
+
+                            <div class="ai-category-result" style="display:none; margin-top:10px;">
+  <div><strong>اقتراح AI:</strong> <span class="ai-cat-label">-</span></div>
+  <div><strong>الثقة:</strong> <span class="ai-cat-confidence">-</span></div>
+</div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- AI Originality Check Section -->
+                    <div class="ai-originality-check">
+                        <div class="ai-header">
+                            <i class="fas fa-search"></i>
+                            <span>AI Originality Check - التحقق من التشابه</span>
+                        </div>
+                        <div class="ai-body">
+                            <!-- Before Check -->
+                            <div class="ai-before-check" id="aiBeforeCheck">
+                                <button type="button" class="ai-search-btn" id="aiSearchBtn">
+                                    <i class="fas fa-search"></i>
+                                    بدء الفحص
+                                </button>
+                            </div>
+
+                            <!-- Loading State -->
+                            <div class="ai-loading" id="aiLoading" style="display: none;">
+                                <span>جاري الفحص...</span>
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+
+                            <!-- After Check -->
+                            <div class="ai-after-check" id="aiAfterCheck" style="display: none;">
+                                <div class="ai-result">
+                                    <div class="ai-percentage">
+                                        <span id="similarityPercentage" class="ai-percent-badge">0%</span>
+
+                                        <div class="ai-progress-bar">
+                                            <div class="ai-progress" id="aiProgress" style="width: 0%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ai-status" id="aiStatus">
+                                        <span class="ai-status-text">تشابه منخفض - المشروع أصلي</span>
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="ai-description" id="aiDescription">
+                                    <span>الوصف:</span>
+                                    <p>مشروع يبدو أصليًا ويتطابق بنسبة منخفضة مع المشاريع السابقة.</p>
+                                </div>
+                                <button class="ai-recheck-btn" id="aiRecheckBtn">
+                                    <i class="fas fa-redo"></i>
+                                    إعادة الفحص
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Buttons -->
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" id="teamCancelBtn"
+                            onclick="closeModal()">إلغاء</button>
+                        <button type="button" class="btn-submit" id="createProjectBtn"
+                            onclick="finishCreatingProject()">إنشاء المشروع</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    </form>
+    </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <script src="DashScript.js" defer></script>
+
+</body>
+
+</html>

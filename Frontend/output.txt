@@ -1,0 +1,55 @@
+AI Button Output (JSON)
+
+The endpoint returns a JSON object with these keys:
+
+{
+  "phase_id": 1,
+  "criterion_id": 3,
+  "original_text": "My objectives are: improve the system.",
+  "explanation": "The objectives are too vague and not measurable. They should start with action verbs and include at least 2–3 clear bullet points.",
+  "suggested_text": "Objectives:\n• Design a web-based platform to manage graduation project phases.\n• Develop an AI criteria checklist that evaluates each phase deliverable.\n• Improve tracking by generating pass/fail feedback and clear improvement tips.",
+  "tips": [
+    "Start each objective with an action verb (design, develop, evaluate).",
+    "Make objectives specific and measurable when possible.",
+    "Write at least 2–3 objectives to reflect the project scope."
+  ]
+}
+
+_____________
+What each field means (for UI)
+
+phase_id: which phase this suggestion belongs to
+
+criterion_id: which criterion the AI is improving
+
+original_text: what the student wrote (show it for reference)
+
+explanation: short reason why the text is weak / what’s missing
+
+suggested_text: improved version the user can copy or apply
+
+tips: small bullet guidance list
+__________________
+How frontend should use it
+
+In the UI (modal/side panel):
+
+Show explanation
+
+Show suggested_text in a textarea + Copy button
+
+Show tips as bullets
+
+Add Apply button → replace the related input field with suggested_text
+__________________
+Error output (still same structure)
+
+Even if Groq fails, backend should return:
+{
+  "phase_id": 1,
+  "criterion_id": 3,
+  "original_text": "My objectives are: improve the system.",
+  "explanation": "AI service error. Please try again later or edit manually.",
+  "suggested_text": "My objectives are: improve the system.",
+  "tips": ["Use action verbs, add 2–3 measurable objectives, and include specific targets."]
+}

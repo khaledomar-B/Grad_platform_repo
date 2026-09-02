@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>تفاصيل المشروع - منصة مشاريع التخرج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style_menu.css">
+    <link rel="stylesheet" href="style_project_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <script src="project_details.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <div class="header-right">
+            <div class="logo-circle">🎓</div>
+            <div>
+                <div class="university-name">جامعة الرموك</div>
+                <div class="university-subtitle">منصة مشاريع التخرج</div>
+                <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+            </div>
+        </div>
+
+        <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar"></div>
+                <div class="user-info">
+                    <span class="user-name" id="menuUserName"></span>
+                    <div class="user-role">طالب</div>
+                </div>
+            </div>
+
+
+            <nav class="menu">
+                <a href="dashboard.html" class="menu-item">
+                    <i class="fas fa-th-large menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">لوحة التحكم</span>
+                        <span class="menu-item-en">Dashboard</span>
+                    </div>
+                </a>
+
+                <a href="IdeasGenerator.html" class="menu-item">
+                    <i class="fas fa-lightbulb menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">أفكار ذكية</span>
+                        <span class="menu-item-en">AI Ideas Generator</span>
+                    </div>
+                </a>
+
+                <a href="progress&phases.html" class="menu-item">
+                    <i class="fas fa-calendar-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">التقدم والمراحل</span>
+                        <span class="menu-item-en">Progress & Phases</span>
+                    </div>
+                </a>
+
+                <a href="project_details.html" class="menu-item active">
+                    <i class="fas fa-folder menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">تفاصيل المشروع</span>
+                        <span class="menu-item-en">Project Details</span>
+                    </div>
+                </a>
+
+                <a href="messages.html" class="menu-item">
+                    <i class="fas fa-comment-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">المحادثات</span>
+                        <span class="menu-item-en">Messages</span>
+                    </div>
+                </a>
+
+                <a href="all_teams.html" class="menu-item">
+                    <i class="fas fa-users menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">جميع الفرق</span>
+                        <span class="menu-item-en">All Teams</span>
+                    </div>
+                </a>
+
+                <a href="FindTeammates.html" class="menu-item">
+                    <i class="fas fa-user-friends menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">البحث عن زملاء</span>
+                        <span class="menu-item-en">Find Teammates</span>
+                    </div>
+                </a>
+
+                <a href="notifications.html" class="menu-item">
+                    <i class="fas fa-bell menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الإشعارات</span>
+                        <span class="menu-item-en">Notifications</span>
+                    </div>
+                </a>
+
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user-circle menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الملف الشخصي</span>
+                        <span class="menu-item-en">Profile</span>
+                    </div>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header Section -->
+            <div class="main-header">
+                <i class="fas fa-folder header-icon"></i>
+                <div class="header-text">
+                    <h1>تفاصيل المشروع</h1>
+                    <p>معلومات شاملة عن مشروعك والمستندات المرتبطة</p>
+                    <p>Project Details & Documentation</p>
+                </div>
+            </div>
+
+
+            <!-- Project Information Section -->
+            <div class="project-info">
+                <div class="project-header">
+                    <div class="project-title">
+                        <i class="fas fa-book-open"></i>
+                        <h2>معلومات المشروع</h2>
+
+                    </div>
+                    <div class="project-status">
+                        <span class="status-label" id="pdStatus">—</span>
+                    </div>
+                </div>
+                <hr>
+                <!-- Project Summary Section -->
+                <div class="project-summary">
+                    <h2 id="pdTitleAr">—</h2>
+                    <p id="pdTitleEn">—</p>
+
+                </div>
+                <hr>
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon-circle" style="background-color: #fef9e7;">
+                            <i class="fas fa-file-alt stat-icon" style="color: #d4a017;"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="pdFilesCount" style="color:#d4a017;">0</span>
+                            <span class="stat-label">الملفات</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon-circle" style="background-color: #eaf2fd;">
+                            <i class="fas fa-users stat-icon" style="color: #2563eb;"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="pdTeamCount" style="color:#2563eb;">0</span>
+                            <span class="stat-label">الفريق</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon-circle" style="background-color: #e6f9e6;">
+                            <i class="fas fa-check-circle stat-icon" style="color: #22c55e;"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="pdStages" style="color:#22c55e;">0/0</span>
+                            <span class="stat-label">المراحل</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon-circle" style="background-color: #e5e7eb;">
+                            <i class="fas fa-bullseye stat-icon" style="color: #0f4b6b;"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="pdProgress" style="color:#0f4b6b;">0%</span>
+                            <span class="stat-label">التقدم</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="project-deadline">
+                    <span>الموعد النهائي:</span>
+                    <span class="deadline-date" id="pdDeadline">—</span>
+                </div>
+                <div class="project-supervisor">
+                    <span>المشرف:</span>
+                    <span class="supervisor-name" id="pdSupervisor">—</span>
+                </div>
+                <div class="project-major">
+                    <span>التخصص:</span>
+                    <span class="major-name" id="pdMajor">—</span>
+                </div>
+            </div>
+
+
+
+            <!-- العنصر الجديد المضاف -->
+            <div class="project-documents">
+                <div class="documents-header">
+                    <div class="documents-title">
+                        <i class="fas fa-file-alt"></i>
+                        <h2 id="total-documents">وثائق المشروع (0)</h2>
+                    </div>
+                    <p>رفع وإدارة جميع الملفات والوثائق المتعلقة بالمشروع</p>
+                </div>
+                <hr>
+                <div class="documents-note">
+                    <div class="note-content">
+                        <div class="note-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="note-text">
+                            <span class="note-label">ملاحظة:</span>
+                            <span>جميع أعضاء الفريق يمكنهم رفع الملفات، الحذف أو التعديل، تواصل مع المشرف
+                                الأكاديمي.</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- الأقسام -->
+                <div class="section-title">
+                    <i class="fas fa-file-alt" style="color:#2563eb;"></i>
+                    <span>مقترح المشروع</span>
+                    <span class="section-count" id="count-proposal">0</span>
+                </div>
+                <div class="file-list" id="section-proposal"></div>
+
+                <div class="section-title">
+                    <i class="fas fa-check-circle" style="color:#16a34a;"></i>
+                    <span>المتطلبات</span>
+                    <span class="section-count" id="count-requirements">0</span>
+                </div>
+                <div class="file-list" id="section-requirements"></div>
+
+                <div class="section-title">
+                    <i class="fas fa-image" style="color:#a259ff;"></i>
+                    <span>وثائق التصميم</span>
+                    <span class="section-count" id="count-design">0</span>
+                </div>
+                <div class="file-list" id="section-design"></div>
+
+                <div class="section-title">
+                    <i class="fas fa-file-pdf" style="color:#ff8c00;"></i>
+                    <span>التطوير</span>
+                    <span class="section-count" id="count-development">0</span>
+                </div>
+                <div class="file-list" id="section-development"></div>
+
+                <div class="section-title">
+                    <i class="fas fa-chalkboard" style="color:black;"></i>
+                    <span>العروض التقديمية</span>
+                    <span class="section-count" id="count-presentations">0</span>
+                </div>
+                <div class="file-list" id="section-presentations"></div>
+
+                <div class="section-title">
+                    <i class="fas fa-folder" style="color:#6c757d;"></i>
+                    <span>التسليم النهائي</span>
+                    <span class="section-count" id="count-Final">0</span>
+                </div>
+                <div class="file-list" id="section-Final"></div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal-overlay" id="modal">
+                <div class="modal">
+
+                    <div class="modal-header">
+                        <span>رفع ملف جديد</span>
+                        <span style="cursor:pointer;" onclick="closeModal()">✕</span>
+                    </div>
+
+                    <p style="color:#6b7280; margin-top:10px;">اختر ملفاً وحدد فئته لرفعه إلى المشروع</p>
+
+                    <div id="drop-zone">اسحب الملف هنا أو اضغط للاختيار</div>
+
+                    <label style="margin-top:18px; display:block;">الملف</label>
+                    <input type="file" id="fileInput"
+                        style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+
+                    <label style="margin-top:18px; display:block;">الفئة</label>
+                    <select id="fileCategory" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+                        <option>مقترح المشروع</option>
+                        <option>المتطلبات</option>
+                        <option>وثائق التصميم</option>
+                        <option>التقارير</option>
+                        <option>العروض التقديمية</option>
+                        <option>أخرى</option>
+                    </select>
+
+                    <div style="margin-top:10px; color:#2563eb; font-size:13px;">💡 الملفات المدعومة: PDF, DOCX, PPTX,
+                        FIG, ZIP, RAR</div>
+
+                    <div class="modal-footer">
+                        <button onclick="addFile()"
+                            style="padding:10px 20px;background:#06324a;color:white;border:none;border-radius:6px;">رفع
+                            الملف</button>
+                        <button onclick="closeModal()"
+                            style="padding:10px 20px;border:1px solid #ccc;border-radius:6px;">إلغاء</button>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tech-container">
+
+                <div class="tech-header-row">
+                    <div class="tech-header">
+                        <i class="fas fa-gear"></i>
+                        التقنيات المستخدمة
+                        <span id="totalTechCount">(0)</span>
+                    </div>
+                    <button class="add-tech-btn" id="openTechModal">
+                        <i class="fas fa-plus"></i> إضافة تقنية
+                    </button>
+                </div>
+                <hr>
+                <div class="tech-container">
+                    <div class="tech-body">
+
+                        <div class="tech-col">
+                            <div class="tech-col-title">
+                                <i class="fas fa-code"></i>
+                                Backend
+                                <span class="count">0</span>
+                            </div>
+                            <div class="badges" data-cat="backend"></div>
+                        </div>
+
+                        <div class="tech-col">
+                            <div class="tech-col-title">
+                                <i class="fas fa-globe"></i> Frontend <span class="count">0</span>
+                            </div>
+                            <div class="badges" data-cat="frontend"></div>
+                        </div>
+
+                        <div class="tech-col">
+                            <div class="tech-col-title">
+                                <i class="fas fa-lightbulb"></i> AI/ML <span class="count">0</span>
+                            </div>
+                            <div class="badges" data-cat="ai"></div>
+                        </div>
+
+                        <div class="tech-col">
+                            <div class="tech-col-title">
+                                <i class="fas fa-database"></i> Database <span class="count">0</span>
+                            </div>
+                            <div class="badges" data-cat="db"></div>
+                        </div>
+
+                        <div class="tech-col">
+                            <div class="tech-col-title">
+                                <i class="fas fa-server"></i> DevOps <span class="count">0</span>
+                            </div>
+                            <div class="badges" data-cat="devops"></div>
+                        </div>
+
+                        <div class="tech-col">
+                            <div class="tech-col-title">
+                                <i class="fas fa-gear"></i> أخرى <span class="count">0</span>
+                            </div>
+                            <div class="badges" data-cat="other"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal-overlay" id="techModal">
+                    <div class="modal">
+                        <div class="modal-header">
+                            إضافة تقنية جديدة
+                            <span id="closeTechModal" style="cursor:pointer;">✕</span>
+                        </div>
+
+                        <p class="modal-desc">اكتب اسم التقنية واختر فئتها</p>
+
+                        <input id="techName" placeholder="مثال: React.js">
+
+                        <select id="techCategory">
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="ai">AI / ML</option>
+                            <option value="db">Database</option>
+                            <option value="devops">DevOps</option>
+                            <option value="other">أخرى</option>
+                        </select>
+
+                        <div class="modal-actions">
+                            <button class="primary-btn" id="addTechBtn">إضافة</button>
+                            <button class="secondary-btn" id="cancelTech">إلغاء</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="documents-note">
+                <div class="note-content">
+                    <div class="note-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="note-text">
+                        <span class="note-label">ملاحظة:</span>
+                        <span>المشرف الأكاديمي هو المسؤول عن إدارة الفريق وإضافة أو إزالة الأعضاء.</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="team-section">
+
+                <div class="team-header">
+                    <span>أعضاء الفريق</span>
+                    <span id="teamCount">(0)</span>
+                    <div class="team-members" id="teamMembers"></div>
+                </div>
+                <hr>
+                <div class="team-members" id="teamMembers"></div>
+
+            </div>
+
+
+
+
+
+
+            <div class="links-section">
+
+                <div class="links-header">
+                    <i class="fas fa-link"></i>
+                    <span>روابط مهمة</span>
+                </div>
+                <hr>
+                <div class="links-grid">
+
+                    <!-- Live Demo -->
+                    <div class="link-card" onclick="handleCardClick('demo')">
+                        <div class="link-info">
+                            <span class="link-title">Live Demo</span>
+                            <span class="link-desc" id="desc-demo">لم يتم إضافة رابط بعد</span>
+                            <button class="add-link-btn" id="btn-demo"
+                                onclick="event.stopPropagation(); openLinksModal('demo')">
+                                + إضافة رابط
+                            </button>
+                        </div>
+                        <i class="fas fa-globe link-icon"></i>
+                        <i class="fas fa-pen edit-btn" onclick="event.stopPropagation(); openLinksModal('demo')"></i>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="link-card" onclick="handleCardClick('github')">
+                        <div class="link-info">
+                            <span class="link-title">GitHub Repository</span>
+                            <span class="link-desc" id="desc-github">لم يتم إضافة رابط بعد</span>
+                            <button class="add-link-btn" id="btn-github"
+                                onclick="event.stopPropagation(); openLinksModal('github')">
+                                + إضافة رابط
+                            </button>
+                        </div>
+                        <i class="fab fa-github link-icon"></i>
+                        <i class="fas fa-pen edit-btn" onclick="event.stopPropagation(); openLinksModal('github')"></i>
+                    </div>
+
+                    <!-- Docs -->
+                    <div class="link-card" onclick="handleCardClick('docs')">
+                        <div class="link-info">
+                            <span class="link-title">Documentation</span>
+                            <span class="link-desc" id="desc-docs">لم يتم إضافة رابط بعد</span>
+                            <button class="add-link-btn" id="btn-docs"
+                                onclick="event.stopPropagation(); openLinksModal('docs')">
+                                + إضافة رابط
+                            </button>
+                        </div>
+                        <i class="fas fa-file-alt link-icon"></i>
+                        <i class="fas fa-pen edit-btn" onclick="event.stopPropagation(); openLinksModal('docs')"></i>
+                    </div>
+
+                    <!-- Figma -->
+                    <div class="link-card" onclick="handleCardClick('figma')">
+                        <div class="link-info">
+                            <span class="link-title">Figma Design</span>
+                            <span class="link-desc" id="desc-figma">لم يتم إضافة رابط بعد</span>
+                            <button class="add-link-btn" id="btn-figma"
+                                onclick="event.stopPropagation(); openLinksModal('figma')">
+                                + إضافة رابط
+                            </button>
+                        </div>
+                        <i class="fab fa-figma link-icon"></i>
+                        <i class="fas fa-pen edit-btn" onclick="event.stopPropagation(); openLinksModal('figma')"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===== Links Modal (renamed) ===== -->
+            <div class="modal-overlay" id="links-modal-overlay">
+                <div class="modal">
+                    <div class="modal-header">
+                        <span id="linksModalTitle">إضافة رابط</span>
+                        <span style="cursor:pointer" onclick="closeLinksModal()">✕</span>
+                    </div>
+
+                    <input id="linksInput" placeholder="https://example.com">
+
+                    <div class="modal-actions">
+                        <button class="btn-primary" onclick="saveLink()">حفظ</button>
+                        <button class="btn-secondary" onclick="closeLinksModal()">إلغاء</button>
+                    </div>
+                </div>
+            </div>
+
+
+</body>
+
+</html>

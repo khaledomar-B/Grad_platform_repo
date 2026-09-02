@@ -1,0 +1,1197 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>نظرة عامة على التقدم - منصة مشاريع التخرج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style_menu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style_progress.css?v=2">
+    <script src="progress.js" defer></script>
+    <script src="DashScript.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- toggle button for mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="فتح القائمة">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 7H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M0 12.5H20" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <!-- university info -->
+        <div class="header-right">
+            <div class="logo-circle">🎓</div>
+            <div>
+                <div class="university-name">جامعة الرموك</div>
+                <div class="university-subtitle">منصة مشاريع التخرج</div>
+                <div style="font-size:11px;color:#9ca3af;">Yarmouk University - Graduation Projects</div>
+            </div>
+        </div>
+
+        <!-- logout button -->
+        <button class="logout-btn" aria-label="تسجيل خروج" title="تسجيل خروج" onclick="handleLogout()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </button>
+    </div>
+
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar"></div>
+                <div class="user-info">
+                    <span class="user-name" id="menuUserName"></span>
+                    <div class="user-role">طالب</div>
+                </div>
+            </div>
+
+
+            <nav class="menu">
+                <a href="dashboard.html" class="menu-item">
+                    <i class="fas fa-th-large menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">لوحة التحكم</span>
+                        <span class="menu-item-en">Dashboard</span>
+                    </div>
+
+                </a>
+
+                <a href="IdeasGenerator.html" class="menu-item">
+                    <i class="fas fa-lightbulb menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">أفكار ذكية</span>
+                        <span class="menu-item-en">AI Ideas Generator</span>
+                    </div>
+
+                </a>
+
+                <a href="progress&phases.html" class="menu-item active">
+                    <i class="fas fa-calendar-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">التقدم والمراحل</span>
+                        <span class="menu-item-en">Progress & Phases</span>
+                    </div>
+
+                </a>
+
+                <a href="project_details.html" class="menu-item">
+                    <i class="fas fa-folder menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">تفاصيل المشروع</span>
+                        <span class="menu-item-en">Project Details</span>
+                    </div>
+
+                </a>
+
+                <a href="messages.html" class="menu-item">
+                    <i class="fas fa-comment-alt menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">المحادثات</span>
+                        <span class="menu-item-en">Messages</span>
+                    </div>
+                </a>
+
+                <a href="all_teams.html" class="menu-item">
+                    <i class="fas fa-users menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">جميع الفرق</span>
+                        <span class="menu-item-en">All Teams</span>
+                    </div>
+
+                </a>
+
+                <a href="FindTeammates.html" class="menu-item">
+                    <i class="fas fa-user-friends menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">البحث عن زملاء</span>
+                        <span class="menu-item-en">Find Teammates</span>
+                    </div>
+
+                </a>
+
+                <a href="notifications.html" class="menu-item">
+                    <i class="fas fa-bell menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الإشعارات</span>
+                        <span class="menu-item-en">Notifications</span>
+                    </div>
+                </a>
+
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user-circle menu-item-icon"></i>
+                    <div class="menu-item-content">
+                        <span class="menu-item-ar">الملف الشخصي</span>
+                        <span class="menu-item-en">Profile</span>
+                    </div>
+
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header Section -->
+            <div class="main-header">
+                <i class="bi bi-graph-up-arrow gold-icon"></i>
+                <div class="header-text">
+                    <h1>التقدم والمراحل</h1>
+                    <p>تتبع تقدم مشروعك عبر جميع المراحل الأكاديمية</p>
+                    <p>Progress & Project Phases</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <!-- Header -->
+
+                <div class="top-row">
+                    <span class="progress-title">
+                        <i class="bi bi-bullseye"></i>
+                        التقدم الإجمالي
+                    </span>
+                </div>
+
+                <!-- Progress -->
+                <div class="progress-wrapper">
+                    <div class="progress" id="progressBar">0%</div>
+                </div>
+
+                <hr>
+                <!-- Stats -->
+                <div class="stats">
+
+                    <!-- إجمالي المراحل -->
+                    <div class="stat total">
+                        <div class="icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <div class="number" id="totalStages">0</div>
+                        <div class="label">إجمالي المراحل</div>
+                    </div>
+
+                    <!-- مراحل مقفلة -->
+                    <div class="stat locked">
+                        <div class="icon">
+                            <i class="bi bi-lock"></i>
+                        </div>
+                        <div class="number" id="lockedStages">0</div>
+                        <div class="label">مراحل مقفلة</div>
+                    </div>
+
+                    <!-- مراحل نشطة -->
+                    <div class="stat active">
+                        <div class="icon">
+                            <i class="bi bi-record-circle-fill"></i>
+                        </div>
+                        <div class="number" id="activeStages">0</div>
+                        <div class="label">مراحل نشطة</div>
+                    </div>
+
+                    <!-- مراحل مكتملة -->
+                    <div class="stat done">
+                        <div class="icon">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div class="number" id="doneStages">0</div>
+                        <div class="label">مراحل مكتملة</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+<div class="modal-overlay" id="stage1Modal" style="display:none;">
+  <div class="proposal-modal">
+
+    <!-- Header -->
+    <div class="proposal-header">
+      <div>
+        <h2>تسليم المخرجات - تقديم المقترح</h2>
+        <p>قم بكتابة محتوى كل مخرج من المخرجات المطلوبة</p>
+      </div>
+      <button class="close-btn" onclick="closeStage1Wizard()">✕</button>
+    </div>
+
+    <!-- Progress -->
+    <div class="proposal-progress">
+      <div class="progress-info">
+        <span id="progressPercent">0%</span>
+        <span id="progressText">المخرج 1 من 5</span>
+      </div>
+      <div class="progress-bar">
+        <div id="wizardBarFill"></div>
+      </div>
+      <small id="progressSubText">تم إدخال 0 من 5 مخرجات</small>
+    </div>
+
+    <div class="proposal-body">
+
+      <!-- Main Content -->
+      <div class="proposal-content">
+        <div class="output-card">
+          <div class="output-title">
+            <span class="step-badge" id="stepBadge">1</span>
+            <h3 id="wizardTitle"></h3>
+          </div>
+
+          <p class="output-desc">
+            اكتب محتوى تفصيلي وواضح لهذا المخرج (50 حرف على الأقل)
+          </p>
+
+          <textarea id="wizardTextarea"
+            placeholder="اكتب محتوى المخرج هنا..."></textarea>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="proposal-sidebar">
+        <h4>جميع المخرجات المطلوبة:</h4>
+        <ul id="outputsList"></ul>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="proposal-footer">
+      <button id="prevBtn" onclick="prevStep()" class="btn-outline" style="display:none;">
+        السابق
+      </button>
+
+      <button id="nextBtn" onclick="nextStep()" class="btn-primary">
+        حفظ والتالي
+      </button>
+
+      <button class="btn-cancel" onclick="closeStage1Wizard()">إلغاء</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+            <div id="phasesContent">
+                <!-- ================== PHASE 1 ================== -->
+                <div class="stage-card" id="stage1Card">
+
+                    <!-- Header -->
+                    <div class="stage-header">
+                        <div class="stage-title">
+                            <i class="bi bi-circle" id="stage1StatusIcon"></i>
+                            <div>
+                                <h3>
+                                    المرحلة 1: تقديم المقترح
+                                    <span class="status-badge pending" id="stage1StatusText">
+                                        غير مسلّمة
+                                    </span>
+                                </h3>
+                                <small>Proposal Submission</small>
+                            </div>
+                        </div>
+
+                        <span class="weight-badge">15%</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="stage-desc">
+                        تقديم فكرة المشروع والأهداف المتوقعة والتقنيات المستخدمة
+                    </p>
+
+                    <!-- Outputs -->
+                    <div class="outputs-box">
+                        <div class="outputs-header">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>المخرجات المطلوبة:</span>
+                        </div>
+
+                        <ul>
+                            <li>عنوان المشروع ووصف مختصر</li>
+                            <li>المشكلة والحل المقترح</li>
+                            <li>الأهداف المتوقعة</li>
+                            <li>التقنيات والأدوات المستخدمة</li>
+                            <li>الجدول الزمني المبدئي</li>
+                        </ul>
+                    </div>
+                    <!-- New: Start and End Dates -->
+                    <div class="dates-card" id="datesCard1">
+                        <div class="dates-head">
+                            <i class="bi bi-calendar-event"></i>
+                            <span>مواعيد التسليم</span>
+                        </div>
+
+                        <div class="dates-grid">
+                            <div class="date-item">
+                                <div class="date-label">تاريخ بداية التسليم</div>
+                                <div class="date-value" id="startDateText1">—</div>
+                            </div>
+
+                            <div class="date-item">
+                                <div class="date-label">تاريخ نهاية التسليم</div>
+                                <div class="date-value" id="endDateText1">—</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+                    <div class="student-submit" id="stage1SubmitBox">
+
+                     
+                            <button class="submit-btn" onclick="openStage1Wizard()">
+  <i class="bi bi-send"></i>
+  تسليم المرحلة
+</button>
+
+                        </div>
+
+
+                    </div>
+                    
+                    <!-- 
+<button class="submit-btn" id="stage1Btn" onclick="submitPhase(1)">
+                                <i class="bi bi-send"></i>
+                                تسليم المرحلة
+                            </button>-->
+
+                    <div class="criteria-card">
+
+                        <!-- Header -->
+                        <div class="criteria-header">
+                            <div class="criteria-title">
+                                <i class="bi bi-stars"></i>
+                                <span>التحقق من المعايير - تقديم المقترح</span>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="criteria-desc">
+                            اضغط للتحقق من اكتمال جميع العناصر المطلوبة قبل التسليم
+                        </p>
+
+                        <!-- Action -->
+                        <div class="criteria-action">
+                            <button class="criteria-btn" id="criteriaCheckBtn">
+
+                                <i class="bi bi-check-circle"></i>
+                                تحقق من المعايير
+                            </button>
+                        </div>
+
+
+
+
+                        <div class="ai-suggestion-panel" id="aiSuggestionPanel" style="display:none;">
+
+                            <div class="ai-suggestion-header">
+                                <h3>اقتراحات الذكاء الاصطناعي</h3>
+                                <button class="close-btn" onclick="closeAISuggestion()">✕</button>
+                            </div>
+
+                            <!-- Explanation -->
+                            <div class="ai-explanation">
+                                <strong>لماذا يحتاج تحسين؟</strong>
+                                <p id="aiExplanation"></p>
+                            </div>
+
+                            <!-- Suggested Text -->
+                            <div class="ai-suggested">
+                                <strong>النص المقترح</strong>
+                                <textarea id="aiSuggestedText" rows="6"></textarea>
+
+                                <div class="ai-actions">
+                                    <button onclick="copySuggestedText()">📋 نسخ</button>
+                                    <button class="apply-btn" onclick="applySuggestedText()">✔ تطبيق</button>
+                                </div>
+                            </div>
+
+                            <!-- Tips -->
+                            <div class="ai-tips">
+                                <strong>نصائح</strong>
+                                <ul id="aiTipsList"></ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submission Info (Hidden by default) -->
+                    <div class="submission-info hidden" id="stage1SubmissionInfo">
+                        <i class="bi bi-upload"></i>
+                        تم التسليم بتاريخ:
+                        <strong id="stage1SubmittedAt"></strong>
+                        <ul class="submitted-files" id="stage1Files"></ul>
+                        <i class="bi bi-trash delete-submit-icon" id="stage1DeleteIcon" title="حذف التسليم"
+                            onclick="deleteSubmission(1)">
+                        </i>
+
+                    </div>
+
+                    <!-- Supervisor Comment (Hidden) -->
+                    <div class="supervisor-box hidden" id="stage1SupervisorBox">
+                        <div class="supervisor-header">
+                            <i class="bi bi-chat-left-text"></i>
+                            <span>تعليقات المشرف:</span>
+                        </div>
+                        <p id="stage1SupervisorComment"></p>
+                    </div>
+
+                </div>
+
+                <!-- ================== PHASE 2 ================== -->
+                <div class="stage-card" id="stage2Card">
+
+                    <!-- Header -->
+                    <div class="stage-header">
+                        <div class="stage-title">
+                            <i class="bi bi-circle" id="stage2StatusIcon"></i>
+                            <div>
+                                <h3>
+                                    المرحلة 2: تحليل المتطلبات
+                                    <span class="status-badge pending" id="stage2StatusText">
+                                        غير مسلّمة
+                                    </span>
+                                </h3>
+                                <small>Requirements Analysis</small>
+                            </div>
+                        </div>
+
+                        <span class="weight-badge">20%</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="stage-desc">
+                        تحديد المتطلبات الوظيفية وغير الوظيفية وتحليل احتياجات المستخدمين
+                    </p>
+
+                    <!-- Outputs -->
+                    <div class="outputs-box">
+                        <div class="outputs-header">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>المخرجات المطلوبة:</span>
+                        </div>
+
+                        <ul>
+                            <li>وثيقة المتطلبات الوظيفية (Functional Requirements)</li>
+                            <li>وثيقة المتطلبات غير الوظيفية (Non-Functional Requirements)</li>
+                            <li>حالات الاستخدام (Use Cases)</li>
+                            <li>مخططات UML الأولية</li>
+                            <li>تحليل المستخدمين والأدوار</li>
+                        </ul>
+                    </div>
+                    <!-- New: Start and End Dates -->
+                    <div class="dates-card" id="datesCard2">
+                        <div class="dates-head">
+                            <i class="bi bi-calendar-event"></i>
+                            <span>مواعيد التسليم</span>
+                        </div>
+
+                        <div class="dates-grid">
+                            <div class="date-item">
+                                <div class="date-label">تاريخ بداية التسليم</div>
+                                <div class="date-value" id="startDateText2">—</div>
+                            </div>
+
+                            <div class="date-item">
+                                <div class="date-label">تاريخ نهاية التسليم</div>
+                                <div class="date-value" id="endDateText2">—</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Submit Box (JS controls visibility) -->
+                    <div class="student-submit" id="stage2SubmitBox">
+
+                        <div class="submit-card">
+                            <div class="submit-head">
+                                <div class="submit-title">
+                                    <i class="bi bi-cloud-upload"></i>
+                                    <span>رفع ملفات المرحلة</span>
+                                </div>
+
+                                <label class="file-btn" for="stage2File">
+                                    <i class="bi bi-paperclip"></i>
+                                    اختيار ملفات
+                                </label>
+
+                                <input type="file" id="stage2File" multiple class="file-input-hidden">
+                            </div>
+
+                            <div class="file-hint" id="stage2FileHint">لم يتم اختيار ملفات</div>
+
+                            <button class="submit-btn" id="stage2Btn" onclick="submitPhase(2)">
+                                <i class="bi bi-send"></i>
+                                تسليم المرحلة
+                            </button>
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Submission Info -->
+                    <div class="submission-info hidden" id="stage2SubmissionInfo">
+                        <i class="bi bi-upload"></i>
+                        تم التسليم بتاريخ:
+                        <strong id="stage2SubmittedAt"></strong>
+                        <ul class="submitted-files" id="stage2Files"></ul>
+                        <i class="bi bi-trash delete-submit-icon" id="stage2DeleteIcon" title="حذف التسليم"
+                            onclick="deleteSubmission(2)">
+                        </i>
+
+                    </div>
+
+                    <!-- Supervisor Comment -->
+                    <div class="supervisor-box hidden" id="stage2SupervisorBox">
+                        <div class="supervisor-header">
+                            <i class="bi bi-chat-left-text"></i>
+                            <span>تعليقات المشرف:</span>
+                        </div>
+                        <p id="stage2SupervisorComment"></p>
+                    </div>
+
+                </div>
+
+                <!-- ================== PHASE 3 ================== -->
+                <div class="stage-card" id="stage3Card">
+
+                    <!-- Header -->
+                    <div class="stage-header">
+                        <div class="stage-title">
+                            <i class="bi bi-circle" id="stage3StatusIcon"></i>
+                            <div>
+                                <h3>
+                                    المرحلة 3: التصميم
+                                    <span class="status-badge pending" id="stage3StatusText">
+                                        غير مسلّمة
+                                    </span>
+                                </h3>
+                                <small>System Design</small>
+                            </div>
+                        </div>
+
+                        <span class="weight-badge">20%</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="stage-desc">
+                        تصميم قاعدة البيانات والواجهات وبنية النظام
+                    </p>
+
+                    <!-- Outputs -->
+                    <div class="outputs-box">
+                        <div class="outputs-header">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>المخرجات المطلوبة:</span>
+                        </div>
+
+                        <ul>
+                            <li>تصميم قاعدة البيانات (ERD)</li>
+                            <li>Class Diagram</li>
+                            <li>Sequence Diagram</li>
+                            <li>تصميم الواجهات (UI/UX Mockups)</li>
+                            <li>بنية النظام (System Architecture)</li>
+                            <li>Component Diagram</li>
+                        </ul>
+                    </div>
+                    <div class="dates-card" id="datesCard3">
+                        <div class="dates-head">
+                            <i class="bi bi-calendar-event"></i>
+                            <span>مواعيد التسليم</span>
+                        </div>
+
+                        <div class="dates-grid">
+                            <div class="date-item">
+                                <div class="date-label">تاريخ بداية التسليم</div>
+                                <div class="date-value" id="startDateText3">—</div>
+                            </div>
+
+                            <div class="date-item">
+                                <div class="date-label">تاريخ نهاية التسليم</div>
+                                <div class="date-value" id="endDateText3">—</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- Submit Box (JS controls visibility) -->
+                    <div class="student-submit" id="stage3SubmitBox">
+
+                        <div class="submit-card">
+                            <div class="submit-head">
+                                <div class="submit-title">
+                                    <i class="bi bi-cloud-upload"></i>
+                                    <span>رفع ملفات المرحلة</span>
+                                </div>
+
+                                <label class="file-btn" for="stage3File">
+                                    <i class="bi bi-paperclip"></i>
+                                    اختيار ملفات
+                                </label>
+
+                                <input type="file" id="stage3File" multiple class="file-input-hidden">
+                            </div>
+
+                            <div class="file-hint" id="stage3FileHint">لم يتم اختيار ملفات</div>
+
+                            <button class="submit-btn" id="stage3Btn" onclick="submitPhase(3)">
+                                <i class="bi bi-send"></i>
+                                تسليم المرحلة
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Submission Info -->
+                    <div class="submission-info hidden" id="stage3SubmissionInfo">
+                        <i class="bi bi-upload"></i>
+                        تم التسليم بتاريخ:
+                        <strong id="stage3SubmittedAt"></strong>
+                        <ul class="submitted-files" id="stage3Files"></ul>
+                        <i class="bi bi-trash delete-submit-icon" id="stage3DeleteIcon" title="حذف التسليم"
+                            onclick="deleteSubmission(3)">
+                        </i>
+
+                    </div>
+
+                    <!-- Supervisor Comment -->
+                    <div class="supervisor-box hidden" id="stage3SupervisorBox">
+                        <div class="supervisor-header">
+                            <i class="bi bi-chat-left-text"></i>
+                            <span>تعليقات المشرف:</span>
+                        </div>
+                        <p id="stage3SupervisorComment"></p>
+                    </div>
+
+                </div>
+
+                <!-- ================== PHASE 4 ================== -->
+                <div class="stage-card" id="stage4Card">
+
+                    <!-- Header -->
+                    <div class="stage-header">
+                        <div class="stage-title">
+                            <i class="bi bi-circle" id="stage4StatusIcon"></i>
+                            <div>
+                                <h3>
+                                    المرحلة 4: التطوير - المرحلة الأولى
+                                    <span class="status-badge pending" id="stage4StatusText">
+                                        غير مسلّمة
+                                    </span>
+                                </h3>
+                                <small>Development Phase 1</small>
+                            </div>
+                        </div>
+
+                        <span class="weight-badge">15%</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="stage-desc">
+                        تطوير الوظائف الأساسية وقاعدة البيانات
+                    </p>
+
+                    <!-- Outputs -->
+                    <div class="outputs-box">
+                        <div class="outputs-header">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>المخرجات المطلوبة:</span>
+                        </div>
+
+                        <ul>
+                            <li>إعداد البيئة التطويرية</li>
+                            <li>تطبيق قاعدة البيانات</li>
+                            <li>تطوير نظام التسجيل والمصادقة</li>
+                            <li>تطوير لوحة التحكم الأساسية</li>
+                            <li>API endpoints الأساسية</li>
+                            <li>كود منظم على GitHub</li>
+                        </ul>
+                    </div>
+                    <!-- New: Start and End Dates -->
+                    <div class="dates-card" id="datesCard4">
+                        <div class="dates-head">
+                            <i class="bi bi-calendar-event"></i>
+                            <span>مواعيد التسليم</span>
+                        </div>
+
+                        <div class="dates-grid">
+                            <div class="date-item">
+                                <div class="date-label">تاريخ بداية التسليم</div>
+                                <div class="date-value" id="startDateText4">—</div>
+                            </div>
+
+                            <div class="date-item">
+                                <div class="date-label">تاريخ نهاية التسليم</div>
+                                <div class="date-value" id="endDateText4">—</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Submit Box (JS controls visibility) -->
+                    <div class="student-submit" id="stage4SubmitBox">
+
+                        <div class="submit-card">
+                            <div class="submit-head">
+                                <div class="submit-title">
+                                    <i class="bi bi-cloud-upload"></i>
+                                    <span>رفع ملفات المرحلة</span>
+                                </div>
+
+                                <label class="file-btn" for="stage4File">
+                                    <i class="bi bi-paperclip"></i>
+                                    اختيار ملفات
+                                </label>
+
+                                <input type="file" id="stage4File" multiple class="file-input-hidden">
+                            </div>
+
+                            <div class="file-hint" id="stage4FileHint">لم يتم اختيار ملفات</div>
+
+                            <button class="submit-btn" id="stage4Btn" onclick="submitPhase(4)">
+                                <i class="bi bi-send"></i>
+                                تسليم المرحلة
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Submission Info -->
+                    <div class="submission-info hidden" id="stage4SubmissionInfo">
+                        <i class="bi bi-upload"></i>
+                        تم التسليم بتاريخ:
+                        <strong id="stage4SubmittedAt"></strong>
+                        <ul class="submitted-files" id="stage4Files"></ul>
+                        <i class="bi bi-trash delete-submit-icon" id="stage4DeleteIcon" title="حذف التسليم"
+                            onclick="deleteSubmission(4)">
+                        </i>
+
+                    </div>
+
+                    <!-- Supervisor Comment -->
+                    <div class="supervisor-box hidden" id="stage4SupervisorBox">
+                        <div class="supervisor-header">
+                            <i class="bi bi-chat-left-text"></i>
+                            <span>تعليقات المشرف:</span>
+                        </div>
+                        <p id="stage4SupervisorComment"></p>
+                    </div>
+
+                </div>
+                <!-- ================== PHASE 5 ================== -->
+                <div class="stage-card" id="stage5Card">
+
+                    <!-- Header -->
+                    <div class="stage-header">
+                        <div class="stage-title">
+                            <i class="bi bi-circle" id="stage5StatusIcon"></i>
+                            <div>
+                                <h3>
+                                    المرحلة 5: التطوير - المرحلة الثانية
+                                    <span class="status-badge pending" id="stage5StatusText">
+                                        غير مسلّمة
+                                    </span>
+                                </h3>
+                                <small>Development Phase 2</small>
+                            </div>
+                        </div>
+
+                        <span class="weight-badge">15%</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="stage-desc">
+                        استكمال الوظائف المتقدمة والتكامل
+                    </p>
+
+                    <!-- Outputs -->
+                    <div class="outputs-box">
+                        <div class="outputs-header">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>المخرجات المطلوبة:</span>
+                        </div>
+
+                        <ul>
+                            <li>تطوير جميع الميزات المتقدمة</li>
+                            <li>تكامل الذكاء الاصطناعي</li>
+                            <li>نظام الإشعارات والدردشة</li>
+                            <li>نظام رفع الملفات</li>
+                            <li>تطبيق جميع التصاميم</li>
+                            <li>اختبارات الوحدة (Unit Tests)</li>
+                        </ul>
+                    </div>
+                    <!-- New: Start and End Dates -->
+                    <div class="dates-card" id="datesCard5">
+                        <div class="dates-head">
+                            <i class="bi bi-calendar-event"></i>
+                            <span>مواعيد التسليم</span>
+                        </div>
+
+                        <div class="dates-grid">
+                            <div class="date-item">
+                                <div class="date-label">تاريخ بداية التسليم</div>
+                                <div class="date-value" id="startDateText5">—</div>
+                            </div>
+
+                            <div class="date-item">
+                                <div class="date-label">تاريخ نهاية التسليم</div>
+                                <div class="date-value" id="endDateText5">—</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Submit Box (JS controls visibility) -->
+                    <div class="student-submit" id="stage5SubmitBox">
+
+                        <div class="submit-card">
+                            <div class="submit-head">
+                                <div class="submit-title">
+                                    <i class="bi bi-cloud-upload"></i>
+                                    <span>رفع ملفات المرحلة</span>
+                                </div>
+
+                                <label class="file-btn" for="stage5File">
+                                    <i class="bi bi-paperclip"></i>
+                                    اختيار ملفات
+                                </label>
+
+                                <input type="file" id="stage5File" multiple class="file-input-hidden">
+                            </div>
+
+                            <div class="file-hint" id="stage5FileHint">لم يتم اختيار ملفات</div>
+
+                            <button class="submit-btn" id="stage5Btn" onclick="submitPhase(5)">
+                                <i class="bi bi-send"></i>
+                                تسليم المرحلة
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Submission Info -->
+                    <div class="submission-info hidden" id="stage5SubmissionInfo">
+                        <i class="bi bi-upload"></i>
+                        تم التسليم بتاريخ:
+                        <strong id="stage5SubmittedAt"></strong>
+                        <ul class="submitted-files" id="stage5Files"></ul>
+                        <i class="bi bi-trash delete-submit-icon" id="stage5DeleteIcon" title="حذف التسليم"
+                            onclick="deleteSubmission(5)">
+                        </i>
+
+                    </div>
+
+                    <!-- Supervisor Comment -->
+                    <div class="supervisor-box hidden" id="stage5SupervisorBox">
+                        <div class="supervisor-header">
+                            <i class="bi bi-chat-left-text"></i>
+                            <span>تعليقات المشرف:</span>
+                        </div>
+                        <p id="stage5SupervisorComment"></p>
+                    </div>
+
+                </div>
+
+                <!-- ================== PHASE 6 ================== -->
+                <div class="stage-card" id="stage6Card">
+
+                    <!-- Header -->
+                    <div class="stage-header">
+                        <div class="stage-title">
+                            <i class="bi bi-circle" id="stage6StatusIcon"></i>
+                            <div>
+                                <h3>
+                                    المرحلة 6: الاختبار والتوثيق
+                                    <span class="status-badge pending" id="stage6StatusText">
+                                        غير مسلّمة
+                                    </span>
+                                </h3>
+                                <small>Testing & Documentation</small>
+                            </div>
+                        </div>
+
+                        <span class="weight-badge">10%</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="stage-desc">
+                        اختبار شامل للنظام وكتابة الوثائق النهائية
+                    </p>
+
+                    <!-- Outputs -->
+                    <div class="outputs-box">
+                        <div class="outputs-header">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>المخرجات المطلوبة:</span>
+                        </div>
+
+                        <ul>
+                            <li>خطة الاختبار (Test Plan)</li>
+                            <li>حالات الاختبار (Test Cases)</li>
+                            <li>تقرير الاختبار (Test Report)</li>
+                            <li>دليل المستخدم (User Manual)</li>
+                            <li>الوثائق التقنية (Technical Documentation)</li>
+                            <li>إصلاح جميع الأخطاء</li>
+                        </ul>
+                    </div>
+                    <!-- New: Start and End Dates -->
+                    <div class="dates-card" id="datesCard6">
+                        <div class="dates-head">
+                            <i class="bi bi-calendar-event"></i>
+                            <span>مواعيد التسليم</span>
+                        </div>
+
+                        <div class="dates-grid">
+                            <div class="date-item">
+                                <div class="date-label">تاريخ بداية التسليم</div>
+                                <div class="date-value" id="startDateText6">—</div>
+                            </div>
+
+                            <div class="date-item">
+                                <div class="date-label">تاريخ نهاية التسليم</div>
+                                <div class="date-value" id="endDateText6">—</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Submit Box (JS controls visibility) -->
+                    <div class="student-submit" id="stage6SubmitBox">
+
+                        <div class="submit-card">
+                            <div class="submit-head">
+                                <div class="submit-title">
+                                    <i class="bi bi-cloud-upload"></i>
+                                    <span>رفع ملفات المرحلة</span>
+                                </div>
+
+                                <label class="file-btn" for="stage6File">
+                                    <i class="bi bi-paperclip"></i>
+                                    اختيار ملفات
+                                </label>
+
+                                <input type="file" id="stage6File" multiple class="file-input-hidden">
+                            </div>
+
+                            <div class="file-hint" id="stage6FileHint">لم يتم اختيار ملفات</div>
+
+                            <button class="submit-btn" id="stage6Btn" onclick="submitPhase(6)">
+                                <i class="bi bi-send"></i>
+                                تسليم المرحلة
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Submission Info -->
+                    <div class="submission-info hidden" id="stage6SubmissionInfo">
+                        <i class="bi bi-upload"></i>
+                        تم التسليم بتاريخ:
+                        <strong id="stage6SubmittedAt"></strong>
+                        <ul class="submitted-files" id="stage6Files"></ul>
+                        <i class="bi bi-trash delete-submit-icon" id="stage6DeleteIcon" title="حذف التسليم"
+                            onclick="deleteSubmission(6)">
+                        </i>
+
+                    </div>
+
+
+                    <!-- Supervisor Comment -->
+                    <div class="supervisor-box hidden" id="stage6SupervisorBox">
+                        <div class="supervisor-header">
+                            <i class="bi bi-chat-left-text"></i>
+                            <span>تعليقات المشرف:</span>
+                        </div>
+                        <p id="stage6SupervisorComment"></p>
+
+                    </div>
+
+                </div>
+
+                <!-- ================== PHASE 7 ================== -->
+                <div class="stage-card" id="stage7Card">
+
+                    <!-- Header -->
+                    <div class="stage-header">
+                        <div class="stage-title">
+                            <i class="bi bi-circle" id="stage7StatusIcon"></i>
+                            <div>
+                                <h3>
+                                    المرحلة 7: التسليم النهائي
+                                    <span class="status-badge pending" id="stage7StatusText">
+                                        غير مسلّمة
+                                    </span>
+                                </h3>
+                                <small>Final Delivery</small>
+                            </div>
+                        </div>
+
+                        <span class="weight-badge">5%</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="stage-desc">
+                        التسليم النهائي والعرض التقديمي
+                    </p>
+
+                    <!-- Outputs -->
+                    <div class="outputs-box">
+                        <div class="outputs-header">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>المخرجات المطلوبة:</span>
+                        </div>
+
+                        <ul>
+                            <li>المشروع الكامل (Source Code)</li>
+                            <li>قاعدة البيانات النهائية</li>
+                            <li>جميع الوثائق</li>
+                            <li>العرض التقديمي (Presentation)</li>
+                            <li>فيديو توضيحي (Demo Video)</li>
+                            <li>ملف README شامل</li>
+                        </ul>
+                    </div>
+                    <!-- New: Start and End Dates -->
+                    <div class="dates-card" id="datesCard7">
+                        <div class="dates-head">
+                            <i class="bi bi-calendar-event"></i>
+                            <span>مواعيد التسليم</span>
+                        </div>
+
+                        <div class="dates-grid">
+                            <div class="date-item">
+                                <div class="date-label">تاريخ بداية التسليم</div>
+                                <div class="date-value" id="startDateText7">—</div>
+                            </div>
+
+                            <div class="date-item">
+                                <div class="date-label">تاريخ نهاية التسليم</div>
+                                <div class="date-value" id="endDateText7">—</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Submit Box (JS controls visibility) -->
+                    <div class="student-submit" id="stage7SubmitBox">
+
+                        <div class="submit-card">
+                            <div class="submit-head">
+                                <div class="submit-title">
+                                    <i class="bi bi-cloud-upload"></i>
+                                    <span>رفع ملفات المرحلة</span>
+                                </div>
+
+                                <label class="file-btn" for="stage7File">
+                                    <i class="bi bi-paperclip"></i>
+                                    اختيار ملفات
+                                </label>
+
+                                <input type="file" id="stage7File" multiple class="file-input-hidden">
+                            </div>
+
+                            <div class="file-hint" id="stage7FileHint">لم يتم اختيار ملفات</div>
+
+                            <button class="submit-btn" id="stage7Btn" onclick="submitPhase(7)">
+                                <i class="bi bi-send"></i>
+                                تسليم المرحلة
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submission Info -->
+                    <div class="submission-info hidden" id="stage7SubmissionInfo">
+                        <i class="bi bi-upload"></i>
+                        تم التسليم بتاريخ:
+                        <strong id="stage7SubmittedAt"></strong>
+                        <ul class="submitted-files" id="stage7Files"></ul>
+                        <i class="bi bi-trash delete-submit-icon" id="stage7DeleteIcon" title="حذف التسليم"
+                            onclick="deleteSubmission(7)">
+                        </i>
+
+                    </div>
+
+                    <!-- Supervisor Comment -->
+                    <div class="supervisor-box hidden" id="stage7SupervisorBox">
+                        <div class="supervisor-header">
+                            <i class="bi bi-chat-left-text"></i>
+                            <span>تعليقات المشرف:</span>
+                        </div>
+                        <p id="stage7SupervisorComment"></p>
+
+                    </div>
+
+                </div>
+            </div>
+
+<!-- =========================
+     AI Phases Report Card
+========================= -->
+<div class="ai-report-card" id="aiReportCard" style="display:none;">
+  <div class="ai-report-head">
+    <div class="ai-report-title">
+      <i class="bi bi-stars"></i>
+      تقرير ذكاء اصطناعي عن المشروع
+    </div>
+    <div class="ai-report-sub">
+      يولّد تحليل شامل للمراحل، الالتزام، جودة التسليمات ونِقاط التحسين.
+    </div>
+  </div>
+
+  <div class="ai-report-actions">
+    <button class="ai-report-btn" id="generateAiReportBtn" type="button">
+      <i class="bi bi-cpu"></i>
+      توليد التقرير
+    </button>
+
+    <a class="ai-report-download" id="aiReportDownloadLink" href="#" download="AI_Phases_Report.pdf" style="display:none;">
+      <i class="bi bi-download"></i>
+      تحميل PDF
+    </a>
+
+    <div class="ai-report-status" id="aiReportStatus"></div>
+  </div>
+</div>
+
+
+        </main>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>إدارة المراحل</title>
+
+
+    <!-- ستايل خاص بهذه الصفحة -->
+    <link rel="stylesheet" href="PhasesManager.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <!-- الهيدر -->
+    <div id="header-container"></div>
+
+    <div class="page-container">
+        <!-- السايدبار -->
+        <div id="sidebar-container"></div>
+
+        <!-- محتوى الصفحة -->
+        <main class="main-content">
+            <section class="phases-page">
+
+                <!-- هيدر الصفحة -->
+                <header class="phases-page-header">
+                    <div class="phases-icon-circle">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <div>
+                        <h1 class="phases-title">إدارة مراحل المشروع</h1>
+                        <p class="phases-subtitle">
+                            قم بتحديد المراحل، المخرجات، والمواعيد النهائية لكل مشروع تخرج.
+                        </p>
+                    </div>
+                </header>
+
+                <!-- شريط اختيار المشروع + ملخص -->
+                <section class="phases-toolbar">
+                    <div class="project-selector">
+                        <label for="projectSelect" class="selector-label">
+                            اختر مشروعاً لإدارته:
+                        </label>
+                        <div class="selector-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <select id="projectSelect" class="selector-input">
+                                <!-- يمتلئ من الـ JS -->
+                            </select>
+                        </div>
+                        <p class="selector-hint">
+                            يمكنك تعديل المراحل والمخرجات الخاصة بكل مشروع على حدة.
+                        </p>
+                    </div>
+
+                    <div class="project-summary">
+                        <div class="summary-card">
+                            <span class="summary-label">عدد المراحل</span>
+                            <span id="summaryPhasesCount" class="summary-value">0</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">المراحل النشطة</span>
+                            <span id="summaryActiveCount" class="summary-value">0</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">نسبة الإنجاز</span>
+                            <span id="summaryProgress" class="summary-value">0%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- نموذج إضافة مرحلة جديدة -->
+                <section class="add-phase-shell">
+                    <header class="add-phase-header">
+                        <h2 class="add-phase-title">
+                            <i class="fa-solid fa-plus-circle"></i>
+                            إضافة مرحلة جديدة
+                        </h2>
+                        <p class="add-phase-hint">
+                            أدخل تفاصيل المرحلة ثم اضغط <strong>إضافة</strong>. يمكنك تعديلها لاحقاً.
+                        </p>
+                    </header>
+
+                    <form id="addPhaseForm" class="add-phase-form">
+                        <div class="form-row">
+                            <div class="field">
+                                <label class="field-label">اسم المرحلة</label>
+                                <input type="text" id="phaseTitleInput" class="field-input"
+                                    placeholder="مثال: تحليل المتطلبات" required />
+                            </div>
+                            <div class="field">
+                                <label class="field-label">تاريخ التسليم النهائي</label>
+                                <input type="date" id="phaseDeadlineInput" class="field-input" required />
+                            </div>
+                            <div class="field field-small">
+                                <label class="field-label">ترتيب المرحلة</label>
+                                <input type="number" id="phaseOrderInput" class="field-input" min="1" value="1"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="field-label">وصف المرحلة</label>
+                            <textarea id="phaseDescriptionInput" class="field-input field-textarea" rows="2"
+                                placeholder="اكتب شرحاً موجزاً لما يجب على الطلاب إنجازه في هذه المرحلة..."></textarea>
+                        </div>
+
+                        <div class="add-phase-actions">
+                            <button type="submit" class="btn-primary">
+                                <i class="fa-solid fa-plus"></i>
+                                إضافة المرحلة
+                            </button>
+                            <button type="button" id="resetFormBtn" class="btn-soft">
+                                إعادة تعيين الحقول
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- قائمة المراحل -->
+                <section class="phases-list-shell">
+                    <header class="phases-list-header">
+                        <div>
+                            <h2 class="phases-list-title">
+                                <i class="fa-solid fa-layer-group"></i>
+                                مراحل المشروع
+                            </h2>
+                            <p class="phases-list-subtitle">
+                                يمكنك إعادة ترتيب المراحل، قفلها أو فتحها، وتعديل المخرجات المطلوبة لكل مرحلة.
+                            </p>
+                        </div>
+
+                        <div class="phases-list-tools">
+                            <button id="expandAllBtn" class="btn-soft small">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                فتح الكل
+                            </button>
+                            <button id="collapseAllBtn" class="btn-soft small">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                طيّ الكل
+                            </button>
+                        </div>
+                    </header>
+
+                    <div id="phasesContainer" class="phases-container">
+                        <!-- الكروت تُملى من الـ JS -->
+                    </div>
+                </section>
+
+            </section>
+        </main>
+    </div>
+
+
+    <!-- سكربت الصفحة -->
+    <script src="PhasesManager.js"></script>
+</body>
+
+</html>

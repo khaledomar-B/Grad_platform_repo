@@ -1,0 +1,341 @@
+/* ============================= */
+/*       GLOBAL VARIABLES        */
+/* ============================= */
+:root {
+    --header-height: 72px;
+    --sidebar-width: 260px;
+    --deep-blue: #06324a;
+    --mid-blue: #0f4b6b;
+    --accent: #ffd34a;
+    --border-color: #e5e7eb;
+    --text-gray: #6b7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Tajawal", sans-serif;
+    background-color: #f9fafb;
+    direction: rtl;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* (اختياري) تنسيق شكل الـ Scrollbar – لاحظ أنه لا يغيّر الجهة في كل المتصفحات */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-color: #06324a #e5e7eb;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #e5e7eb;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #06324a;
+    border-radius: 6px;
+}
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2000;
+
+    background: linear-gradient(180deg, var(--mid-blue), var(--deep-blue));
+    min-height: var(--header-height);
+    padding: 12px 150px 12px 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* زر القائمة */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* الحاوية في اليمين */
+.header-right {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* دائرة الشعار */
+.logo-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    color: var(--deep-blue);
+    font-weight: 700;
+}
+
+/* نص الجامعة */
+.university-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.university-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* زر تسجيل خروج */
+.logout-btn {
+    position: absolute;
+    left: 16px;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================= */
+/*            SIDEBAR            */
+/* ============================= */
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: #fff;
+    border-left: 1px solid var(--border-color);
+    position: fixed;
+    right: 0;
+    top: var(--header-height);
+    bottom: 0;
+    padding: 16px 14px;
+    overflow-y: auto;
+    z-index: 1500;
+    height: 100%;
+    min-height: 100%;
+}
+
+/* جعل النصوص داخل عناصر السايدبار يسار وليس يمين */
+.sidebar .menu-text {
+    text-align: left !important;
+    align-items: flex-start !important;
+    direction: ltr !important;
+}
+
+/* المستخدم */
+.user-profile {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.user-avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--deep-blue);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.user-role {
+    font-size: 11px;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.user-role::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: #10b981;
+    border-radius: 50%;
+}
+
+/* ============================= */
+/*         MENU ITEMS            */
+/* ============================= */
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+    padding: 10px 14px;
+    border-radius: 14px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    background: white;
+    transition: 0.25s ease;
+}
+
+.menu-item:hover {
+    background: #f3f4f6;
+}
+
+.menu-item .icon {
+    font-size: 18px;
+    color: #06324a;
+    flex-shrink: 0;
+}
+
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    direction: rtl;
+    line-height: 1.1;
+}
+
+.menu-text .ar {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 3px;
+}
+
+.menu-text .en {
+    font-size: 10px;
+    margin-top: 2px;
+    color: #9ca3af;
+}
+
+/* ============================= */
+/*     ACTIVE MENU HIGHLIGHT     */
+/* ============================= */
+
+.menu-item.active {
+    background: var(--deep-blue);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    padding: 12px 16px;
+}
+
+.menu-item.active .ar {
+    color: white;
+}
+
+.menu-item.active .en {
+    color: var(--accent);
+}
+
+.menu-item.active .icon {
+    color: var(--accent);
+}
+
+.menu-item.active::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 40%;
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+/* ============================= */
+/*        PAGE CONTENT           */
+/* ============================= */
+
+.main-content {
+    margin-right: var(--sidebar-width);
+    padding: 30px;
+
+    /* زيادة بسيطة عشان ما ينقص أي جزء تحت الهيدر */
+    padding-top: calc(var(--header-height) + 20px);
+
+    min-height: 100vh;
+    overflow-y: visible;
+}
+
+/* ============================= */
+/*         RESPONSIVE            */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .sidebar {
+        right: -260px;
+        transition: 0.35s;
+    }
+
+    .sidebar.active {
+        right: 0;
+        box-shadow: -4px 12px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .main-content {
+    margin-right: var(--sidebar-width);
+    padding: 30px;
+    padding-top: calc(var(--header-height) + 40px); /* زيادة 40px حتى يبتعد عن الهيدر */
+    min-height: 100vh;
+    overflow-y: visible;
+}
+
+}

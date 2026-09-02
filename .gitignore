@@ -1,0 +1,14 @@
+.vs/
+bin/
+obj/
+# Python
+Ai_Service/venv/
+Ai_Service/__pycache__/
+Ai_Service/.env
+
+# ASP.NET
+**/bin/
+**/obj/
+.vs/
+*.csproj.user
+*.zip

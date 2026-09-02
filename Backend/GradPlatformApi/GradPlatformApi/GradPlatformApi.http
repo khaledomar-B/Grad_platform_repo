@@ -1,0 +1,6 @@
+@GradPlatformApi_HostAddress = http://localhost:5107
+
+GET {{GradPlatformApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

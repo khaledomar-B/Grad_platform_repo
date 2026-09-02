@@ -1,0 +1,536 @@
+/* صفحة إدارة المراحل */
+
+.phases-page {
+    direction: rtl;
+    font-family: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #0f172a;
+}
+
+/* ===== هيدر الصفحة ===== */
+
+.phases-page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 18px 22px;
+    border-radius: 24px;
+    background: radial-gradient(circle at 0 0, rgba(255, 211, 74, 0.18), transparent 55%),
+        #ffffff;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.phases-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #facc15, #f97316);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f172a;
+    font-size: 26px;
+    box-shadow: 0 16px 40px rgba(248, 181, 0, 0.35);
+}
+
+.phases-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #06324a;
+    margin-bottom: 4px;
+}
+
+.phases-subtitle {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* ===== شريط الأدوات ===== */
+
+.phases-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.project-selector {
+    flex: 1.4;
+    min-width: 260px;
+    background: #ffffff;
+    padding: 16px 18px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.selector-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.selector-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+}
+
+.selector-input-wrapper i {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.selector-input {
+    border: none;
+    background: transparent;
+    flex: 1;
+    font-size: 13px;
+    outline: none;
+}
+
+.selector-hint {
+    margin-top: 6px;
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+/* ملخص المشروع */
+
+.project-summary {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    gap: 10px;
+}
+
+.summary-card {
+    flex: 1;
+    padding: 12px 10px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #f9fafb, #ffffff);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.summary-label {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.summary-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: #06324a;
+}
+
+/* ===== بطاقة إضافة مرحلة ===== */
+
+.add-phase-shell {
+    margin-top: 6px;
+    margin-bottom: 20px;
+    padding: 16px 18px 14px;
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+}
+
+.add-phase-header {
+    margin-bottom: 12px;
+}
+
+.add-phase-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #06324a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-phase-title i {
+    color: var(--accent);
+}
+
+.add-phase-hint {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.add-phase-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.field {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.field-small {
+    max-width: 120px;
+}
+
+.field-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.field-input {
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 8px 11px;
+    font-size: 13px;
+    background: #f9fafb;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.field-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.18);
+    background: #ffffff;
+}
+
+.field-textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.add-phase-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    margin-top: 4px;
+}
+
+/* أزرار عامة */
+
+.btn-primary {
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--deep-blue), var(--mid-blue));
+    color: #ffffff;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.40);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.35);
+}
+
+.btn-soft {
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    padding: 7px 16px;
+    font-size: 12px;
+    color: #374151;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+
+.btn-soft:hover {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+    transform: translateY(-1px);
+}
+
+.btn-soft.small {
+    padding: 5px 12px;
+    font-size: 11px;
+}
+
+/* ===== قائمة المراحل ===== */
+
+.phases-list-shell {
+    background: #ffffff;
+    border-radius: 26px;
+    padding: 18px 18px 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+    margin-bottom: 30px;
+}
+
+.phases-list-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+.phases-list-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #06324a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.phases-list-title i {
+    color: var(--accent);
+}
+
+.phases-list-subtitle {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.phases-list-tools {
+    display: flex;
+    gap: 6px;
+}
+
+/* كروت المراحل */
+
+.phases-container {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.phase-card {
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    background: radial-gradient(circle at 100% 0, rgba(37, 99, 235, 0.09), transparent 55%),
+        #ffffff;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+    padding: 12px 14px 10px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.phase-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.17);
+}
+
+.phase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.phase-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.phase-order-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: #0f4b6b;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phase-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.phase-status-pill {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-active {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.status-locked {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.status-completed {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.phase-body {
+    font-size: 12px;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+.phase-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phase-deadline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.phase-deadline i {
+    color: #f97316;
+}
+
+.phase-deliverables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.deliverable-pill {
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    font-size: 11px;
+    color: #4b5563;
+}
+
+.phase-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+    justify-content: flex-end;
+}
+
+/* ===== نافذة إدارة المخرجات (بسيطة) ===== */
+
+.deliverables-panel {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #e5e7eb;
+    display: none;
+    animation: fadeInScale 0.18s ease forwards;
+}
+
+.deliverables-panel.visible {
+    display: block;
+}
+
+.deliverables-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.deliverables-empty {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.deliverable-remove-btn {
+    margin-left: 4px;
+    cursor: pointer;
+    color: #b91c1c;
+}
+
+.deliverables-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.deliverables-form-row input {
+    flex: 1;
+}
+
+/* أنيميشن خفيفة */
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translateY(4px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== ريسبونسيف ===== */
+
+@media (max-width: 900px) {
+    .phases-toolbar {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .phases-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .phase-meta-row {
+        align-items: flex-start;
+    }
+
+    .phase-actions {
+        justify-content: flex-start;
+    }
+}
